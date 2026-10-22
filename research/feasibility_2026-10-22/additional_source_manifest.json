@@ -1,0 +1,38 @@
+[
+  {
+    "file": "andrew_POSOCO_data.csv",
+    "source_url": "https://robbieandrew.github.io/india/data/POSOCO_data.csv",
+    "retrieved_utc": "2026-10-22T02:02:40.465785+00:00",
+    "status": 200,
+    "content_type": "text/csv; charset=utf-8",
+    "bytes": 3917387,
+    "sha256": "6f94699d02dc73f8324de23cdcfc52a96829fc8819d2c29f1c967489f66d2f53"
+  },
+  {
+    "file": "andrew_POSOCO_metadata.json",
+    "source_url": "https://robbieandrew.github.io/india/data/POSOCO_metadata.json",
+    "retrieved_utc": "2026-10-22T02:02:40.465997+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 39702,
+    "sha256": "369f9c43b2382fdf2301cb3786240a9d4996db313cc5dbc99338d42b19b913f9"
+  },
+  {
+    "file": "iip_api_manual.pdf",
+    "source_url": "https://esankhyiki.mospi.gov.in/API/IIP%20API%20User%20Manual.pdf",
+    "retrieved_utc": "2026-10-22T02:02:40.466069+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 899043,
+    "sha256": "a19784a4db610523e0c56cdf15c7f99064639d71cad5c41c2786945803ffbf23"
+  },
+  {
+    "file": "iip_api_metadata.xlsx",
+    "source_url": "https://esankhyiki.mospi.gov.in/API/IIP%20Metadata.xlsx",
+    "retrieved_utc": "2026-10-22T02:02:40.826902+00:00",
+    "status": 200,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "bytes": 11683,
+    "sha256": "a4116552ef35a5a80bc32422ffeebf59d2ac7b2b043105ef6675e1ff8eb83264"
+  }
+]

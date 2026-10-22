@@ -1,0 +1,21 @@
+{
+  "iip_rows": 576,
+  "iip_targets": [
+    "basic_metals",
+    "manufacturing",
+    "nonmetallic_minerals",
+    "wearing_apparel"
+  ],
+  "iip_months_each": 144,
+  "daily_days": 4383,
+  "usable_energy_days": 4366,
+  "complete_weather_days": 4383,
+  "new_report_checks": 16,
+  "new_report_layouts": [
+    "MOP_E_energy_row_8"
+  ],
+  "verified_release_months": 86,
+  "original_unchanged_files": 182,
+  "new_daily_missing_energy": [],
+  "value_vintage": "revised IIP and reanalysis weather; pseudo-real-time only"
+}

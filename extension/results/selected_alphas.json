@@ -1,0 +1,58 @@
+[
+  {
+    "case": "full",
+    "target": "manufacturing",
+    "alpha": 100.0,
+    "validation_MAE_pp": 9.234931065612885,
+    "validation_origins": 59
+  },
+  {
+    "case": "full",
+    "target": "basic_metals",
+    "alpha": 100.0,
+    "validation_MAE_pp": 15.494899215472216,
+    "validation_origins": 59
+  },
+  {
+    "case": "full",
+    "target": "nonmetallic_minerals",
+    "alpha": 100.0,
+    "validation_MAE_pp": 23.919830010775993,
+    "validation_origins": 59
+  },
+  {
+    "case": "full",
+    "target": "wearing_apparel",
+    "alpha": 100.0,
+    "validation_MAE_pp": 37.588891369280844,
+    "validation_origins": 59
+  },
+  {
+    "case": "strict_covid",
+    "target": "manufacturing",
+    "alpha": 10.0,
+    "validation_MAE_pp": 2.2598729770399926,
+    "validation_origins": 16
+  },
+  {
+    "case": "strict_covid",
+    "target": "basic_metals",
+    "alpha": 10.0,
+    "validation_MAE_pp": 7.2924723935817815,
+    "validation_origins": 16
+  },
+  {
+    "case": "strict_covid",
+    "target": "nonmetallic_minerals",
+    "alpha": 10.0,
+    "validation_MAE_pp": 3.808334873646184,
+    "validation_origins": 16
+  },
+  {
+    "case": "strict_covid",
+    "target": "wearing_apparel",
+    "alpha": 10.0,
+    "validation_MAE_pp": 7.762693027432937,
+    "validation_origins": 16
+  }
+]

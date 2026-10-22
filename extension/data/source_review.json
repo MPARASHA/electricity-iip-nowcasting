@@ -1,0 +1,151 @@
+{
+  "method": "Sixteen original MOP_E ranges A3:I14 were rendered and visually checked against the labelled national energy totals and reporting dates. Displayed totals use whole MU; automated XLS-precision comparisons are separate.",
+  "reports": [
+    {
+      "date": "2024-01-15",
+      "manual_reporting_date": "2024-01-16",
+      "manual_displayed_energy_MU": 4198,
+      "file": "grid/reports/2024-01-15.xls",
+      "sha256": "eca2a5ac17d31d275c7dd91e3b194a0bd413d3c23871d9b7c173c2dab9c437b6",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-01-15.png"
+    },
+    {
+      "date": "2024-03-15",
+      "manual_reporting_date": "2024-03-16",
+      "manual_displayed_energy_MU": 4694,
+      "file": "grid/reports/2024-03-15.xls",
+      "sha256": "e71c545522bc28c018038cbf18236c68c844a611d27fbbd8372dc1a33eef6184",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-03-15.png"
+    },
+    {
+      "date": "2024-05-15",
+      "manual_reporting_date": "2024-05-16",
+      "manual_displayed_energy_MU": 4961,
+      "file": "grid/reports/2024-05-15.xls",
+      "sha256": "5fb4aa3ee686dc77f3cba04d197404bfe8c5f5f44b80bfe426f4c8d99f72776f",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-05-15.png"
+    },
+    {
+      "date": "2024-05-30",
+      "manual_reporting_date": "2024-05-31",
+      "manual_displayed_energy_MU": 5466,
+      "file": "grid/reports/2024-05-30.xls",
+      "sha256": "0c88aab76e0654084f2f0e5846f0fcd0e0061f79572cb3f42644048fb7e76938",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-05-30.png"
+    },
+    {
+      "date": "2024-07-15",
+      "manual_reporting_date": "2024-07-16",
+      "manual_displayed_energy_MU": 4886,
+      "file": "grid/reports/2024-07-15.xls",
+      "sha256": "eb9c39264ae611a25e673c7e2067795b7455a74a14ff3ae34aa49318c86a141c",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-07-15.png"
+    },
+    {
+      "date": "2024-09-15",
+      "manual_reporting_date": "2024-09-16",
+      "manual_displayed_energy_MU": 4514,
+      "file": "grid/reports/2024-09-15.xls",
+      "sha256": "7f3530155a2faafe9d6aa372dc77b2de20a2a680320b65aa739f9a38d4f8ec06",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-09-15.png"
+    },
+    {
+      "date": "2024-11-15",
+      "manual_reporting_date": "2024-11-16",
+      "manual_displayed_energy_MU": 4226,
+      "file": "grid/reports/2024-11-15.xls",
+      "sha256": "153319d5f373cd7a82f6941ebbfcf0ab987db8f58bfc8d6ec859741ffac8a903",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2024-11-15.png"
+    },
+    {
+      "date": "2025-01-15",
+      "manual_reporting_date": "2025-01-16",
+      "manual_displayed_energy_MU": 4219,
+      "file": "grid/reports/2025-01-15.xls",
+      "sha256": "2deba8f7fa4aae92a2ff57ba085251c6e8cf2dbf7352444afcdd822b2e7faf45",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-01-15.png"
+    },
+    {
+      "date": "2025-03-14",
+      "manual_reporting_date": "2025-03-15",
+      "manual_displayed_energy_MU": 4398,
+      "file": "grid/reports/2025-03-14.xls",
+      "sha256": "b6e4a3aae38cb4090a96e3765426010ed7aa0633312e7c34d5f3ccfd79011271",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-03-14.png"
+    },
+    {
+      "date": "2025-03-15",
+      "manual_reporting_date": "2025-03-16",
+      "manual_displayed_energy_MU": 4489,
+      "file": "grid/reports/2025-03-15.xls",
+      "sha256": "d4e7a6506aa64c6ba8cb3cca99c9998576f2c7f70eff876fad154358af2ce2b7",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-03-15.png"
+    },
+    {
+      "date": "2025-05-15",
+      "manual_reporting_date": "2025-05-16",
+      "manual_displayed_energy_MU": 5142,
+      "file": "grid/reports/2025-05-15.xls",
+      "sha256": "d2b2c41cce965ea1b332d168133d7054ad26a607d43a91865f166079ccdd9a70",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-05-15.png"
+    },
+    {
+      "date": "2025-05-25",
+      "manual_reporting_date": "2025-05-26",
+      "manual_displayed_energy_MU": 4289,
+      "file": "grid/reports/2025-05-25.xls",
+      "sha256": "672492d30902cdd65e7efa18a2ec2ddfdb497bc15fcdb589f8e843e828e13e40",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-05-25.png"
+    },
+    {
+      "date": "2025-07-15",
+      "manual_reporting_date": "2025-07-16",
+      "manual_displayed_energy_MU": 4938,
+      "file": "grid/reports/2025-07-15.xls",
+      "sha256": "4658028c94ce06e0548a46f2a3ddd2fad45af02d133fbe62c69393b07240f0a9",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-07-15.png"
+    },
+    {
+      "date": "2025-09-15",
+      "manual_reporting_date": "2025-09-16",
+      "manual_displayed_energy_MU": 5028,
+      "file": "grid/reports/2025-09-15.xls",
+      "sha256": "7a025c815ea8258bcdab3f092296de37d750f235b88967848c787f3552e91406",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-09-15.png"
+    },
+    {
+      "date": "2025-11-09",
+      "manual_reporting_date": "2025-11-10",
+      "manual_displayed_energy_MU": 3813,
+      "file": "grid/reports/2025-11-09.xls",
+      "sha256": "66b7202649ae89ac81eff050588cb9623e012481f06735b2cc3fb532327db771",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-11-09.png"
+    },
+    {
+      "date": "2025-11-15",
+      "manual_reporting_date": "2025-11-16",
+      "manual_displayed_energy_MU": 4097,
+      "file": "grid/reports/2025-11-15.xls",
+      "sha256": "5eac57424e9647b70433d51ab579c474a314ae905f65bb4a03d6385ce2e18880",
+      "visual_status": "checked",
+      "image": "extension/qa/source_workbooks/2025-11-15.png"
+    }
+  ],
+  "rounding_note": "2024-09-15 regional component sum is 0.12 MU below national total; record it, retain national column. All national XLS totals exactly match Andrew extraction.",
+  "source_limitation": "Original documents preserved in a frozen public mirror; official-host byte identity unavailable."
+}

@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css?v=1" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css?v=1" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css?v=1" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" /><link id="pibA11yCss" rel="stylesheet" href="/css/accessibility.css?v=7" type="text/css" />
+      <script type="text/javascript">
+        /* Stamps the saved theme on <html> before the page paints. The
+           switcher in js/accessibility.js settles the rest, but on inner
+           pages it does not run until the end of the body and inside the
+           release frame it is a separate download - either way the reader
+           would otherwise watch a light page turn dark in front of them. */
+        (function (d) {
+            var t = "";
+            try {
+                t = window.localStorage.getItem("pibStyle") || "";
+            } catch (e) {
+                t = "";
+            }
+            if (t === "orange") {
+                t = "yellow";
+            }
+            var c = t === "change" ? " pib-hc"
+                : t === "green" ? " pib-theme-green"
+                : t === "yellow" ? " pib-theme-yellow" : "";
+            d.documentElement.className += c + " pib-a11y-content";
+        }(document));
+      </script>
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="/js/accessibility.js?v=7"></script>
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: var(--dbim-text, #150202);
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      
+
+      <link id="pibConsentCss" href="/css/consent.css?v=8" rel="stylesheet" type="text/css" /><link id="pibFontsCss" href="/css/fonts-noto.css?v=6" rel="stylesheet" type="text/css" /><link id="pibDbimCss" href="/css/dbim.css?v=1120" rel="stylesheet" type="text/css" /><meta property="og:title" content="QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1915931" /><meta property="og:description" content="
+The Quick Estimates of Index of Industrial Production (IIP) are released on 12th of every month (o" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eqausaeizck4mjqacqlqauyaabvns5t3-f-957f49824-clienttons-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":9,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"105b2814","ak.r":24958,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":49546,"ak.gh":"23.3.70.132","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1792636539","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==CZyHQz44gJak8TC01rvLxXyZ/6cXEkFi2MDMxLgCipRdUyMwD26gZ7FR28DrIpGiVJhmqczKrRThTbT3/ZmlRF97a2ZjqZs1RLYAkoCwhglnuVRBS4v9VgCnAc5KbRzOOFOp/mvnCzrA6ek7HKa+MTjjYVKHZDQw2Ct4Cjx8vi8tJcvP/IW4jSlfzyf46PC1mehIvtjWdgs6zxgF0Nc73hRqk02IIE0cCyfqa7gfth9BGBURdEjNLNxwsjwjPcspg5RcdV4I8Mj+ViMYT88Bc+19RrwhqjtL/WF46djvdQWu1EetPnErRAFqeJZQ+HA49VqLCszOkW2JlSNyfQ83BsMO/UgNNQQ3RYtZjQD074SSZY/f1OFA7zGJXDWQ/A3d1bocoydIKaLFt+DNCbe/yHgmF7KnRRsVAb+4RFvHQTA=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden" id="dbim-icon-sprite">
+    <defs>
+        <symbol id="icon-angle-double-left" viewBox="0 0 24 24"><path d="M11.6 4.6 4.2 12l7.4 7.4 2.2-2.2L8.6 12l5.2-5.2z"/><path d="M19 4.6 11.6 12 19 19.4l2.2-2.2L16 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-angle-double-right" viewBox="0 0 24 24"><path d="M12.4 4.6 10.2 6.8 15.4 12l-5.2 5.2 2.2 2.2L19.8 12z"/><path d="M5 4.6 2.8 6.8 8 12l-5.2 5.2L5 19.4 12.4 12z"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20.8 10.6H9.6v2.8h11.2z"/><path d="M10.8 5.6 3.2 12l7.6 6.4z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M3.2 10.6h11.2v2.8H3.2z"/><path d="M13.2 5.6 20.8 12l-7.6 6.4z"/></symbol>
+        <symbol id="icon-blogger" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.4 2.4h11.2a4 4 0 0 1 4 4v11.2a4 4 0 0 1-4 4H6.4a4 4 0 0 1-4-4V6.4a4 4 0 0 1 4-4zm2.8 5.2a2 2 0 0 0 0 4h2.4a2 2 0 0 0 0-4zm0 5.6a2 2 0 0 0 0 4h5.6a2 2 0 0 0 0-4z"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7.6 2.4H10v2.4H7.6z"/><path d="M14 2.4h2.4v2.4H14z"/><path fill-rule="evenodd" d="M4 4.8h16a1.6 1.6 0 0 1 1.6 1.6v13.2a1.6 1.6 0 0 1-1.6 1.6H4a1.6 1.6 0 0 1-1.6-1.6V6.4A1.6 1.6 0 0 1 4 4.8zm.4 5.6v8.4h15.2v-8.4z"/><path d="M6.4 12.4h3.2v3.2H6.4z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4 2.2-2.2L12.4 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M8.6 4.6 6.4 6.8 11.6 12l-5.2 5.2 2.2 2.2L16 12z"/></symbol>
+        <symbol id="icon-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M10.8 3h2.4v7.6h3.4L12 16.6l-4.6-6h3.4z"/><path d="M4 17.2h2.4v2.4h11.2v-2.4H20v3.2a1.4 1.4 0 0 1-1.4 1.4H5.4A1.4 1.4 0 0 1 4 20.4z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M13.6 21.6v-8.4h2.8l.42-3.3h-3.22V7.8c0-.95.27-1.6 1.64-1.6h1.74V3.26a23 23 0 0 0-2.54-.13c-2.5 0-4.22 1.53-4.22 4.34v2.43H7.4v3.3h2.82v8.4z"/></symbol>
+        <symbol id="icon-fact-check" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4 3.6 5.6v6.2c0 4.6 3.4 8.6 8.4 9.8 5-1.2 8.4-5.2 8.4-9.8V5.6zm-1 13.2-3.6-3.6 1.7-1.7 1.9 1.9 4.5-4.5 1.7 1.7z"/></symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.8 3h2.4l-1 6h3.2l1-6h2.4l-1 6h3.4v2.4h-3.8l-.6 3.2h3.6V17h-4l-1 5h-2.4l1-5h-3.2l-1 5H5.4l1-5H3V14.6h3.8l.6-3.2H3.8V9h4zm.6 8.4-.6 3.2h3.2l.6-3.2z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M12 3.4 2.8 11.6h2.4v8.4a1 1 0 0 0 1 1h3.3v-5.4h5v5.4h3.3a1 1 0 0 0 1-1v-8.4h2.4z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.6 2.4h8.8a5.2 5.2 0 0 1 5.2 5.2v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6a5.2 5.2 0 0 1 5.2-5.2zm0 2.4a2.8 2.8 0 0 0-2.8 2.8v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8z"/><path fill-rule="evenodd" d="M12 6.8a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 2.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z"/><circle cx="17.3" cy="6.7" r="1.3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.8 8.8h3.6v12H4.8z"/><circle cx="6.6" cy="5.4" r="2.1"/><path d="M10.8 8.8h3.45v1.65h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.6h-3.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95h-3.6z"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2.4 7.6v9.2a1.6 1.6 0 0 0 1.6 1.6h16a1.6 1.6 0 0 0 1.6-1.6V7.6L12 14z"/><path d="M21.2 5.4H2.8L12 11.8z"/></symbol>
+        <symbol id="icon-mail-open" viewBox="0 0 24 24"><path d="M2.4 9.8h19.2v9.6A1.6 1.6 0 0 1 20 21H4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M12 2.6 21.6 9.2h-3.8L12 5.3 6.2 9.2H2.4z"/><path d="m3.9 11.2 8.1 5.4 8.1-5.4 1.5 1.3-9.6 6.4-9.6-6.4z"/></symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a7 7 0 0 0-7 7c0 5.2 7 12.2 7 12.2s7-7 7-12.2a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z"/></symbol>
+        <symbol id="icon-newspaper" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 4.4h14.8v15.2H2.8zm2 2v11.2h10.8V6.4z"/><path d="M6 7.6h8.4v1.6H6z"/><path d="M6 10.8h8.4v1.6H6z"/><path d="M6 14h5.2v1.6H6z"/><path d="M18.4 8.4h2.8v9.6a1.4 1.4 0 0 1-2.8 0z"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="7.4" y="4" width="3.6" height="16" rx="0.9"/><rect x="13" y="4" width="3.6" height="16" rx="0.9"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 4.5v15l12-7.5z"/></symbol>
+        <symbol id="icon-picture" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.4 5.2h19.2v13.6H2.4zm2 2v9.6h15.2V7.2z"/><path d="M5.6 16.4 10 11l2.6 3 2-2.2 4 4.6z"/><circle cx="8" cy="10.4" r="1.5"/></symbol>
+        <symbol id="icon-press-conference" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6"/><path d="M7.6 12.2a4.4 4.4 0 0 1 8.8 0z"/><circle cx="4.9" cy="9.6" r="2.2"/><path d="M1.8 15.2a3.1 3.1 0 0 1 6.2 0z"/><circle cx="19.1" cy="9.6" r="2.2"/><path d="M16 15.2a3.1 3.1 0 0 1 6.2 0z"/><path d="M6.6 13.6h10.8l2.2 7.8H4.4z"/></symbol>
+        <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6.4 2.8h11.2v4.4H6.4z"/><path d="M4 8.4h16a1.6 1.6 0 0 1 1.6 1.6v5.6a1.6 1.6 0 0 1-1.6 1.6h-1.6v-2.8H6v2.8H4a1.6 1.6 0 0 1-1.6-1.6V10A1.6 1.6 0 0 1 4 8.4z"/><path d="M7.2 15.6h9.6v5.6H7.2z"/></symbol>
+        <symbol id="icon-rss" viewBox="0 0 24 24"><circle cx="4.8" cy="19.2" r="2.4"/><path d="M2.4 11.2v3.2a6.4 6.4 0 0 1 6.4 6.4H12A9.6 9.6 0 0 0 2.4 11.2z"/><path d="M2.4 4.8V8A13.6 13.6 0 0 1 16 21.6h3.2A16.8 16.8 0 0 0 2.4 4.8z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10 2.8a7.2 7.2 0 1 0 0 14.4 7.2 7.2 0 0 0 0-14.4zm0 2.4a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6z"/><path d="M15.3 14.6 21.2 20.5l-1.5 1.5-5.9-5.9z"/><path d="M9.2 6.8h1.6v2.4h2.4v1.6h-2.4v2.4H9.2v-2.4H6.8V9.2h2.4z"/></symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5.6" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="18.4" r="3"/><path d="M8.3 10.9 15.7 7.2l.9 1.8-7.4 3.7z"/><path d="M9.2 13.1 16.6 16.8l-.9 1.8-7.4-3.7z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M4.2 3h4.3l11.3 18h-4.3z"/><path d="M19.3 3h-2.6L4.2 21h2.6z"/></symbol>
+        <symbol id="icon-university" viewBox="0 0 24 24"><path d="M12 2.4 21.6 7.2v1.6H2.4V7.2z"/><path d="M4.8 10.4h2.4v8H4.8z"/><path d="M9.2 10.4h2.4v8H9.2z"/><path d="M13.4 10.4h2.4v8h-2.4z"/><path d="M17.6 10.4H20v8h-2.4z"/><path d="M3.2 19.8h17.6v1.8H3.2z"/></symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3.2 9.2h3.3l5-4.2v14l-5-4.2H3.2z"/><path d="M14.6 8.4a5 5 0 0 1 0 7.2l1.6 1.6a7.2 7.2 0 0 0 0-10.4z"/><path d="M17.4 5.6a8.8 8.8 0 0 1 0 12.8l1.5 1.5a10.9 10.9 0 0 0 0-15.8z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a9.5 9.5 0 0 0-8.1 14.5L2.4 21.6l4.8-1.4A9.5 9.5 0 1 0 12 2.4zm0 2.2a7.3 7.3 0 1 1-3.8 13.5l-.4-.2-2.6.7.7-2.5-.3-.4A7.3 7.3 0 0 1 12 4.6z"/><path d="M9.4 7.8c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5z"/></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10.2 15.1V8.9l5.1 3.1z"/></symbol>
+    </defs>
+</svg>
+
+      <form method="post" action="./PressReleasePage.aspx?PRID=1915931&amp;lang=2&amp;reg=3" id="form1">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LdIxBJXt0U_WW5GWfJqHAqo6frgCmGRfEywglicTersO2OKrFhK1gAIp0Wk2al2YrpdR3uWqH6f4nfjBsCyRUfTUUVmb0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a8613aea7%3af9cec9bc%3a3202a5a2%3aab09e3fe%3a87104b7c%3a720a52bf%3a589eaa30%3aa67c2700%3abe6fb298" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9gpc3lvGeAhxXEsxVNWPrzGI1CLKa/MwG2O7bZ98Xl2t+LuKvv4+6Byp4dhIRO4Ip/N/eGOHoDZ7RVm5ijAqSAR7dswnCAABmygmyIUljs/wU7ZxJGe1ZuNqi0VBrapO8QKORQG2pxE+CYvKdOkhF0EBv4o9dDLbnnU5xKty1Y9YokAF3g2MqYOKl6/XVYEGy+0K8alo+jy8AaIUFZt/+EScvRWVOl1bIoQN20Ne7SrODXFfV+RVS334C8+vSH45dNezg//g0n0JNIt2GP11ofns+XI=" />
+                              
+            <div id="templateCss"></div>
+            
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+
+<span class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</span>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="1915931" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Statistics & Programme Implementation
+                        </div>
+                        
+                        <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2026/sep/ph_9768_20260902_10000501.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h1 id="Titleh2">
+                                    QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)
+                              </h1>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"></span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              Posted On:
+                12 APR 2023 5:43PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <div class="WordSection1">
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Quick Estimates of Index of Industrial Production (IIP) are released on 12<sup>th</sup> of every month (or previous working day if 12<sup>th</sup> is a holiday) with a six weeks lag and compiled with data received from source agencies, which in turn receive the data from the producing factories/ establishments. </span></span></p>
+
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">2. For the month of February 2023, the Quick Estimates of Index of Industrial Production (IIP) with base 2011-12 stands at 138.7. The Indices of Industrial Production for the Mining, Manufacturing and Electricity sectors for the month of February 2023 stand at 129.0, 136.8 and 174.0 respectively. These Quick Estimates will undergo revision in subsequent releases as per the revision policy of IIP.</span></span></p>
+
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As per Use-based classification, the indices stand at 139.7 for Primary Goods, 104.4 for Capital Goods, 143.2 for Intermediate Goods and 164.0 for Infrastructure/ Construction Goods for the month of February 2023. Further, the indices for Consumer durables and Consumer non-durables stand at 108.4 and 154.3 respectively for the month of February 2023.</span></span></p>
+
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">4. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Details of Quick Estimates of the Index of Industrial Production for the month of February 2023 at Sectoral, 2-digit level of National Industrial Classification (NIC-2008) and by Use-based classification are given at Statements I, II and III respectively. Also, for users to appreciate the changes in the industrial sector, Statement IV provides month-wise indices for the last 12 months, by industry groups (as per 2-digit level of NIC-2008) and sectors.</span></span></p>
+
+<p style="margin-left:4.5pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Along with the Quick Estimates of IIP for the month of February 2023, the indices for January 2023 have undergone the first revision and those for November 2022 have undergone final revision in the light of the updated data received from the source agencies. The Quick Estimates for February 2023, the first revision for January 2023 and the final revision for November 2022 have been compiled at weighted response rates of 92 percent, 94 percent and 95 percent respectively.</span></span></p>
+
+<p style="margin-left:4.5pt; text-align:justify"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Release of the Index for March 2023 will be on Friday, 12</span><sup>th</sup><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px"> May 2023.</span></p>
+
+<p style="margin-left:13.5pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><u>Note: -</u></span></span></p>
+
+<ol>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">This Press release information is also available at the Website of the Ministry -<a href="http://www.mospi.gov.in" target="_blank">http://www.mospi.gov.in</a></span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Press release in Hindi follows and shall be available at: </span></span></li>
+</ol>
+
+<p style="margin-left:13.5pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><a href="https://www.mospi.gov.in/hi/" target="_blank">https://www.mospi.gov.in/hi</a> </span></span></p>
+
+<p style="margin-left:13.5pt; text-align:justify"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/apr/doc2023412180201.pdf" target="_blank"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Click here to see Annexures:</span></span></a></p>
+
+<p style="margin-left:13.5pt; text-align:center"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">****</span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong><span style="color:black">AL</span></strong></span></span><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">&nbsp; </span></p>
+</div>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(Release ID: 1915931)</span>
+                        <span id="lblViews">Visitor Counter : 2095</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">Read this release in: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1916110' target="_blank">
+                                          Urdu </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1916002' target="_blank">
+                                          हिन्दी </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        
+                        <div class="pr-share pr-share--footer" role="group" aria-label="Share this press release">
+                              <span class="pr-share__label" aria-hidden="true">Share</span>
+                              <ul class="pr-share__list">
+                                    <li><a class="pr-share__btn pr-share__btn--facebook"
+                                           href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1915931"
+                                           target="_blank" rel="noopener noreferrer"
+                                           aria-label="Share on Facebook">
+                                        <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-facebook" xlink:href="#icon-facebook"></use></svg>
+                                    </a></li>
+                                    <li><a class="pr-share__btn pr-share__btn--twitter"
+                                           href="https://twitter.com/intent/tweet?url=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1915931"
+                                           target="_blank" rel="noopener noreferrer"
+                                           aria-label="Share on X">
+                                        <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-twitter" xlink:href="#icon-twitter"></use></svg>
+                                    </a></li>
+                                    <li><a class="pr-share__btn pr-share__btn--whatsapp"
+                                           href="https://api.whatsapp.com/send?text=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1915931"
+                                           target="_blank" rel="noopener noreferrer"
+                                           aria-label="Share on WhatsApp">
+                                        <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use></svg>
+                                    </a></li>
+                                    <li><a class="pr-share__btn pr-share__btn--linkedin"
+                                           href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1915931"
+                                           target="_blank" rel="noopener noreferrer"
+                                           aria-label="Share on LinkedIn">
+                                        <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-linkedin" xlink:href="#icon-linkedin"></use></svg>
+                                    </a></li>
+                                    <li><a class="pr-share__btn pr-share__btn--mail"
+                                           href="mailto:?subject=Press+release+from+PIB&amp;body=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1915931"
+                                           aria-label="Share by email">
+                                        <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-mail" xlink:href="#icon-mail"></use></svg>
+                                    </a></li>
+                              </ul>
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Statistics & Programme Implementation
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          Posted On:
+                        12 APR 2023 5:43PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <div class="WordSection1">
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Quick Estimates of Index of Industrial Production (IIP) are released on 12<sup>th</sup> of every month (or previous working day if 12<sup>th</sup> is a holiday) with a six weeks lag and compiled with data received from source agencies, which in turn receive the data from the producing factories/ establishments. </span></span></p>
+
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">2. For the month of February 2023, the Quick Estimates of Index of Industrial Production (IIP) with base 2011-12 stands at 138.7. The Indices of Industrial Production for the Mining, Manufacturing and Electricity sectors for the month of February 2023 stand at 129.0, 136.8 and 174.0 respectively. These Quick Estimates will undergo revision in subsequent releases as per the revision policy of IIP.</span></span></p>
+
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As per Use-based classification, the indices stand at 139.7 for Primary Goods, 104.4 for Capital Goods, 143.2 for Intermediate Goods and 164.0 for Infrastructure/ Construction Goods for the month of February 2023. Further, the indices for Consumer durables and Consumer non-durables stand at 108.4 and 154.3 respectively for the month of February 2023.</span></span></p>
+
+<p style="margin-left:4.5pt; margin-right:0cm; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">4. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Details of Quick Estimates of the Index of Industrial Production for the month of February 2023 at Sectoral, 2-digit level of National Industrial Classification (NIC-2008) and by Use-based classification are given at Statements I, II and III respectively. Also, for users to appreciate the changes in the industrial sector, Statement IV provides month-wise indices for the last 12 months, by industry groups (as per 2-digit level of NIC-2008) and sectors.</span></span></p>
+
+<p style="margin-left:4.5pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Along with the Quick Estimates of IIP for the month of February 2023, the indices for January 2023 have undergone the first revision and those for November 2022 have undergone final revision in the light of the updated data received from the source agencies. The Quick Estimates for February 2023, the first revision for January 2023 and the final revision for November 2022 have been compiled at weighted response rates of 92 percent, 94 percent and 95 percent respectively.</span></span></p>
+
+<p style="margin-left:4.5pt; text-align:justify"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Release of the Index for March 2023 will be on Friday, 12</span><sup>th</sup><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px"> May 2023.</span></p>
+
+<p style="margin-left:13.5pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><u>Note: -</u></span></span></p>
+
+<ol>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">This Press release information is also available at the Website of the Ministry -<a href="http://www.mospi.gov.in" target="_blank">http://www.mospi.gov.in</a></span></span></li>
+	<li style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Press release in Hindi follows and shall be available at: </span></span></li>
+</ol>
+
+<p style="margin-left:13.5pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><a href="https://www.mospi.gov.in/hi/" target="_blank">https://www.mospi.gov.in/hi</a> </span></span></p>
+
+<p style="margin-left:13.5pt; text-align:justify"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/apr/doc2023412180201.pdf" target="_blank"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Click here to see Annexures:</span></span></a></p>
+
+<p style="margin-left:13.5pt; text-align:center"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">****</span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong><span style="color:black">AL</span></strong></span></span><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">&nbsp; </span></p>
+</div>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (Release ID: 1915931)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931&text=QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931&title=QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931&text=QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1915931&title=QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="QUICK ESTIMATES OF INDEX OF INDUSTRIAL PRODUCTION AND USE-BASED INDEX FOR THE MONTH OF FEBRUARY 2023 (BASE 2011-12=100)" />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;div class=&quot;WordSection1&quot;>
+&lt;p style=&quot;margin-left:4.5pt; margin-right:0cm; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The Quick Estimates of Index of Industrial Production (IIP) are released on 12th of every month (or previous working day if 12th is a holiday) with a six weeks lag and compiled with data received from source agencies, which in turn receive the data from the producing factories/ establishments. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:4.5pt; margin-right:0cm; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>2. For the month of February 2023, the Quick Estimates of Index of Industrial Production (IIP) with base 2011-12 stands at 138.7. The Indices of Industrial Production for the Mining, Manufacturing and Electricity sectors for the month of February 2023 stand at 129.0, 136.8 and 174.0 respectively. These Quick Estimates will undergo revision in subsequent releases as per the revision policy of IIP.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:4.5pt; margin-right:0cm; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>3.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; As per Use-based classification, the indices stand at 139.7 for Primary Goods, 104.4 for Capital Goods, 143.2 for Intermediate Goods and 164.0 for Infrastructure/ Construction Goods for the month of February 2023. Further, the indices for Consumer durables and Consumer non-durables stand at 108.4 and 154.3 respectively for the month of February 2023.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:4.5pt; margin-right:0cm; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>4. &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Details of Quick Estimates of the Index of Industrial Production for the month of February 2023 at Sectoral, 2-digit level of National Industrial Classification (NIC-2008) and by Use-based classification are given at Statements I, II and III respectively. Also, for users to appreciate the changes in the industrial sector, Statement IV provides month-wise indices for the last 12 months, by industry groups (as per 2-digit level of NIC-2008) and sectors.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:4.5pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>5.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Along with the Quick Estimates of IIP for the month of February 2023, the indices for January 2023 have undergone the first revision and those for November 2022 have undergone final revision in the light of the updated data received from the source agencies. The Quick Estimates for February 2023, the first revision for January 2023 and the final revision for November 2022 have been compiled at weighted response rates of 92 percent, 94 percent and 95 percent respectively.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:4.5pt; text-align:justify&quot;>&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;>6.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Release of the Index for March 2023 will be on Friday, 12&lt;/span>th&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;> May 2023.&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:13.5pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;u>Note: -&lt;/u>&lt;/span>&lt;/span>&lt;/p>
+
+
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>This Press release information is also available at the Website of the Ministry -&lt;a href=&quot;http://www.mospi.gov.in&quot; target=&quot;_blank&quot;>http://www.mospi.gov.in&lt;/a>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Press release in Hindi follows and shall be available at: &lt;/span>&lt;/span>&lt;/li>
+
+
+&lt;p style=&quot;margin-left:13.5pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;a href=&quot;https://www.mospi.gov.in/hi/&quot; target=&quot;_blank&quot;>https://www.mospi.gov.in/hi&lt;/a> &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:13.5pt; text-align:justify&quot;>&lt;a href=&quot;https://static.pib.gov.in/WriteReadData/specificdocs/documents/2023/apr/doc2023412180201.pdf&quot; target=&quot;_blank&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Click here to see Annexures:&lt;/span>&lt;/span>&lt;/a>&lt;/p>
+
+&lt;p style=&quot;margin-left:13.5pt; text-align:center&quot;>&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;>****&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>&lt;span style=&quot;color:black&quot;>AL&lt;/span>&lt;/strong>&lt;/span>&lt;/span>&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;>&amp;nbsp; &lt;/span>&lt;/p>
+&lt;/div>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: var(--dbim-key, #0F5757);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: var(--dbim-key, #0F5757);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: var(--dbim-key, #0F5757);*/
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: var(--dbim-key, #0F5757);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: var(--dbim-h2, 20px);   /* was 20px !important - the !important blocked A+/A- */
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: var(--dbim-h3, 16px);   /* was 16px !important */
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 18px, var(--dbim-text, #150202) 18px, var(--dbim-text, #150202) 36px );
+                        border-top: 8px solid var(--dbim-green-key, #0F5757);
+                        border-bottom: 8px solid var(--dbim-green-key, #0F5757);
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+          <script type="text/javascript">
+                const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                const countdownElement = document.getElementById("countdown");
+
+                const interval = setInterval(() => {
+                      const now = new Date().getTime();
+
+                      // BEFORE FESTIVAL — show days + hours left
+                      if (now < festivalStart) {
+                            const diff = festivalStart - now;
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                            countdownElement.innerHTML = `
+              ${days} Day${days !== 1 ? 's' : ''} 
+              ${hours} Hour${hours !== 1 ? 's' : ''} to go
+          `;
+
+                      }
+
+                      // DURING FESTIVAL — show 56th IFFI - Day X
+                      else if (now >= festivalStart && now <= festivalEnd) {
+                            const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                            countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                      }
+
+                      // AFTER FESTIVAL — new message
+                      else {
+                            countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                            // Width change logic
+                            const elements = document.querySelectorAll('.film-roll-badge');
+                            elements.forEach(el => el.style.width = "350px");
+
+                            clearInterval(interval);
+                      }
+
+                }, 1000);
+          </script>
+ <script type="text/javascript">
+
+               const miffStart = new Date("2026-06-15T00:00:00").getTime();
+               const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+
+               const miffElement = document.getElementById("miff");
+
+               if (miffElement) {
+
+                   const miffInterval = setInterval(() => {
+
+                       const now = new Date().getTime();
+
+                       // Before MIFF
+                       if (now < miffStart) {
+
+                           const diff = miffStart - now;
+                           const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                           const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        
+
+                   /*  miffElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to MIFF`;*/
+                           miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+
+
+                     }
+
+                       // During MIFF
+                       else if (now >= miffStart && now <= miffEnd) {
+
+                           const dayNumber =
+                               Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+
+                           miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                       }
+
+                       // After MIFF
+                       else {
+
+                           miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+
+                           document.querySelectorAll('.film-roll-badge')
+                               .forEach(el => el.style.width = "350px");
+
+                           clearInterval(miffInterval);
+                       }
+
+                   }, 1000);
+               }
+
+</script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="3HwcTdw0b-8LAu6eUiDE5y-b5Lz7B9glhvCfsRksdycgqGqKQioYfNPuYrtt3lAWRpYBtsbSdR2UJsUlY4ZNblhSCgN5hal2"/></form>
+      
+      
+
+<script type="application/json" id="pibConsentConfig">{"ga4Id":"G-Q414Y0X6EE,G-QJJ6LZ8LHV","policyUrl":"/CookiePolicy.aspx","text":{"bannerLabel":"Cookie consent","title":"Cookies on this website","body":"We use essential cookies to make this website work. We also set analytics cookies when you arrive, so we can see how the site is used and improve it - you can switch these off below or at any time from the Cookie Policy page. Cookies from embedded social media content are set only if you allow them.","policyLink":"Read our Cookie Policy","accept":"Accept all","reject":"Reject optional","customize":"Customise","prefsTitle":"Cookie preferences","prefsIntro":"Choose which cookies this website may set. Essential cookies cannot be switched off because the site does not work without them. Analytics cookies are on unless you turn them off. Social media cookies stay off until you allow them. You can change these choices at any time from the Cookie Policy page.","essentialName":"Essential cookies","essentialDesc":"Needed for the site to function. These remember your session, your language and region, your text size and colour theme, and verify the security check on forms. They are always on.","analyticsName":"Analytics cookies","analyticsDesc":"Help us understand how visitors use the site - which pages are read and how long people stay - so it can be improved. The information is collected in a form that does not directly identify you. These are on when you arrive; switching them off here stops them and deletes the ones already set.","socialName":"Social media cookies","socialDesc":"Set by content embedded from X, Facebook and YouTube, such as timelines and videos. These platforms may use them to track you across websites. They stay off until you allow them.","save":"Save preferences","cancel":"Cancel"}}</script>
+<script type="text/javascript" src='/js/consent.js?v=10'></script>
+
+<script type="text/javascript" src='/js/consent-embeds.js?v=10'></script>
+
+    
+
+<script type="text/javascript">
+    (function () {
+        try {
+            if (window.self === window.top) { return; }
+        } catch (e) { return; }
+        var s = document.createElement("style");
+        s.textContent =
+            ".sticky-social, .sticky-social_mb { display: none !important; }";
+        (document.head || document.documentElement).appendChild(s);
+    }());
+</script>
+</body>
+</html>
+

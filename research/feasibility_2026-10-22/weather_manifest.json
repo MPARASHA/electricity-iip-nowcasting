@@ -1,0 +1,162 @@
+[
+  {
+    "file": "delhi_north.json",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=28.61&longitude=77.21&start=20140101&end=20231231&format=JSON&time-standard=UTC",
+    "latitude": 28.61,
+    "longitude": 77.21,
+    "retrieved_utc": "2026-10-22T01:55:23.377276+00:00",
+    "selection": "Provisional fixed regional locations; equal treatment, not industrial weights",
+    "status": 200,
+    "bytes": 185022,
+    "content_type": "application/json",
+    "sha256": "8d3ca6571756384eb7a093c2882fcf84a118e6a11df20af2b0542cdca57c727f",
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.1",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20140101",
+      "end": "20231231"
+    },
+    "parameters": {
+      "T2M": 3652,
+      "T2M_MAX": 3652,
+      "T2M_MIN": 3652
+    }
+  },
+  {
+    "file": "mumbai_west.json",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=19.08&longitude=72.88&start=20140101&end=20231231&format=JSON&time-standard=UTC",
+    "latitude": 19.08,
+    "longitude": 72.88,
+    "retrieved_utc": "2026-10-22T01:55:23.377505+00:00",
+    "selection": "Provisional fixed regional locations; equal treatment, not industrial weights",
+    "status": 200,
+    "bytes": 185801,
+    "content_type": "application/json",
+    "sha256": "4a6d75d90a3d169e1712ae7f3554332bf31917ed8e8b0a72c2442b71207edfde",
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.1",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20140101",
+      "end": "20231231"
+    },
+    "parameters": {
+      "T2M": 3652,
+      "T2M_MAX": 3652,
+      "T2M_MIN": 3652
+    }
+  },
+  {
+    "file": "chennai_south.json",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=13.08&longitude=80.27&start=20140101&end=20231231&format=JSON&time-standard=UTC",
+    "latitude": 13.08,
+    "longitude": 80.27,
+    "retrieved_utc": "2026-10-22T01:55:23.377591+00:00",
+    "selection": "Provisional fixed regional locations; equal treatment, not industrial weights",
+    "status": 200,
+    "bytes": 185795,
+    "content_type": "application/json",
+    "sha256": "0fc4a838027ce2a75da8a4296e0db666ac566408f7f3578e7e32c271e7b0445f",
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.1",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20140101",
+      "end": "20231231"
+    },
+    "parameters": {
+      "T2M": 3652,
+      "T2M_MAX": 3652,
+      "T2M_MIN": 3652
+    }
+  },
+  {
+    "file": "kolkata_east.json",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=22.57&longitude=88.36&start=20140101&end=20231231&format=JSON&time-standard=UTC",
+    "latitude": 22.57,
+    "longitude": 88.36,
+    "retrieved_utc": "2026-10-22T01:55:25.223548+00:00",
+    "selection": "Provisional fixed regional locations; equal treatment, not industrial weights",
+    "status": 200,
+    "bytes": 185539,
+    "content_type": "application/json",
+    "sha256": "3bffed2d6e3f8532c69fd0fdc1025e6647332d7a5e0bdaf0568769bf41dbe495",
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.1",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20140101",
+      "end": "20231231"
+    },
+    "parameters": {
+      "T2M": 3652,
+      "T2M_MAX": 3652,
+      "T2M_MIN": 3652
+    }
+  },
+  {
+    "file": "guwahati_northeast.json",
+    "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=26.14&longitude=91.74&start=20140101&end=20231231&format=JSON&time-standard=UTC",
+    "latitude": 26.14,
+    "longitude": 91.74,
+    "retrieved_utc": "2026-10-22T01:55:25.524659+00:00",
+    "selection": "Provisional fixed regional locations; equal treatment, not industrial weights",
+    "status": 200,
+    "bytes": 185497,
+    "content_type": "application/json",
+    "sha256": "87599ac3527441b51fa598ffe5d66fed2c3b760dc455d03f5e492d7ffa0a49a0",
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "api": {
+        "version": "v2.10.1",
+        "name": "POWER Daily API"
+      },
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "UTC",
+      "start": "20140101",
+      "end": "20231231"
+    },
+    "parameters": {
+      "T2M": 3652,
+      "T2M_MAX": 3652,
+      "T2M_MIN": 3652
+    }
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "target": "Manufacturing IIP YoY, 2011\u201312 base",
+  "evaluation": {
+    "block_months": 3,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 241022,
+    "interval_coverage": 0.95,
+    "hot_season_months": [
+      4,
+      5,
+      6
+    ],
+    "interpretation": "Paired moving-block bootstrap on the common monthly error series, with exploratory uncertainty from only 24 test months."
+  },
+  "bootstrap_rule": "Circular moving blocks; identical resampled month indices for each paired model",
+  "scenarios": [
+    {
+      "name": "primary",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "lag3",
+      "lag_days": 3,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "lag7",
+      "lag_days": 7,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "coverage95",
+      "lag_days": 5,
+      "coverage": 0.95,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "pandemic_excluded",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": true
+    }
+  ],
+  "information_rule": "forecast fifth next month; released labels; refit within training; retain trend",
+  "test_tuning": false
+}

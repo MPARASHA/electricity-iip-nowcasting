@@ -1,0 +1,6 @@
+model,reference,months,mean_MAE_difference_pp,lower_95_pp,upper_95_pp,block_months,bootstrap_repetitions
+raw_ols,iip_benchmark,24,8.99822443019,6.93849173808,11.3595021666,3,2000
+adjusted_ols,iip_benchmark,24,9.43777078301,7.22490909195,11.5107574794,3,2000
+adjusted_ridge,iip_benchmark,24,1.16677229063,-0.876847703232,2.90736066836,3,2000
+adjusted_ols,raw_ols,24,0.439546352819,-1.74041897766,2.55127294194,3,2000
+adjusted_ridge,raw_ols,24,-7.83145213956,-11.5504976597,-5.09790054157,3,2000

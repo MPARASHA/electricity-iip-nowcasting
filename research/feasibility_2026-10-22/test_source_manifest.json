@@ -1,0 +1,13 @@
+[
+  {
+    "file": "original_190101.pdf",
+    "archive_member": "190101.pdf",
+    "source_url": "https://zenodo.org/api/records/7963862/files/POSOCO.zip/content",
+    "range_start": 1033792295,
+    "range_end": 1035261694,
+    "retrieved_utc": "2026-10-22T01:57:52.654783+00:00",
+    "bytes": 1518098,
+    "crc32_valid": true,
+    "sha256": "10657a2a47c86ac9046fb12881ca721a1d83d7cbefa143a742d2bc27c173c72a"
+  }
+]

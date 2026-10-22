@@ -1,0 +1,117 @@
+{
+  "experiment_id": "55026ae4f24b2d185327bedbea1872da69025eefee8f09872b272d8cf1bfe21e",
+  "common_test_months": 24,
+  "selected_ridge_alpha": 100.0,
+  "primary_accuracy": [
+    {
+      "model": "adjusted_ols",
+      "scenario": "primary",
+      "alpha": 0,
+      "months": 24,
+      "MAE_pp": 13.1131487441,
+      "RMSE_pp": 14.7583693431,
+      "benchmark_MAE": 3.67537796109,
+      "benchmark_RMSE": 5.06277730841,
+      "MAE_improvement_pct": -256.7836800167093,
+      "RMSE_improvement_pct": -191.50737715807148
+    },
+    {
+      "model": "adjusted_ridge",
+      "scenario": "primary",
+      "alpha": 100,
+      "months": 24,
+      "MAE_pp": 4.84215025172,
+      "RMSE_pp": 5.4125121672,
+      "benchmark_MAE": 3.67537796109,
+      "benchmark_RMSE": 5.06277730841,
+      "MAE_improvement_pct": -31.745640937673024,
+      "RMSE_improvement_pct": -6.907964492316099
+    },
+    {
+      "model": "iip_benchmark",
+      "scenario": "primary",
+      "alpha": 0,
+      "months": 24,
+      "MAE_pp": 3.67537796109,
+      "RMSE_pp": 5.06277730841,
+      "benchmark_MAE": 3.67537796109,
+      "benchmark_RMSE": 5.06277730841,
+      "MAE_improvement_pct": 0.0,
+      "RMSE_improvement_pct": 0.0
+    },
+    {
+      "model": "raw_ols",
+      "scenario": "primary",
+      "alpha": 0,
+      "months": 24,
+      "MAE_pp": 12.6736023913,
+      "RMSE_pp": 14.5156351269,
+      "benchmark_MAE": 3.67537796109,
+      "benchmark_RMSE": 5.06277730841,
+      "MAE_improvement_pct": -244.82446500662513,
+      "RMSE_improvement_pct": -186.71288983592947
+    }
+  ],
+  "paired_uncertainty": [
+    {
+      "model": "raw_ols",
+      "reference": "iip_benchmark",
+      "months": 24,
+      "mean_MAE_difference_pp": 8.998224430186417,
+      "lower_95_pp": 6.938491738079123,
+      "upper_95_pp": 11.359502166610328,
+      "block_months": 3,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "adjusted_ols",
+      "reference": "iip_benchmark",
+      "months": 24,
+      "mean_MAE_difference_pp": 9.437770783005499,
+      "lower_95_pp": 7.224909091951387,
+      "upper_95_pp": 11.51075747938897,
+      "block_months": 3,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "adjusted_ridge",
+      "reference": "iip_benchmark",
+      "months": 24,
+      "mean_MAE_difference_pp": 1.1667722906281246,
+      "lower_95_pp": -0.8768477032324747,
+      "upper_95_pp": 2.907360668356598,
+      "block_months": 3,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "adjusted_ols",
+      "reference": "raw_ols",
+      "months": 24,
+      "mean_MAE_difference_pp": 0.4395463528190833,
+      "lower_95_pp": -1.7404189776570467,
+      "upper_95_pp": 2.551272941939301,
+      "block_months": 3,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "model": "adjusted_ridge",
+      "reference": "raw_ols",
+      "months": 24,
+      "mean_MAE_difference_pp": -7.831452139558292,
+      "lower_95_pp": -11.550497659732704,
+      "upper_95_pp": -5.097900541566602,
+      "block_months": 3,
+      "bootstrap_repetitions": 2000
+    }
+  ],
+  "limitations": [
+    "Revised IIP and reanalysis weather imply pseudo-real-time, not release vintages.",
+    "Legacy training release dates are marked nominal; dates are verified for all validation and test origins.",
+    "Website migration timestamps are not historical publication times.",
+    "Raw CSV redistribution terms remain unverified.",
+    "Use NASA POWER UTC daily means under the same calendar-date label as grid energy. UTC midnight differs from IST midnight by 5.5 hours; daily aggregates cannot be shifted exactly. Treat five points as a climate proxy, not a population-weighted national temperature.",
+    "Only 24 final-test months; block intervals are exploratory.",
+    "Grid supply includes residential, agricultural and service loads and is affected by supply constraints.",
+    "The festival calendar is a small proxy and omits many regional holidays."
+  ]
+}

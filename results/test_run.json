@@ -1,0 +1,53 @@
+{
+  "stage": "test",
+  "fingerprint": {
+    "config_sha256": "e48f4a4b901b1d471b190cf9330daab4ef875a2801df3212aebcfb81fcd9b71b",
+    "backtest_script_sha256": "ec9fd5d0736672f826815b41963ebb4eaa4c0ba78ef372a3e8b2b4e1f25b6b1e",
+    "data_versions_sha256": "f8e0ebf587c84a4b5ba892231693b753d3ad90b857c55ac2eed09e8a039c98e1"
+  },
+  "experiment_id": "55026ae4f24b2d185327bedbea1872da69025eefee8f09872b272d8cf1bfe21e",
+  "evaluation_months": 24,
+  "scenarios": [
+    {
+      "name": "primary",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "lag3",
+      "lag_days": 3,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "lag7",
+      "lag_days": 7,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "coverage95",
+      "lag_days": 5,
+      "coverage": 0.95,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "pandemic_excluded",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": true
+    }
+  ],
+  "prediction_rows": 480,
+  "value_vintage": "revised_IIP_pseudo_real_time",
+  "outputs": {
+    "adjusted_daily_snapshot.csv": "33320f5414215db327a62e6ec1ea706ac602ee215838acb3e4c3991e3289e964",
+    "adjustment_coefficients.csv": "fb3a8147da5aa2ce179b4db2aa21c8354e73a428cf03d601f2809224bc43071b",
+    "coefficients.csv": "0be0745bac549979b364f4a1935539d4a1418f55ccb4ce6c7980770940c874ad",
+    "feature_eligibility.csv": "4c5b27a10096dafaaaa59d92a62b7689eaefaf6ce36790e621247e31a83c9faf",
+    "information_sets.csv": "dcbdde50c7632ba2094d3726af85d6cdcc067acfac96293f645ee2c914e92436",
+    "metrics.csv": "84b9cd059d6a699713a41bb8cb12be804eb9e221e3a118a7a640d255f197acfc",
+    "predictions.csv": "b0364d6793e6d7788834c2764e425456e2cf10937d751883d01df3e3840467f6"
+  }
+}

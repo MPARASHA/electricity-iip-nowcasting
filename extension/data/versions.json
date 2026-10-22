@@ -1,0 +1,23 @@
+{
+  "config_sha256": "97de5d84266a77f0a67cbaad7205e53f291512712c22f03b90a70f84473efae4",
+  "preparation_sha256": "26620a984227bd1f5456145942205f94a1e87dd02ca631595cfcb60bbdcc1f54",
+  "original_inputs": {
+    "research/feasibility_2026-10-22/andrew_POSOCO_data.csv": "6f94699d02dc73f8324de23cdcfc52a96829fc8819d2c29f1c967489f66d2f53",
+    "research/feasibility_2026-10-22/andrew_POSOCO_metadata.json": "369f9c43b2382fdf2301cb3786240a9d4996db313cc5dbc99338d42b19b913f9",
+    "research/feasibility_2026-10-22/iip_verified_download_manifest.json": "740f1b2b2e04aecbc805ee5cb3ea19233ad439f941ada353b713a3428334883f",
+    "research/feasibility_2026-10-22/delhi_north.json": "8d3ca6571756384eb7a093c2882fcf84a118e6a11df20af2b0542cdca57c727f",
+    "research/feasibility_2026-10-22/mumbai_west.json": "4a6d75d90a3d169e1712ae7f3554332bf31917ed8e8b0a72c2442b71207edfde",
+    "research/feasibility_2026-10-22/chennai_south.json": "0fc4a838027ce2a75da8a4296e0db666ac566408f7f3578e7e32c271e7b0445f",
+    "research/feasibility_2026-10-22/kolkata_east.json": "3bffed2d6e3f8532c69fd0fdc1025e6647332d7a5e0bdaf0568769bf41dbe495",
+    "research/feasibility_2026-10-22/guwahati_northeast.json": "87599ac3527441b51fa598ffe5d66fed2c3b760dc455d03f5e492d7ffa0a49a0"
+  },
+  "raw_manifest_sha256": "dbc0d523d6fa8a5ffcc2922ac9893a13511628bfec420c9caf2b96b259aef0c3",
+  "outputs": {
+    "calendar_events.csv": "f9f48c5656b2dc5139cdfe1564d0442f896201535785e8039e7085f32bbe1faa",
+    "daily.csv": "f995544c1f83bfbb4528753c9edb05979ba9cf5bf630645742f5e5ae6f96f450",
+    "iip.csv": "11c238d0cd64d5d53fe611d42f0780b3dc0b555afb529476514878a2513cf5a6",
+    "release_calendar.csv": "286f2c9ddade376b88bd5e17bd70ecb35e93bc4e70224d7aef1cdd556df6f832",
+    "report_audit.csv": "a93f3ce4eb77ae86b0a2afc65c6587d6f265a154975069dea0f6479bc7f32813"
+  },
+  "created_utc": "2026-10-22T17:13:53.068009+00:00"
+}

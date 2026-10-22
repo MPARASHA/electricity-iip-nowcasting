@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "metric_cells_checked": 32,
+  "holdout_forecasts": 768,
+  "max_metric_difference_pp": 4.583355917020526e-11,
+  "coefficient_reconstructions": 2868,
+  "max_coefficient_reconstruction_difference_pp": 5.696279004041571e-10,
+  "byte_identical_reproduction_files": [
+    "test_coefficients.csv",
+    "test_daily_coefficients.csv",
+    "test_features.csv",
+    "test_ledger.csv",
+    "test_predictions.csv",
+    "test_scores.csv"
+  ],
+  "independent_block_draws_identical": true,
+  "paired_intervals_checked": 32,
+  "max_interval_difference_pp": 4.4650505515164696e-11,
+  "first_origin_independent_check": {
+    "independently_reconstructed_forecasts": 32,
+    "maximum_absolute_difference_pp": 4.835953859583242e-11
+  },
+  "unchanged_original_files": 182,
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.11.2",
+    "xlrd": "2.0.2",
+    "pypdf": "6.10.0"
+  }
+}

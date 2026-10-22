@@ -1,0 +1,17 @@
+{
+  "reviewed_utc": "2026-10-22T09:10:30.222249+00:00",
+  "test_errors_seen": false,
+  "checks": [
+    "22 source/timing/transformation/freeze regression checks passed",
+    "36 common validation months, no missing or duplicate model forecasts",
+    "Daily adjustment has rank 16 in every fold; no current unlabelled months used for fitting",
+    "Monthly training counts 44\u201379; all labels released by their forecast origins",
+    "Development weekday, festival, adjustment and validation-error plots visually reviewed",
+    "Future daily and unreleased-label perturbations leave historical predictions unchanged"
+  ],
+  "selected_ridge_alpha": 100.0,
+  "selection_reason": "Penalty 100 minimizes the prespecified validation MAE. Penalty 10 has lower RMSE; no criterion switch.",
+  "findings": "Pandemic contraction and 2021 base effects dominate validation errors. Delayed target lags can produce large later overshoots. Daily adjustment removes the weekday profile while retaining trend and disruption.",
+  "decisions": "Retain all four planned models, the primary specification, and every prespecified sensitivity. Do not add models or tune on test.",
+  "protocol": "report.ipynb methods section and results/methods_protocol.json; circular moving-block paired MAE intervals, three months, 2000 draws, fixed seed."
+}

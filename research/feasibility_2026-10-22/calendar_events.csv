@@ -1,0 +1,41 @@
+date,event,source_file,source_url,source_sha256,review_status
+2014-01-26,Republic Day,calendar_sources/holidays_2014.pdf,https://www.highcourtchd.gov.in/sub_pages/top_menu/about/calendar/pbutcalender2014.pdf,231d5d646e4ab4aa057029abe7652390fae9037fb9d542193c561ad3cce8656e,checked_primary_calendar
+2014-08-15,Independence Day,calendar_sources/holidays_2014.pdf,https://www.highcourtchd.gov.in/sub_pages/top_menu/about/calendar/pbutcalender2014.pdf,231d5d646e4ab4aa057029abe7652390fae9037fb9d542193c561ad3cce8656e,checked_primary_calendar
+2014-10-02,Gandhi Jayanti,calendar_sources/holidays_2014.pdf,https://www.highcourtchd.gov.in/sub_pages/top_menu/about/calendar/pbutcalender2014.pdf,231d5d646e4ab4aa057029abe7652390fae9037fb9d542193c561ad3cce8656e,checked_primary_calendar
+2014-10-23,Diwali,calendar_sources/holidays_2014.pdf,https://www.highcourtchd.gov.in/sub_pages/top_menu/about/calendar/pbutcalender2014.pdf,231d5d646e4ab4aa057029abe7652390fae9037fb9d542193c561ad3cce8656e,checked_primary_calendar
+2015-01-26,Republic Day,calendar_sources/holidays_2015.pdf,https://surveyofindia.gov.in/files/RONo.10.pdf,b0a7af637de4babcd0a874b3ec4903c565ee13461dcf0c4bf5f25c499eea4cb3,checked_primary_calendar
+2015-08-15,Independence Day,calendar_sources/holidays_2015.pdf,https://surveyofindia.gov.in/files/RONo.10.pdf,b0a7af637de4babcd0a874b3ec4903c565ee13461dcf0c4bf5f25c499eea4cb3,checked_primary_calendar
+2015-10-02,Gandhi Jayanti,calendar_sources/holidays_2015.pdf,https://surveyofindia.gov.in/files/RONo.10.pdf,b0a7af637de4babcd0a874b3ec4903c565ee13461dcf0c4bf5f25c499eea4cb3,checked_primary_calendar
+2015-11-11,Diwali,calendar_sources/holidays_2015.pdf,https://surveyofindia.gov.in/files/RONo.10.pdf,b0a7af637de4babcd0a874b3ec4903c565ee13461dcf0c4bf5f25c499eea4cb3,checked_primary_calendar
+2016-01-26,Republic Day,calendar_sources/holidays_2016.pdf,https://surveyofindia.gov.in/files/HOLIDAY_1.pdf,94f2ddf0a3709ba00c77eab809b5440bfd10d3a4ebc9557331172a0d1fd0a275,checked_primary_calendar
+2016-08-15,Independence Day,calendar_sources/holidays_2016.pdf,https://surveyofindia.gov.in/files/HOLIDAY_1.pdf,94f2ddf0a3709ba00c77eab809b5440bfd10d3a4ebc9557331172a0d1fd0a275,checked_primary_calendar
+2016-10-02,Gandhi Jayanti,calendar_sources/holidays_2016.pdf,https://surveyofindia.gov.in/files/HOLIDAY_1.pdf,94f2ddf0a3709ba00c77eab809b5440bfd10d3a4ebc9557331172a0d1fd0a275,checked_primary_calendar
+2016-10-30,Diwali,calendar_sources/holidays_2016.pdf,https://surveyofindia.gov.in/files/HOLIDAY_1.pdf,94f2ddf0a3709ba00c77eab809b5440bfd10d3a4ebc9557331172a0d1fd0a275,checked_primary_calendar
+2017-01-26,Republic Day,calendar_sources/holidays_2017.pdf,https://delhi.gov.in/sites/default/files/documents/Government-2017_0.pdf,571051762a0791ea973da66328aec02cdf44d5a7a5099df682f29d6d8debbae2,checked_primary_calendar
+2017-08-15,Independence Day,calendar_sources/holidays_2017.pdf,https://delhi.gov.in/sites/default/files/documents/Government-2017_0.pdf,571051762a0791ea973da66328aec02cdf44d5a7a5099df682f29d6d8debbae2,checked_primary_calendar
+2017-10-02,Gandhi Jayanti,calendar_sources/holidays_2017.pdf,https://delhi.gov.in/sites/default/files/documents/Government-2017_0.pdf,571051762a0791ea973da66328aec02cdf44d5a7a5099df682f29d6d8debbae2,checked_primary_calendar
+2017-10-19,Diwali,calendar_sources/holidays_2017.pdf,https://delhi.gov.in/sites/default/files/documents/Government-2017_0.pdf,571051762a0791ea973da66328aec02cdf44d5a7a5099df682f29d6d8debbae2,checked_primary_calendar
+2018-01-26,Republic Day,calendar_sources/holidays_2018.pdf,https://surveyofindia.gov.in/files/Holiday%20List%202018.pdf,903626953d7243198ef668532ca7c57affe3e46a7b46d0572baf938f744af143,checked_primary_calendar
+2018-08-15,Independence Day,calendar_sources/holidays_2018.pdf,https://surveyofindia.gov.in/files/Holiday%20List%202018.pdf,903626953d7243198ef668532ca7c57affe3e46a7b46d0572baf938f744af143,checked_primary_calendar
+2018-10-02,Gandhi Jayanti,calendar_sources/holidays_2018.pdf,https://surveyofindia.gov.in/files/Holiday%20List%202018.pdf,903626953d7243198ef668532ca7c57affe3e46a7b46d0572baf938f744af143,checked_primary_calendar
+2018-11-07,Diwali,calendar_sources/holidays_2018.pdf,https://surveyofindia.gov.in/files/Holiday%20List%202018.pdf,903626953d7243198ef668532ca7c57affe3e46a7b46d0572baf938f744af143,checked_primary_calendar
+2019-01-26,Republic Day,calendar_sources/holidays_2019.pdf,https://surveyofindia.gov.in/files/Holidays%202019.pdf,03337c665cec6ab81a20ef85df22ab3f0b2769e38cfaaed27761461e158dfd8b,checked_primary_calendar
+2019-08-15,Independence Day,calendar_sources/holidays_2019.pdf,https://surveyofindia.gov.in/files/Holidays%202019.pdf,03337c665cec6ab81a20ef85df22ab3f0b2769e38cfaaed27761461e158dfd8b,checked_primary_calendar
+2019-10-02,Gandhi Jayanti,calendar_sources/holidays_2019.pdf,https://surveyofindia.gov.in/files/Holidays%202019.pdf,03337c665cec6ab81a20ef85df22ab3f0b2769e38cfaaed27761461e158dfd8b,checked_primary_calendar
+2019-10-27,Diwali,calendar_sources/holidays_2019.pdf,https://surveyofindia.gov.in/files/Holidays%202019.pdf,03337c665cec6ab81a20ef85df22ab3f0b2769e38cfaaed27761461e158dfd8b,checked_primary_calendar
+2020-01-26,Republic Day,calendar_sources/holidays_2020.html,https://www.lpsc.gov.in/holidaysBangalore2020.html,db11970c74500acb00f711a716fd89a6b8852f26895bc0f11a77cfe50e6ff3cf,checked_primary_calendar
+2020-08-15,Independence Day,calendar_sources/holidays_2020.html,https://www.lpsc.gov.in/holidaysBangalore2020.html,db11970c74500acb00f711a716fd89a6b8852f26895bc0f11a77cfe50e6ff3cf,checked_primary_calendar
+2020-10-02,Gandhi Jayanti,calendar_sources/holidays_2020.html,https://www.lpsc.gov.in/holidaysBangalore2020.html,db11970c74500acb00f711a716fd89a6b8852f26895bc0f11a77cfe50e6ff3cf,checked_primary_calendar
+2020-11-14,Diwali,calendar_sources/holidays_2020.html,https://www.lpsc.gov.in/holidaysBangalore2020.html,db11970c74500acb00f711a716fd89a6b8852f26895bc0f11a77cfe50e6ff3cf,checked_primary_calendar
+2021-01-26,Republic Day,calendar_sources/holidays_2021.html,https://www.lpsc.gov.in/holidaysBangalore2021.html,fed617a07d1b4b821b71b8b7f84b71fe069b03ef9d97f07dc29974d454fcc152,checked_primary_calendar
+2021-08-15,Independence Day,calendar_sources/holidays_2021.html,https://www.lpsc.gov.in/holidaysBangalore2021.html,fed617a07d1b4b821b71b8b7f84b71fe069b03ef9d97f07dc29974d454fcc152,checked_primary_calendar
+2021-10-02,Gandhi Jayanti,calendar_sources/holidays_2021.html,https://www.lpsc.gov.in/holidaysBangalore2021.html,fed617a07d1b4b821b71b8b7f84b71fe069b03ef9d97f07dc29974d454fcc152,checked_primary_calendar
+2021-11-04,Diwali,calendar_sources/holidays_2021.html,https://www.lpsc.gov.in/holidaysBangalore2021.html,fed617a07d1b4b821b71b8b7f84b71fe069b03ef9d97f07dc29974d454fcc152,checked_primary_calendar
+2022-01-26,Republic Day,calendar_sources/holidays_2022.html,https://www.lpsc.gov.in/holidaysBangalore2022.html,1febc3fbec26c8f131f5728933a0194ef691c0ab700b1cea9637d65220790406,checked_primary_calendar
+2022-08-15,Independence Day,calendar_sources/holidays_2022.html,https://www.lpsc.gov.in/holidaysBangalore2022.html,1febc3fbec26c8f131f5728933a0194ef691c0ab700b1cea9637d65220790406,checked_primary_calendar
+2022-10-02,Gandhi Jayanti,calendar_sources/holidays_2022.html,https://www.lpsc.gov.in/holidaysBangalore2022.html,1febc3fbec26c8f131f5728933a0194ef691c0ab700b1cea9637d65220790406,checked_primary_calendar
+2022-10-24,Diwali,calendar_sources/holidays_2022.html,https://www.lpsc.gov.in/holidaysBangalore2022.html,1febc3fbec26c8f131f5728933a0194ef691c0ab700b1cea9637d65220790406,checked_primary_calendar
+2023-01-26,Republic Day,calendar_sources/holidays_2023.html,https://www.lpsc.gov.in/holidaysBangalore2023.html,6c74e4344e58f7d2e0a457ddfb09704eed762fed7760a618bdf53de0dec2f467,checked_primary_calendar
+2023-08-15,Independence Day,calendar_sources/holidays_2023.html,https://www.lpsc.gov.in/holidaysBangalore2023.html,6c74e4344e58f7d2e0a457ddfb09704eed762fed7760a618bdf53de0dec2f467,checked_primary_calendar
+2023-10-02,Gandhi Jayanti,calendar_sources/holidays_2023.html,https://www.lpsc.gov.in/holidaysBangalore2023.html,6c74e4344e58f7d2e0a457ddfb09704eed762fed7760a618bdf53de0dec2f467,checked_primary_calendar
+2023-11-12,Diwali,calendar_sources/holidays_2023.html,https://www.lpsc.gov.in/holidaysBangalore2023.html,6c74e4344e58f7d2e0a457ddfb09704eed762fed7760a618bdf53de0dec2f467,checked_primary_calendar

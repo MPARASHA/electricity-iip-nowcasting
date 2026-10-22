@@ -1,0 +1,188 @@
+{
+  "frozen_utc": "2026-10-22T09:10:30.435535+00:00",
+  "fingerprint": {
+    "config_sha256": "e48f4a4b901b1d471b190cf9330daab4ef875a2801df3212aebcfb81fcd9b71b",
+    "backtest_script_sha256": "ec9fd5d0736672f826815b41963ebb4eaa4c0ba78ef372a3e8b2b4e1f25b6b1e",
+    "data_versions_sha256": "f8e0ebf587c84a4b5ba892231693b753d3ad90b857c55ac2eed09e8a039c98e1"
+  },
+  "validation_run_sha256": "e0bea61f974722a3dba1db8f89d76c20d09769d45c5743c47c508fc7225c0d28",
+  "selected_ridge_alpha": 100.0,
+  "selection_metric": "validation MAE_pp",
+  "test_errors_seen_at_freeze": false,
+  "review_note": "Validated 36 common months and 22 regression checks; visually reviewed development adjustment and validation errors. Select ridge alpha 100 by prespecified MAE despite alpha 10 having lower RMSE. Pandemic/base effects dominate. Retain the four models and all prespecified sensitivities. Circular moving-block paired MAE intervals use 3 months, 2000 draws and seed 241022. No final test errors seen.",
+  "specification": {
+    "splits": {
+      "training": [
+        "2015-01",
+        "2018-12"
+      ],
+      "validation": [
+        "2019-01",
+        "2021-12"
+      ],
+      "test": [
+        "2022-01",
+        "2023-12"
+      ]
+    },
+    "forecast_day": 5,
+    "adjustment": {
+      "response": "log_energy_MU",
+      "trend": "linear_years_from_history_start_retained",
+      "annual_harmonics": 2,
+      "weekday_reference": "Monday",
+      "fixed_holidays": [
+        "01-26",
+        "08-15",
+        "10-02"
+      ],
+      "diwali_window_days_each_side": 1,
+      "heating_base_C": 18,
+      "cooling_base_C": 24,
+      "temperature_rule": "Compute positive-part HDD18 and CDD24 at each point, then take fixed weighted means.",
+      "fit_end_rule": "Last released in-scope training label month end; exclude current unlabeled months.",
+      "remove": "Annual Fourier, weekdays, fixed holidays, Diwali window and temperature. Keep intercept, trend and residual."
+    },
+    "models": {
+      "benchmark_features": [
+        "iip_lag2_yoy_pct",
+        "iip_lag3_yoy_pct",
+        "month_sin",
+        "month_cos",
+        "diwali_share"
+      ],
+      "electricity_features": [
+        "energy_yoy_pct",
+        "weekly_momentum_pct"
+      ],
+      "weekly_days": 7,
+      "minimum_training_months": 30,
+      "ridge_alphas": [
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "ridge_selection": "Expanding validation MAE, ties use smaller alpha; no test tuning.",
+      "scaling": "Population mean/std from the current monthly training fold only. Intercept unpenalized."
+    },
+    "weather_time_rule": "Use NASA POWER UTC daily means under the same calendar-date label as grid energy. UTC midnight differs from IST midnight by 5.5 hours; daily aggregates cannot be shifted exactly. Treat five points as a climate proxy, not a population-weighted national temperature.",
+    "scenarios": [
+      {
+        "name": "primary",
+        "lag_days": 5,
+        "coverage": 0.9,
+        "exclude_pandemic_training": false
+      },
+      {
+        "name": "lag3",
+        "lag_days": 3,
+        "coverage": 0.9,
+        "exclude_pandemic_training": false
+      },
+      {
+        "name": "lag7",
+        "lag_days": 7,
+        "coverage": 0.9,
+        "exclude_pandemic_training": false
+      },
+      {
+        "name": "coverage95",
+        "lag_days": 5,
+        "coverage": 0.95,
+        "exclude_pandemic_training": false
+      },
+      {
+        "name": "pandemic_excluded",
+        "lag_days": 5,
+        "coverage": 0.9,
+        "exclude_pandemic_training": true
+      }
+    ],
+    "evaluation": {
+      "block_months": 3,
+      "bootstrap_repetitions": 2000,
+      "bootstrap_seed": 241022,
+      "interval_coverage": 0.95,
+      "hot_season_months": [
+        4,
+        5,
+        6
+      ],
+      "interpretation": "Paired moving-block bootstrap on the common monthly error series, with exploratory uncertainty from only 24 test months."
+    },
+    "pandemic_training_exclusion": [
+      "2020-03",
+      "2021-06"
+    ]
+  },
+  "validation_metrics": [
+    {
+      "scenario": "primary",
+      "model": "adjusted_ols",
+      "alpha": 0.0,
+      "months": 36,
+      "MAE_pp": 13.05346215536325,
+      "RMSE_pp": 29.91336220689979
+    },
+    {
+      "scenario": "primary",
+      "model": "adjusted_ridge",
+      "alpha": 0.1,
+      "months": 36,
+      "MAE_pp": 13.038994419105862,
+      "RMSE_pp": 29.903321113830312
+    },
+    {
+      "scenario": "primary",
+      "model": "adjusted_ridge",
+      "alpha": 1.0,
+      "months": 36,
+      "MAE_pp": 12.93335868146439,
+      "RMSE_pp": 29.825824918979325
+    },
+    {
+      "scenario": "primary",
+      "model": "adjusted_ridge",
+      "alpha": 10.0,
+      "months": 36,
+      "MAE_pp": 12.348955635460609,
+      "RMSE_pp": 29.77021048922176
+    },
+    {
+      "scenario": "primary",
+      "model": "adjusted_ridge",
+      "alpha": 100.0,
+      "months": 36,
+      "MAE_pp": 12.041794296592222,
+      "RMSE_pp": 32.88227132445702
+    },
+    {
+      "scenario": "primary",
+      "model": "iip_benchmark",
+      "alpha": 0.0,
+      "months": 36,
+      "MAE_pp": 15.712481200712583,
+      "RMSE_pp": 38.487664890099786
+    },
+    {
+      "scenario": "primary",
+      "model": "raw_ols",
+      "alpha": 0.0,
+      "months": 36,
+      "MAE_pp": 14.31206506383297,
+      "RMSE_pp": 31.608872682153144
+    }
+  ],
+  "publication_revision": {
+    "updated_utc": "2026-10-22T17:08:50.691960+00:00",
+    "source_freeze_sha256": "56ff513e952f98fe1580ebb5b03db238aa08f17ba28447ab641c76d601942ef1",
+    "source_fingerprint": {
+      "config_sha256": "ae76622c0d90839223702b773683879087d4b276acace0cbdca56cce30a01bc8",
+      "backtest_script_sha256": "e68e937dfe1bf77e25e4c6f957a9089c9d8f2b62581bdd4366b87302cc387570",
+      "data_versions_sha256": "c12eb05a55e6a8e36b8c4973b9a332a6b0923aece0459c4b74858cf8c36e3d98"
+    },
+    "description": "Repository packaging after evaluation updates file fingerprints and removes administrative approval metadata. Scientific settings, validation values, selected penalty and numerical forecasts are unchanged. The experimental freeze date above is historical, not a new freeze.",
+    "unchanged_validation_prediction_sha256": "1d4b9288ba811e6bf7fc9d5442285c6360987955f3e6998964c23556aabf7278"
+  }
+}

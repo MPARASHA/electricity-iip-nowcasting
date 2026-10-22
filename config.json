@@ -1,0 +1,236 @@
+{
+  "project": "National manufacturing IIP nowcast from daily electricity",
+  "raw_dir": "research/feasibility_2026-10-22",
+  "output_dir": "data/processed",
+  "history_start": "2014-01-01",
+  "history_end": "2023-12-31",
+  "target_start": "2015-01",
+  "splits": {
+    "training": [
+      "2015-01",
+      "2018-12"
+    ],
+    "validation": [
+      "2019-01",
+      "2021-12"
+    ],
+    "test": [
+      "2022-01",
+      "2023-12"
+    ]
+  },
+  "forecast_day": 5,
+  "primary_daily_lag": 5,
+  "daily_lags": [
+    3,
+    5,
+    7
+  ],
+  "primary_coverage_threshold": 0.9,
+  "coverage_thresholds": [
+    0.9,
+    0.95
+  ],
+  "minimum_test_months": 20,
+  "required_audit_reports": 30,
+  "energy": {
+    "file": "andrew_POSOCO_data.csv",
+    "metadata_file": "andrew_POSOCO_metadata.json",
+    "column": "India: EnergyMet",
+    "units": "MU = GWh",
+    "core": "energy only"
+  },
+  "iip": {
+    "manifest_file": "iip_verified_download_manifest.json",
+    "base_year": "2011-12",
+    "category": "Manufacturing"
+  },
+  "weather_locations": [
+    {
+      "id": "delhi_north",
+      "file": "delhi_north.json",
+      "latitude": 28.61,
+      "longitude": 77.21,
+      "weight": 0.2
+    },
+    {
+      "id": "mumbai_west",
+      "file": "mumbai_west.json",
+      "latitude": 19.08,
+      "longitude": 72.88,
+      "weight": 0.2
+    },
+    {
+      "id": "chennai_south",
+      "file": "chennai_south.json",
+      "latitude": 13.08,
+      "longitude": 80.27,
+      "weight": 0.2
+    },
+    {
+      "id": "kolkata_east",
+      "file": "kolkata_east.json",
+      "latitude": 22.57,
+      "longitude": 88.36,
+      "weight": 0.2
+    },
+    {
+      "id": "guwahati_northeast",
+      "file": "guwahati_northeast.json",
+      "latitude": 26.14,
+      "longitude": 91.74,
+      "weight": 0.2
+    }
+  ],
+  "weather_time_rule": "Use NASA POWER UTC daily means under the same calendar-date label as grid energy. UTC midnight differs from IST midnight by 5.5 hours; daily aggregates cannot be shifted exactly. Treat five points as a climate proxy, not a population-weighted national temperature.",
+  "release_calendar": {
+    "file": "iip_first_release_calendar_verified.csv",
+    "sha256": "be0c3fac5ece67ec1c4d074fb31ab4a9c291ff004a385751f7ba3948a5865333"
+  },
+  "report_sample": {
+    "file": "report_sample.csv",
+    "sha256": "7bf8567be3f639d3a32f412f63dab51228b59aae4f9e0b86cbece7da65c2b08e"
+  },
+  "download_manifests": [
+    {
+      "file": "additional_source_manifest.json",
+      "sha256": "f51d09f19aacb2451addc01e102e474d08d1af30c1201f83de4be3ffc0211960"
+    },
+    {
+      "file": "iip_verified_download_manifest.json",
+      "sha256": "740f1b2b2e04aecbc805ee5cb3ea19233ad439f941ada353b713a3428334883f"
+    },
+    {
+      "file": "weather_manifest.json",
+      "sha256": "2ca4ae41ea40ad58c2aecbd9bb736f2dcb08f832ae02f1a6b79b226c58560b80"
+    },
+    {
+      "file": "report_sample_manifest.json",
+      "sha256": "7cdef0ecc0339fb3e6506745809c58a982000459b71bd67f5f9e465e971fde18"
+    },
+    {
+      "file": "calendar_download_manifest.json",
+      "sha256": "36fe211095fbfb0215c2070bf766e3355510dfb9f4d761de02cb418de8934c9c"
+    }
+  ],
+  "energy_exclusions": [
+    {
+      "date": "2014-01-01",
+      "reason": "unresolved_printed_reporting_year",
+      "evidence": "Official 2014 listing and grid-synchronisation footnote disagree with the printed 2013 reporting year; retain raw value but exclude."
+    },
+    {
+      "date": "2014-01-02",
+      "reason": "unresolved_printed_reporting_year",
+      "evidence": "Official 2014 listing disagrees with the printed 2013 reporting year; retain raw value but exclude."
+    },
+    {
+      "date": "2017-02-15",
+      "reason": "conflicting_original_report_energy",
+      "evidence": "Current official report: 3050 MU. Archived original and Andrew candidate: 3200 MU. Both reports cover the same date; retain both and exclude the day."
+    }
+  ],
+  "evaluation_gate": {
+    "full_calendar_and_alignment": "complete",
+    "test_specification_freeze": "enforced_by_results/experiment_freeze.json"
+  },
+  "limitations": [
+    "Revised IIP and reanalysis weather imply pseudo-real-time, not release vintages.",
+    "Legacy training release dates are marked nominal; dates are verified for all validation and test origins.",
+    "Website migration timestamps are not historical publication times.",
+    "Raw CSV redistribution terms remain unverified."
+  ],
+  "adjustment": {
+    "response": "log_energy_MU",
+    "trend": "linear_years_from_history_start_retained",
+    "annual_harmonics": 2,
+    "weekday_reference": "Monday",
+    "fixed_holidays": [
+      "01-26",
+      "08-15",
+      "10-02"
+    ],
+    "diwali_window_days_each_side": 1,
+    "heating_base_C": 18,
+    "cooling_base_C": 24,
+    "temperature_rule": "Compute positive-part HDD18 and CDD24 at each point, then take fixed weighted means.",
+    "fit_end_rule": "Last released in-scope training label month end; exclude current unlabeled months.",
+    "remove": "Annual Fourier, weekdays, fixed holidays, Diwali window and temperature. Keep intercept, trend and residual."
+  },
+  "models": {
+    "benchmark_features": [
+      "iip_lag2_yoy_pct",
+      "iip_lag3_yoy_pct",
+      "month_sin",
+      "month_cos",
+      "diwali_share"
+    ],
+    "electricity_features": [
+      "energy_yoy_pct",
+      "weekly_momentum_pct"
+    ],
+    "weekly_days": 7,
+    "minimum_training_months": 30,
+    "ridge_alphas": [
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "ridge_selection": "Expanding validation MAE, ties use smaller alpha; no test tuning.",
+    "scaling": "Population mean/std from the current monthly training fold only. Intercept unpenalized."
+  },
+  "scenarios": [
+    {
+      "name": "primary",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "lag3",
+      "lag_days": 3,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "lag7",
+      "lag_days": 7,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "coverage95",
+      "lag_days": 5,
+      "coverage": 0.95,
+      "exclude_pandemic_training": false
+    },
+    {
+      "name": "pandemic_excluded",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": true
+    }
+  ],
+  "pandemic_training_exclusion": [
+    "2020-03",
+    "2021-06"
+  ],
+  "evaluation": {
+    "block_months": 3,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 241022,
+    "interval_coverage": 0.95,
+    "hot_season_months": [
+      4,
+      5,
+      6
+    ],
+    "interpretation": "Paired moving-block bootstrap on the common monthly error series, with exploratory uncertainty from only 24 test months."
+  },
+  "results_dir": "results",
+  "calendar": {
+    "file": "calendar_events.csv",
+    "sha256": "42180131194ce06397cb176df6d1c39a61a33245e3919ec0878a5b8f6ccf0b1f"
+  }
+}

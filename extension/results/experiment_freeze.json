@@ -1,0 +1,459 @@
+{
+  "created_utc": "2026-10-22T14:47:15.034058+00:00",
+  "fingerprints": {
+    "extension/config.json": "97de5d84266a77f0a67cbaad7205e53f291512712c22f03b90a70f84473efae4",
+    "extension/prepare_data.py": "26620a984227bd1f5456145942205f94a1e87dd02ca631595cfcb60bbdcc1f54",
+    "extension/backtest.py": "9bda53bbcb29c78f653eadaca8b11f0e2c51b51f469af96e64c43bbea1b6fec5",
+    "extension/report.py": "35643459b1f038185c11f45590f40549b53d340a3ebf0709c8e69c1f5b997528",
+    "extension/test_extension.py": "1ad45288bfe428ec8c4988f9ee492cd97b2b61e96f1f554f965bdb32228e9d72",
+    "extension/data/calendar_events.csv": "f9f48c5656b2dc5139cdfe1564d0442f896201535785e8039e7085f32bbe1faa",
+    "extension/data/daily.csv": "f995544c1f83bfbb4528753c9edb05979ba9cf5bf630645742f5e5ae6f96f450",
+    "extension/data/iip.csv": "11c238d0cd64d5d53fe611d42f0780b3dc0b555afb529476514878a2513cf5a6",
+    "extension/data/release_calendar.csv": "286f2c9ddade376b88bd5e17bd70ecb35e93bc4e70224d7aef1cdd556df6f832",
+    "extension/data/report_audit.csv": "a93f3ce4eb77ae86b0a2afc65c6587d6f265a154975069dea0f6479bc7f32813",
+    "extension/data/source_audit.json": "0f872c65428ff72f6e29d0c0f61b9223d92bb0856b7101b52d2afe5ffaf98989",
+    "extension/data/source_review.json": "e4ea01b6bc142713f1ff62b66d7cec9ce0bde80234c39ea2190510be988e9745",
+    "extension/data/versions.json": "c2e46a77423da7a226996ce77fce687403f1e7dd837c24ec4e30cebc52b6dc16",
+    "extension/results/selected_alphas.json": "53e8085df54d03b6fed2112dd4238459034d97dd48be72677a1c922193ef19b0",
+    "extension/results/validation_sample.json": "17e2ff262f15fed9166d87a7e0bcd19a2380f32b94db195ebe582f39d66b144b",
+    "extension/results/validation_predictions.csv": "710c4279394352f23007a87193126d4cbe18dde1a6b35685dea41194f8ce7cac",
+    "extension/results/exposure_ledger.csv": "c8ecd13470cefd3b240d0be8798aaabc9ab45c552456e806668f0381e8751124"
+  },
+  "test_months": [
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "validation_sample": [
+    {
+      "case": "full",
+      "origins": 59,
+      "months": [
+        "2019-01",
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-05",
+        "2019-06",
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12",
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07",
+        "2023-08",
+        "2023-09",
+        "2023-10",
+        "2023-11"
+      ],
+      "recent_post_exposure_origins": 2
+    },
+    {
+      "case": "strict_covid",
+      "origins": 16,
+      "months": [
+        "2019-01",
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-05",
+        "2019-06",
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12",
+        "2020-01",
+        "2020-02",
+        "2023-10",
+        "2023-11"
+      ],
+      "recent_post_exposure_origins": 2
+    }
+  ],
+  "prospective_training_counts": [
+    {
+      "month": "2024-01",
+      "case": "full",
+      "training_rows": 104
+    },
+    {
+      "month": "2024-02",
+      "case": "full",
+      "training_rows": 105
+    },
+    {
+      "month": "2024-03",
+      "case": "full",
+      "training_rows": 106
+    },
+    {
+      "month": "2024-04",
+      "case": "full",
+      "training_rows": 107
+    },
+    {
+      "month": "2024-05",
+      "case": "full",
+      "training_rows": 108
+    },
+    {
+      "month": "2024-06",
+      "case": "full",
+      "training_rows": 109
+    },
+    {
+      "month": "2024-07",
+      "case": "full",
+      "training_rows": 110
+    },
+    {
+      "month": "2024-08",
+      "case": "full",
+      "training_rows": 111
+    },
+    {
+      "month": "2024-09",
+      "case": "full",
+      "training_rows": 112
+    },
+    {
+      "month": "2024-10",
+      "case": "full",
+      "training_rows": 113
+    },
+    {
+      "month": "2024-11",
+      "case": "full",
+      "training_rows": 114
+    },
+    {
+      "month": "2024-12",
+      "case": "full",
+      "training_rows": 115
+    },
+    {
+      "month": "2025-01",
+      "case": "full",
+      "training_rows": 116
+    },
+    {
+      "month": "2025-02",
+      "case": "full",
+      "training_rows": 117
+    },
+    {
+      "month": "2025-03",
+      "case": "full",
+      "training_rows": 118
+    },
+    {
+      "month": "2025-04",
+      "case": "full",
+      "training_rows": 120
+    },
+    {
+      "month": "2025-05",
+      "case": "full",
+      "training_rows": 121
+    },
+    {
+      "month": "2025-06",
+      "case": "full",
+      "training_rows": 122
+    },
+    {
+      "month": "2025-07",
+      "case": "full",
+      "training_rows": 123
+    },
+    {
+      "month": "2025-08",
+      "case": "full",
+      "training_rows": 124
+    },
+    {
+      "month": "2025-09",
+      "case": "full",
+      "training_rows": 125
+    },
+    {
+      "month": "2025-10",
+      "case": "full",
+      "training_rows": 126
+    },
+    {
+      "month": "2025-11",
+      "case": "full",
+      "training_rows": 127
+    },
+    {
+      "month": "2025-12",
+      "case": "full",
+      "training_rows": 128
+    },
+    {
+      "month": "2024-01",
+      "case": "strict_covid",
+      "training_rows": 61
+    },
+    {
+      "month": "2024-02",
+      "case": "strict_covid",
+      "training_rows": 62
+    },
+    {
+      "month": "2024-03",
+      "case": "strict_covid",
+      "training_rows": 63
+    },
+    {
+      "month": "2024-04",
+      "case": "strict_covid",
+      "training_rows": 64
+    },
+    {
+      "month": "2024-05",
+      "case": "strict_covid",
+      "training_rows": 65
+    },
+    {
+      "month": "2024-06",
+      "case": "strict_covid",
+      "training_rows": 66
+    },
+    {
+      "month": "2024-07",
+      "case": "strict_covid",
+      "training_rows": 67
+    },
+    {
+      "month": "2024-08",
+      "case": "strict_covid",
+      "training_rows": 68
+    },
+    {
+      "month": "2024-09",
+      "case": "strict_covid",
+      "training_rows": 69
+    },
+    {
+      "month": "2024-10",
+      "case": "strict_covid",
+      "training_rows": 70
+    },
+    {
+      "month": "2024-11",
+      "case": "strict_covid",
+      "training_rows": 71
+    },
+    {
+      "month": "2024-12",
+      "case": "strict_covid",
+      "training_rows": 72
+    },
+    {
+      "month": "2025-01",
+      "case": "strict_covid",
+      "training_rows": 73
+    },
+    {
+      "month": "2025-02",
+      "case": "strict_covid",
+      "training_rows": 74
+    },
+    {
+      "month": "2025-03",
+      "case": "strict_covid",
+      "training_rows": 75
+    },
+    {
+      "month": "2025-04",
+      "case": "strict_covid",
+      "training_rows": 77
+    },
+    {
+      "month": "2025-05",
+      "case": "strict_covid",
+      "training_rows": 78
+    },
+    {
+      "month": "2025-06",
+      "case": "strict_covid",
+      "training_rows": 79
+    },
+    {
+      "month": "2025-07",
+      "case": "strict_covid",
+      "training_rows": 80
+    },
+    {
+      "month": "2025-08",
+      "case": "strict_covid",
+      "training_rows": 81
+    },
+    {
+      "month": "2025-09",
+      "case": "strict_covid",
+      "training_rows": 82
+    },
+    {
+      "month": "2025-10",
+      "case": "strict_covid",
+      "training_rows": 83
+    },
+    {
+      "month": "2025-11",
+      "case": "strict_covid",
+      "training_rows": 84
+    },
+    {
+      "month": "2025-12",
+      "case": "strict_covid",
+      "training_rows": 85
+    }
+  ],
+  "accepted_limitation": "Strict validation has only two recent post-exposure origins; penalties and intervals are exploratory",
+  "protocol": {
+    "lag_selection": "Two latest released growth labels at each historical origin; no substitution of older clean lags in strict case",
+    "daily_fit_end": "Latest released target label month end, regardless of monthly strict eligibility; remove shock dates only for strict daily fit. Daily energy/weather after the shock remain past observed inputs, not outcomes.",
+    "common_rows": "Within each case all four models use identical training months; test calendar identical across targets and cases",
+    "strict_monthly_exposure": "Outcome index and annual base, two released IIP lag indices and annual bases, monthly and annual-base electricity windows and both weekly windows; drop row on any shock contact",
+    "strict_validation_limit": "At most 16 nominal dates, only Oct-Nov2023 recent; accept explicitly before holdout scoring",
+    "primary_contrast": "Adjusted ridge versus IIP-only OLS is a complete-method comparison",
+    "matched_ols_contrasts": [
+      "raw_ols minus iip_benchmark",
+      "adjusted_ols minus iip_benchmark",
+      "adjusted_ols minus raw_ols"
+    ],
+    "original_study": "unchanged; new holdout chosen after original findings; not an independent prospective replication"
+  },
+  "uncertainty": {
+    "block_months": 3,
+    "repetitions": 2000,
+    "seed": 241022,
+    "coverage": 0.95,
+    "construction": "Noncircular blocks within each contiguous calendar run; truncate each run to its own length; shared draws across targets/models/cases"
+  },
+  "provenance_amendment": {
+    "utc": "2026-10-22T15:07:29.715470+00:00",
+    "original_freeze_sha256": "9cdb5cca4ad827d46050956aae73caeb681f0cf92702af8a5bea73b496cd9275",
+    "changed_fingerprints": [
+      "extension/prepare_data.py",
+      "extension/data/versions.json"
+    ],
+    "reason": "Make preparation metadata idempotent on an unchanged cached rerun. Identified after initial results, before final review. No modelling specification, source values, tuning, exclusions or predictions change.",
+    "unchanged_prepared_csv_hashes": {
+      "iip.csv": "11c238d0cd64d5d53fe611d42f0780b3dc0b555afb529476514878a2513cf5a6",
+      "daily.csv": "f995544c1f83bfbb4528753c9edb05979ba9cf5bf630645742f5e5ae6f96f450",
+      "calendar_events.csv": "f9f48c5656b2dc5139cdfe1564d0442f896201535785e8039e7085f32bbe1faa",
+      "release_calendar.csv": "286f2c9ddade376b88bd5e17bd70ecb35e93bc4e70224d7aef1cdd556df6f832",
+      "report_audit.csv": "a93f3ce4eb77ae86b0a2afc65c6587d6f265a154975069dea0f6479bc7f32813"
+    },
+    "unchanged_initial_prediction_hashes": {
+      "test_ledger.csv": "cd378a535ed6325faa69aaff925bccd4b744e30e657d23c710422f6a94b5f486",
+      "test_daily_coefficients.csv": "094d0359505d18e831dd16ddcbf2a1feaf64a94ad86598fb3d5ef7350e059bce",
+      "test_coefficients.csv": "58de5542b34ada2c8f73258be222f0c709b473f073820bf05c3bd50ad6129305",
+      "test_features.csv": "a904be6ea04f9887d050fd5198f6e87dafdedc323ec42fde2d44957d7c1f0cff",
+      "test_predictions.csv": "b9ba7b777e095da4fe5a833e310b8485ffe9659159a7d00ffd09383cd7fcbf67",
+      "test_scores.csv": "15593abcee6f5ac001c9babe8ba03b6fd10ce4f888f515be4818af7e245e8e6a"
+    }
+  },
+  "publication_revision": {
+    "updated_utc": "2026-10-22T17:14:12.947992+00:00",
+    "source_freeze_sha256": "e6a477afe7aa039ed0be596ea69374a5ab1fb5b23a2137e77aedca8f6801b6b8",
+    "source_fingerprints": {
+      "extension/config.json": "30007a78c45f36d2720daa9c9233d88f2bef69fbf03f93d511c80ec9032c0df7",
+      "extension/prepare_data.py": "26620a984227bd1f5456145942205f94a1e87dd02ca631595cfcb60bbdcc1f54",
+      "extension/backtest.py": "743793df1003de82058f06f469fe0e1da4f7d395f0ef024f62d572619a213401",
+      "extension/report.py": "35643459b1f038185c11f45590f40549b53d340a3ebf0709c8e69c1f5b997528",
+      "extension/test_extension.py": "1ad45288bfe428ec8c4988f9ee492cd97b2b61e96f1f554f965bdb32228e9d72",
+      "extension/data/calendar_events.csv": "f9f48c5656b2dc5139cdfe1564d0442f896201535785e8039e7085f32bbe1faa",
+      "extension/data/daily.csv": "f995544c1f83bfbb4528753c9edb05979ba9cf5bf630645742f5e5ae6f96f450",
+      "extension/data/iip.csv": "11c238d0cd64d5d53fe611d42f0780b3dc0b555afb529476514878a2513cf5a6",
+      "extension/data/release_calendar.csv": "286f2c9ddade376b88bd5e17bd70ecb35e93bc4e70224d7aef1cdd556df6f832",
+      "extension/data/report_audit.csv": "a93f3ce4eb77ae86b0a2afc65c6587d6f265a154975069dea0f6479bc7f32813",
+      "extension/data/source_audit.json": "2ef729638cf3e9ba45a8624d238c4b9ea4ca14f596e407ea768a942b6792ba25",
+      "extension/data/source_review.json": "739690c67ca77a1d5bd28907e7aea211cf9686ceaf1efeece40172763c66bc6b",
+      "extension/data/versions.json": "8bda7d4178b36e7530198f0d898b8cd16c9b0ae768df1ff806de91dc25176fa3",
+      "extension/results/selected_alphas.json": "53e8085df54d03b6fed2112dd4238459034d97dd48be72677a1c922193ef19b0",
+      "extension/results/validation_sample.json": "17e2ff262f15fed9166d87a7e0bcd19a2380f32b94db195ebe582f39d66b144b",
+      "extension/results/validation_predictions.csv": "710c4279394352f23007a87193126d4cbe18dde1a6b35685dea41194f8ce7cac",
+      "extension/results/exposure_ledger.csv": "c8ecd13470cefd3b240d0be8798aaabc9ab45c552456e806668f0381e8751124"
+    },
+    "description": "Repository packaging after evaluation updates file fingerprints and removes administrative scope metadata. Scientific settings, validation values, selected penalties and numerical forecasts are unchanged. This is not a new prospective freeze.",
+    "unchanged_holdout_csv_hashes": {
+      "test_coefficients.csv": "58de5542b34ada2c8f73258be222f0c709b473f073820bf05c3bd50ad6129305",
+      "test_daily_coefficients.csv": "094d0359505d18e831dd16ddcbf2a1feaf64a94ad86598fb3d5ef7350e059bce",
+      "test_features.csv": "a904be6ea04f9887d050fd5198f6e87dafdedc323ec42fde2d44957d7c1f0cff",
+      "test_ledger.csv": "cd378a535ed6325faa69aaff925bccd4b744e30e657d23c710422f6a94b5f486",
+      "test_predictions.csv": "b9ba7b777e095da4fe5a833e310b8485ffe9659159a7d00ffd09383cd7fcbf67",
+      "test_scores.csv": "15593abcee6f5ac001c9babe8ba03b6fd10ce4f888f515be4818af7e245e8e6a"
+    }
+  }
+}

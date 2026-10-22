@@ -1,0 +1,9 @@
+{
+  "development_end": "2021-12-31",
+  "observations": [
+    "1. The mean Sunday energy index is 97.00, versus 100.57 across Monday\u2013Friday. The difference motivates weekday controls; it does not identify its cause.",
+    "2. The average within-year seasonal profile ranges from 94.31 in November to 104.38 in June. Weather and calendar variation should be addressed before interpreting predictive associations.",
+    "3. Mean national energy changes by -24.05% from April 2019 to April 2020, while manufacturing IIP growth is -66.64%. The joint disruption and the later base effect require prespecified pandemic sensitivity checks."
+  ],
+  "festival_diagnostics": "Source-checked Diwali window plotted separately"
+}

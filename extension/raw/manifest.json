@@ -1,0 +1,479 @@
+[
+  {
+    "file": "calendar/2024.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1976917&lang=2&reg=48",
+    "retrieved_utc": "2026-10-22T14:33:25.058014+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1976917&lang=2&reg=48",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 135578,
+    "sha256": "ca22c2c72f6c2c5b7e630935b63a0bb7564f7096704b2bfa4a892dde002ae7ab"
+  },
+  {
+    "file": "calendar/2025.html",
+    "url": "https://dip.goa.gov.in/list-of-holidays-during-year-2025/",
+    "retrieved_utc": "2026-10-22T14:30:17.916082+00:00",
+    "final_url": "https://dip.goa.gov.in/list-of-holidays-during-year-2025/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 128376,
+    "sha256": "ff61b48acb84ce4437aa9367838d28d758969dede8c91cd33dda1acbb8b6c6ef"
+  },
+  {
+    "file": "grid/mirror_commit.json",
+    "url": "https://api.github.com/repos/HalcyonVector/Grid-Sentinel/commits/main",
+    "retrieved_utc": "2026-10-22T14:37:22.906305+00:00",
+    "final_url": "https://api.github.com/repos/HalcyonVector/Grid-Sentinel/commits/main",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 5552,
+    "sha256": "dfebf0df3a8c1ef2b0d230fb6c12c41d20817450a309cb070a0a8fc810289c0d"
+  },
+  {
+    "file": "grid/mirror_tree.json",
+    "url": "https://api.github.com/repos/HalcyonVector/Grid-Sentinel/git/trees/3693c3190226034f27fc86772bcc99385c2391e4?recursive=1",
+    "retrieved_utc": "2026-10-22T14:38:53.549893+00:00",
+    "final_url": "https://api.github.com/repos/HalcyonVector/Grid-Sentinel/git/trees/3693c3190226034f27fc86772bcc99385c2391e4?recursive=1",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 1472950,
+    "sha256": "293daf7edc5ff72dbe7ee77574f348b3616ab252868b541ec5bfa29ffbbae253"
+  },
+  {
+    "file": "grid/reports/2024-01-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File1_Raw/15.01.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:28.994117+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File1_Raw/15.01.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 266240,
+    "sha256": "eca2a5ac17d31d275c7dd91e3b194a0bd413d3c23871d9b7c173c2dab9c437b6"
+  },
+  {
+    "file": "grid/reports/2024-03-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File1_Raw/15.03.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:28.985475+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File1_Raw/15.03.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 266240,
+    "sha256": "e71c545522bc28c018038cbf18236c68c844a611d27fbbd8372dc1a33eef6184"
+  },
+  {
+    "file": "grid/reports/2024-05-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.05.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:29.041000+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.05.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 269312,
+    "sha256": "5fb4aa3ee686dc77f3cba04d197404bfe8c5f5f44b80bfe426f4c8d99f72776f"
+  },
+  {
+    "file": "grid/reports/2024-05-30.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/30.05.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:29.079779+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/30.05.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 254464,
+    "sha256": "0c88aab76e0654084f2f0e5846f0fcd0e0061f79572cb3f42644048fb7e76938"
+  },
+  {
+    "file": "grid/reports/2024-07-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.07.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:30.882655+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.07.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 254464,
+    "sha256": "eb9c39264ae611a25e673c7e2067795b7455a74a14ff3ae34aa49318c86a141c"
+  },
+  {
+    "file": "grid/reports/2024-09-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.09.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:30.879576+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.09.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 269312,
+    "sha256": "7f3530155a2faafe9d6aa372dc77b2de20a2a680320b65aa739f9a38d4f8ec06"
+  },
+  {
+    "file": "grid/reports/2024-11-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.11.24_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:31.020239+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.11.24_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 291328,
+    "sha256": "153319d5f373cd7a82f6941ebbfcf0ab987db8f58bfc8d6ec859741ffac8a903"
+  },
+  {
+    "file": "grid/reports/2025-01-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.01.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:31.101909+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.01.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 298496,
+    "sha256": "2deba8f7fa4aae92a2ff57ba085251c6e8cf2dbf7352444afcdd822b2e7faf45"
+  },
+  {
+    "file": "grid/reports/2025-03-14.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/14.03.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:32.900956+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/14.03.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 342016,
+    "sha256": "b6e4a3aae38cb4090a96e3765426010ed7aa0633312e7c34d5f3ccfd79011271"
+  },
+  {
+    "file": "grid/reports/2025-03-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.03.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:32.819188+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.03.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 284672,
+    "sha256": "d4e7a6506aa64c6ba8cb3cca99c9998576f2c7f70eff876fad154358af2ce2b7"
+  },
+  {
+    "file": "grid/reports/2025-05-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.05.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:33.060303+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.05.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 284160,
+    "sha256": "d2b2c41cce965ea1b332d168133d7054ad26a607d43a91865f166079ccdd9a70"
+  },
+  {
+    "file": "grid/reports/2025-05-25.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/25.05.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:33.648534+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/25.05.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 284672,
+    "sha256": "672492d30902cdd65e7efa18a2ec2ddfdb497bc15fcdb589f8e843e828e13e40"
+  },
+  {
+    "file": "grid/reports/2025-07-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.07.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:34.713454+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.07.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 272384,
+    "sha256": "4658028c94ce06e0548a46f2a3ddd2fad45af02d133fbe62c69393b07240f0a9"
+  },
+  {
+    "file": "grid/reports/2025-09-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.09.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:34.902521+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.09.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 342016,
+    "sha256": "7a025c815ea8258bcdab3f092296de37d750f235b88967848c787f3552e91406"
+  },
+  {
+    "file": "grid/reports/2025-11-09.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/09.11.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:34.969701+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/09.11.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 284160,
+    "sha256": "66b7202649ae89ac81eff050588cb9623e012481f06735b2cc3fb532327db771"
+  },
+  {
+    "file": "grid/reports/2025-11-15.xls",
+    "url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.11.25_NLDC_PSP.xls",
+    "retrieved_utc": "2026-10-22T14:40:35.610539+00:00",
+    "final_url": "https://raw.githubusercontent.com/HalcyonVector/Grid-Sentinel/3693c3190226034f27fc86772bcc99385c2391e4/Dataset/Raw/File2_Raw/15.11.25_NLDC_PSP.xls",
+    "content_type": "application/octet-stream",
+    "bytes": 283136,
+    "sha256": "5eac57424e9647b70433d51ab579c474a314ae905f65bb4a03d6385ce2e18880"
+  },
+  {
+    "file": "reading/bee_pat.html",
+    "url": "https://www.beeindia.gov.in/view_content.php?lang=1&lid=613",
+    "retrieved_utc": "2026-10-22T14:30:21.755634+00:00",
+    "final_url": "https://www.beeindia.gov.in/view_content.php?lang=1&lid=613",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 283454,
+    "sha256": "a94179ac072122ed1a2ef8e3a15740498fc7c74765613d0786cb904613499a1a"
+  },
+  {
+    "file": "reading/iip_october_delay.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2195834&lang=1&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:20.204245+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2195834&lang=1&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 74422,
+    "sha256": "824a7450d4aaeb1b5f0b5b357413cf27f22257d8158dcaa36b0a0fa3b1e86b0c"
+  },
+  {
+    "file": "reading/iip_release_change.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2122427&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:20.406574+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2122427&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 107155,
+    "sha256": "f0d3472899ce3e36e116a4cdcf8327bbc6bf3a67bf31451134f9d7715da2fa43"
+  },
+  {
+    "file": "releases/pib_2005316.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2005316&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:43.138247+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2005316&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1572922,
+    "sha256": "803cc8bb4ef839e5743fb24a2738430472ddfd2556e4f980e373e29bd701033d"
+  },
+  {
+    "file": "releases/pib_2013798.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2013798&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:42.812018+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2013798&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1608555,
+    "sha256": "f143008fe43ab210fe2970ff1a875f3a6f18980c6ddd1fcedc765c85f6f95b55"
+  },
+  {
+    "file": "releases/pib_2017772.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2017772&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:43.921811+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2017772&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1623720,
+    "sha256": "498e302e1260dbed672f5a2e05dcebbed369d66e3966217912d7c69fab29ee91"
+  },
+  {
+    "file": "releases/pib_2020239.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2020239&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:43.321195+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2020239&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1468900,
+    "sha256": "27282d8f37af8611e65627bc77d64ab5a934e5655e8f51b9595940eeeeab76ea"
+  },
+  {
+    "file": "releases/pib_2024748.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2024748&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:48.001822+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2024748&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1819092,
+    "sha256": "21979478adbd15eb1cfc28c30a1f05c4a5ca60c48db4f25a8270b2589502eba7"
+  },
+  {
+    "file": "releases/pib_2032770.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2032770&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:47.499829+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2032770&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1564272,
+    "sha256": "63040bfa3930146f62ae25e6d5d8d3dd433bfdc04c4773d29cf13bf2cba31cbd"
+  },
+  {
+    "file": "releases/pib_2044601.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2044601&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:48.357448+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2044601&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1624640,
+    "sha256": "d242a79c96d037f0e37d484e65446d755e4ad0c8327fc0d4bcb53cb0ebb8fe96"
+  },
+  {
+    "file": "releases/pib_2054214.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2054214&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:48.710262+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2054214&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1686625,
+    "sha256": "a75fd6de3f6d394b4fac646f0a313b65149caca19b2f10a756a53ca9413a8d8d"
+  },
+  {
+    "file": "releases/pib_2064193.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2064193&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:52.051713+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2064193&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1582009,
+    "sha256": "dac850a45e005e1c8117cc3bb88ed0a8e52aa87e002981d97e2a70e3d6637387"
+  },
+  {
+    "file": "releases/pib_2072709.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2072709&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:57.386005+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2072709&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1780951,
+    "sha256": "868a6208714b0582c2216b2b397d15f4bf7e7cd4584562c787c566a56b3b1672"
+  },
+  {
+    "file": "releases/pib_2083705.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2083705&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:53.799143+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2083705&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1609872,
+    "sha256": "22111fae29fa9be699d2cad6ae00a7f2160efdf54300f8eb8c210747506ad9ff"
+  },
+  {
+    "file": "releases/pib_2091785.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2091785&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:53.146837+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2091785&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1689000,
+    "sha256": "f38c18337327cd86118e7f98f920ef7d7b4b0fea2ce544e1502a3365b27d67c6"
+  },
+  {
+    "file": "releases/pib_2102261.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2102261&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:56.646681+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2102261&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1732502,
+    "sha256": "857f6c77c28684b74d2912f08729b8efff459cffe4063605b3a716d8bc06d655"
+  },
+  {
+    "file": "releases/pib_2110777.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2110777&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:57.968063+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2110777&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1724646,
+    "sha256": "a36371ad7a3b64cba718d205ad2c42b5ebbd0d99d5640c43027a0ada84907e3e"
+  },
+  {
+    "file": "releases/pib_2120934.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2120934&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:29:59.007104+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2120934&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1595516,
+    "sha256": "1824a0d375eb2a5603745fc48dc3c7bd727c401834aa464884b8d4ba77b80bd5"
+  },
+  {
+    "file": "releases/pib_2124850.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2124850&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:01.805307+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2124850&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1746671,
+    "sha256": "2720c56d1e08548d33b61338544dd3109520de65fb4abb2b44753668ab33fab3"
+  },
+  {
+    "file": "releases/pib_2132055.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132055&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:02.052477+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132055&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1964398,
+    "sha256": "86e9dbc43ba07d1bec5af9b45028b36b929a9dae1966bee28f4c5eb0d434d18b"
+  },
+  {
+    "file": "releases/pib_2140774.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2140774&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:03.040707+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2140774&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1663245,
+    "sha256": "c0947738e7cd03c22abff789722a20a190bac03ade11f270f88d4faf29def2dd"
+  },
+  {
+    "file": "releases/pib_2149266.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2149266&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:03.686945+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2149266&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1584739,
+    "sha256": "789bed2265f2f668f5dc54ee044dc76589b2a09253588c97718a52e45f4722c0"
+  },
+  {
+    "file": "releases/pib_2161516.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2161516&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:09.421903+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2161516&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1689512,
+    "sha256": "a7ae670db14a36caab5f0b8e3b5219700472872c35d2a577145ab445d996b380"
+  },
+  {
+    "file": "releases/pib_2172702.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2172702&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:07.968471+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2172702&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1837391,
+    "sha256": "8eb0c76ebe018a5b5e766ac6eddc9c3201e4a93cf3e49781966ed1c9dbc69491"
+  },
+  {
+    "file": "releases/pib_2183312.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2183312&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:08.407051+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2183312&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1712354,
+    "sha256": "83ae6354662a11dda975ab54e791daba51d6159f2d8955bddab1145e69f18e0a"
+  },
+  {
+    "file": "releases/pib_2196938.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2196938&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:08.311801+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2196938&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1707477,
+    "sha256": "8156559ee494dad7aa7ec7a561ef119e1eac27453b4916686cbf33158b8f7311"
+  },
+  {
+    "file": "releases/pib_2209434.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209434&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:12.661604+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209434&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1704527,
+    "sha256": "4b6195df0eee41995882c8c3b3b33697c10acbbea9c55bc5544e17955b8254de"
+  },
+  {
+    "file": "releases/pib_2219602.html",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219602&lang=2&reg=3",
+    "retrieved_utc": "2026-10-22T14:30:13.226224+00:00",
+    "final_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219602&lang=2&reg=3",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1712642,
+    "sha256": "e1b750971eab5b3553051c2c625ff3ec782950599ef380f293f4018e0300f5b2"
+  },
+  {
+    "file": "weather/chennai_south.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=13.08&longitude=80.27&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "retrieved_utc": "2026-10-22T14:29:38.911417+00:00",
+    "final_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=13.08&longitude=80.27&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "content_type": "application/json",
+    "bytes": 37691,
+    "sha256": "34f069c4be8dcad2ec927f612eb16d6f87bb966d28715bfd33e8230b815d387f"
+  },
+  {
+    "file": "weather/delhi_north.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=28.61&longitude=77.21&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "retrieved_utc": "2026-10-22T14:29:38.391348+00:00",
+    "final_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=28.61&longitude=77.21&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "content_type": "application/json",
+    "bytes": 37544,
+    "sha256": "0a40ee2347d944fa783fc6732b8789d0e474295429cf0424780a21bc2d16e3f3"
+  },
+  {
+    "file": "weather/guwahati_northeast.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=26.14&longitude=91.74&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "retrieved_utc": "2026-10-22T14:29:39.318947+00:00",
+    "final_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=26.14&longitude=91.74&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "content_type": "application/json",
+    "bytes": 37606,
+    "sha256": "3ae133ebcf587401271b907b37fce9093c9b46d69fc11556f3495fa8ddb842ae"
+  },
+  {
+    "file": "weather/kolkata_east.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=22.57&longitude=88.36&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "retrieved_utc": "2026-10-22T14:29:37.730507+00:00",
+    "final_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=22.57&longitude=88.36&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "content_type": "application/json",
+    "bytes": 37657,
+    "sha256": "94e4a4da6d436e423e9a2e064d4ea3eb0d28167225bcbb549bac10fb24971a86"
+  },
+  {
+    "file": "weather/mumbai_west.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=19.08&longitude=72.88&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "retrieved_utc": "2026-10-22T14:29:38.472748+00:00",
+    "final_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M%2CT2M_MAX%2CT2M_MIN&community=RE&latitude=19.08&longitude=72.88&start=20240101&end=20251231&format=JSON&time-standard=UTC",
+    "content_type": "application/json",
+    "bytes": 37677,
+    "sha256": "9a2c72cdab5b8d09ff5f91648596a67887e28a7c2f41e4a5eb3c454e69d12bed"
+  }
+]

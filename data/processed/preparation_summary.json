@@ -1,0 +1,169 @@
+{
+  "config_sha256": "e48f4a4b901b1d471b190cf9330daab4ef875a2801df3212aebcfb81fcd9b71b",
+  "daily_dates": 3652,
+  "nonmissing_energy_days": 3638,
+  "usable_energy_days": 3635,
+  "missing_energy_dates": [
+    "2014-01-03",
+    "2014-04-29",
+    "2015-03-20",
+    "2015-04-06",
+    "2015-05-02",
+    "2015-07-03",
+    "2015-07-12",
+    "2015-07-13",
+    "2015-09-04",
+    "2015-09-05",
+    "2016-03-07",
+    "2016-03-23",
+    "2016-03-25",
+    "2019-06-10"
+  ],
+  "excluded_quality_flags": [
+    "2014-01-01",
+    "2014-01-02",
+    "2017-02-15"
+  ],
+  "weather_complete_days": 3652,
+  "iip_index_months": 120,
+  "target_months": 108,
+  "reports_audited": 30,
+  "report_layouts": [
+    "table_a_with_national_scada_peak",
+    "table_a_without_national_scada_peak"
+  ],
+  "sample_counts": [
+    {
+      "lag_days": 3,
+      "split": "test",
+      "coverage_threshold": 0.9,
+      "eligible_months": 24,
+      "total_months": 24
+    },
+    {
+      "lag_days": 3,
+      "split": "test",
+      "coverage_threshold": 0.95,
+      "eligible_months": 24,
+      "total_months": 24
+    },
+    {
+      "lag_days": 3,
+      "split": "training",
+      "coverage_threshold": 0.9,
+      "eligible_months": 48,
+      "total_months": 48
+    },
+    {
+      "lag_days": 3,
+      "split": "training",
+      "coverage_threshold": 0.95,
+      "eligible_months": 41,
+      "total_months": 48
+    },
+    {
+      "lag_days": 3,
+      "split": "validation",
+      "coverage_threshold": 0.9,
+      "eligible_months": 36,
+      "total_months": 36
+    },
+    {
+      "lag_days": 3,
+      "split": "validation",
+      "coverage_threshold": 0.95,
+      "eligible_months": 36,
+      "total_months": 36
+    },
+    {
+      "lag_days": 5,
+      "split": "test",
+      "coverage_threshold": 0.9,
+      "eligible_months": 24,
+      "total_months": 24
+    },
+    {
+      "lag_days": 5,
+      "split": "test",
+      "coverage_threshold": 0.95,
+      "eligible_months": 24,
+      "total_months": 24
+    },
+    {
+      "lag_days": 5,
+      "split": "training",
+      "coverage_threshold": 0.9,
+      "eligible_months": 48,
+      "total_months": 48
+    },
+    {
+      "lag_days": 5,
+      "split": "training",
+      "coverage_threshold": 0.95,
+      "eligible_months": 41,
+      "total_months": 48
+    },
+    {
+      "lag_days": 5,
+      "split": "validation",
+      "coverage_threshold": 0.9,
+      "eligible_months": 36,
+      "total_months": 36
+    },
+    {
+      "lag_days": 5,
+      "split": "validation",
+      "coverage_threshold": 0.95,
+      "eligible_months": 36,
+      "total_months": 36
+    },
+    {
+      "lag_days": 7,
+      "split": "test",
+      "coverage_threshold": 0.9,
+      "eligible_months": 24,
+      "total_months": 24
+    },
+    {
+      "lag_days": 7,
+      "split": "test",
+      "coverage_threshold": 0.95,
+      "eligible_months": 24,
+      "total_months": 24
+    },
+    {
+      "lag_days": 7,
+      "split": "training",
+      "coverage_threshold": 0.9,
+      "eligible_months": 43,
+      "total_months": 48
+    },
+    {
+      "lag_days": 7,
+      "split": "training",
+      "coverage_threshold": 0.95,
+      "eligible_months": 41,
+      "total_months": 48
+    },
+    {
+      "lag_days": 7,
+      "split": "validation",
+      "coverage_threshold": 0.9,
+      "eligible_months": 36,
+      "total_months": 36
+    },
+    {
+      "lag_days": 7,
+      "split": "validation",
+      "coverage_threshold": 0.95,
+      "eligible_months": 36,
+      "total_months": 36
+    }
+  ],
+  "sample_status": "input eligibility checked; model timing and evaluation are checked by the backtest freeze",
+  "model_evaluation_gate": {
+    "full_calendar_and_alignment": "complete",
+    "test_specification_freeze": "enforced_by_results/experiment_freeze.json"
+  },
+  "vintage_limit": "Revised IIP and reanalysis weather; pseudo-real-time, no original-vintage reconstruction"
+}

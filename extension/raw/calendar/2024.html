@@ -1,0 +1,1605 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css?v=1" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css?v=1" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css?v=1" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" /><link id="pibA11yCss" rel="stylesheet" href="/css/accessibility.css?v=7" type="text/css" />
+    <script type="text/javascript">
+        (function (d) {
+            var t = "";
+            try {
+                t = window.localStorage.getItem("pibStyle") || "";
+            } catch (e) {
+                t = "";
+            }
+            if (t === "orange") {
+                t = "yellow";
+            }
+            var c = t === "change" ? " pib-hc"
+                : t === "green" ? " pib-theme-green"
+                : t === "yellow" ? " pib-theme-yellow" : "";
+            d.documentElement.className += c + " pib-a11y-content";
+        }(document));
+    </script>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/accessibility.js?v=7"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+            });
+    </script>
+    <style type="text/css">
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        full-width {
+            width: 100%;
+        }
+
+        .logo-left, .logo-center, .countdown {
+            display: flex;
+            align-items: center;
+        }
+
+            .logo-left img, .logo-center img {
+                height: 70px;
+            }
+
+        .countdown {
+            text-align: center;
+            background-color: var(--dbim-text, #150202);
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid grey;
+        }
+
+        .firstnumber {
+            color: #000000;
+            position: absolute;
+            top: 50px;
+            right: 90px;
+            font-size: 30px;
+        }
+
+        .secondnumber {
+            position: absolute;
+            color: #000000;
+            right: 45px;
+            top: 50px;
+            font-size: 30px;
+        }
+
+        .countdown .days {
+            font-size: 35px;
+            color: gold;
+        }
+
+        .countdown p {
+            margin: 0;
+        }
+
+        .countdown .text {
+            font-size: 16px;
+        }
+
+        a {
+            word-break: break-all;
+        }
+
+        iframe, img {
+            max-width: 100%;
+        }
+
+        /* === DBIM 3.0 Option 4 Separator Line & Reading Meta Styling === */
+        .pr-share--footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-top: 1px solid var(--dbim-border, #d1d5db);
+            padding-top: 16px;
+            margin-top: 24px;
+        }
+
+        .pr-share__left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .pr-reading-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--dbim-text-secondary, #475569);
+            font-weight: 500;
+            white-space: nowrap;
+            margin-left: auto;
+        }
+
+        .pr-reading-meta__item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pr-reading-meta__divider {
+            color: var(--dbim-border, #cbd5e1);
+            font-weight: 300;
+        }
+
+        .pib-hc .pr-reading-meta,
+        .pib-hc .pr-reading-meta svg {
+            color: currentColor !important;
+        }
+
+        @media (max-width: 680px) {
+            .pr-share--footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pr-reading-meta {
+                margin-left: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media(max-width:1199px) {
+            .firstnumber {
+                top: 40px;
+                right: 72px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 35px;
+                top: 40px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:990px) {
+            .firstnumber {
+                top: 25px;
+                right: 54px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 25px;
+                top: 25px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:768px) {
+            .countdown, .days {
+                font-size: 12px !important;
+            }
+
+            .firstnumber {
+                top: 25%;
+                right: 8%;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 4.5%;
+                top: 25%;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:475px) {
+            .countdown, .days {
+                font-size: 10px !important;
+                top: 20%;
+            }
+
+            .bannerimgdiv {
+                padding: 0 !important;
+            }
+
+            .bannerimg {
+                width: 108% !important;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+    </script>
+
+    <link id="pibConsentCss" href="/css/consent.css?v=8" rel="stylesheet" type="text/css" /><link id="pibFontsCss" href="/css/fonts-noto.css?v=6" rel="stylesheet" type="text/css" /><link id="pibDbimCss" href="/css/dbim.css?v=1120" rel="stylesheet" type="text/css" /><meta property="og:title" content="Holidays to be observed by Central Government Offices in Kerala in 2024" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1976917" /><meta property="og:description" content="The list of Holidays for the year 2024 to be observed by Central Government Offices in Kerala has be" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="xftdhlqxgv5iy2w2d22a-f-af8fefb58-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":0,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"18216a7","ak.r":43539,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":34126,"ak.gh":"23.53.121.150","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1792679604","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==05djePcG0HL0MAEgtZZ4m1yK/9j9uTpak4sQ7E3Y3TlMRhBW9J6nKLGFasKWowAjXWai3v0z9ytuBiUHuKZaSwLNQ2E/2kr16mKSS8G/4DsIEhnBYSdS0mXgO9uu17c2QWwEyhztWsFMS1/kW4/Q4xfErYLUc2NfYZo+0PUY1/p1GzsqS6NTZ1nKxyDeCWD/AZ6steecJm2JH3jd3VYvD1XGsKrQ+XOAckh2Fc4/++kBtQu4SCilmDB71kmuaXFYQyV6LuD9ZR1z6rZNbLVzV4O2wVwaHFfYukp2msIWwpxOBzi/VLSn5S0bohML3GEaS2mGQQgVjYjzkUKb5kpUvc1sLUqcBZE4CLoRTVGXJCZfbgyrNuZrlM81S+ZVE1oMuY2/qh+llZMgGG775hTOSzYI8JqaSEoAZxUSwx02+b0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden" id="dbim-icon-sprite">
+    <defs>
+        <symbol id="icon-angle-double-left" viewBox="0 0 24 24"><path d="M11.6 4.6 4.2 12l7.4 7.4 2.2-2.2L8.6 12l5.2-5.2z"/><path d="M19 4.6 11.6 12 19 19.4l2.2-2.2L16 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-angle-double-right" viewBox="0 0 24 24"><path d="M12.4 4.6 10.2 6.8 15.4 12l-5.2 5.2 2.2 2.2L19.8 12z"/><path d="M5 4.6 2.8 6.8 8 12l-5.2 5.2L5 19.4 12.4 12z"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20.8 10.6H9.6v2.8h11.2z"/><path d="M10.8 5.6 3.2 12l7.6 6.4z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M3.2 10.6h11.2v2.8H3.2z"/><path d="M13.2 5.6 20.8 12l-7.6 6.4z"/></symbol>
+        <symbol id="icon-blogger" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.4 2.4h11.2a4 4 0 0 1 4 4v11.2a4 4 0 0 1-4 4H6.4a4 4 0 0 1-4-4V6.4a4 4 0 0 1 4-4zm2.8 5.2a2 2 0 0 0 0 4h2.4a2 2 0 0 0 0-4zm0 5.6a2 2 0 0 0 0 4h5.6a2 2 0 0 0 0-4z"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7.6 2.4H10v2.4H7.6z"/><path d="M14 2.4h2.4v2.4H14z"/><path fill-rule="evenodd" d="M4 4.8h16a1.6 1.6 0 0 1 1.6 1.6v13.2a1.6 1.6 0 0 1-1.6 1.6H4a1.6 1.6 0 0 1-1.6-1.6V6.4A1.6 1.6 0 0 1 4 4.8zm.4 5.6v8.4h15.2v-8.4z"/><path d="M6.4 12.4h3.2v3.2H6.4z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4 2.2-2.2L12.4 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M8.6 4.6 6.4 6.8 11.6 12l-5.2 5.2 2.2 2.2L16 12z"/></symbol>
+        <symbol id="icon-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M10.8 3h2.4v7.6h3.4L12 16.6l-4.6-6h3.4z"/><path d="M4 17.2h2.4v2.4h11.2v-2.4H20v3.2a1.4 1.4 0 0 1-1.4 1.4H5.4A1.4 1.4 0 0 1 4 20.4z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M13.6 21.6v-8.4h2.8l.42-3.3h-3.22V7.8c0-.95.27-1.6 1.64-1.6h1.74V3.26a23 23 0 0 0-2.54-.13c-2.5 0-4.22 1.53-4.22 4.34v2.43H7.4v3.3h2.82v8.4z"/></symbol>
+        <symbol id="icon-fact-check" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4 3.6 5.6v6.2c0 4.6 3.4 8.6 8.4 9.8 5-1.2 8.4-5.2 8.4-9.8V5.6zm-1 13.2-3.6-3.6 1.7-1.7 1.9 1.9 4.5-4.5 1.7 1.7z"/></symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.8 3h2.4l-1 6h3.2l1-6h2.4l-1 6h3.4v2.4h-3.8l-.6 3.2h3.6V17h-4l-1 5h-2.4l1-5h-3.2l-1 5H5.4l1-5H3V14.6h3.8l.6-3.2H3.8V9h4zm.6 8.4-.6 3.2h3.2l.6-3.2z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M12 3.4 2.8 11.6h2.4v8.4a1 1 0 0 0 1 1h3.3v-5.4h5v5.4h3.3a1 1 0 0 0 1-1v-8.4h2.4z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.6 2.4h8.8a5.2 5.2 0 0 1 5.2 5.2v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6a5.2 5.2 0 0 1 5.2-5.2zm0 2.4a2.8 2.8 0 0 0-2.8 2.8v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8z"/><path fill-rule="evenodd" d="M12 6.8a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 2.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z"/><circle cx="17.3" cy="6.7" r="1.3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.8 8.8h3.6v12H4.8z"/><circle cx="6.6" cy="5.4" r="2.1"/><path d="M10.8 8.8h3.45v1.65h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.6h-3.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95h-3.6z"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2.4 7.6v9.2a1.6 1.6 0 0 0 1.6 1.6h16a1.6 1.6 0 0 0 1.6-1.6V7.6L12 14z"/><path d="M21.2 5.4H2.8L12 11.8z"/></symbol>
+        <symbol id="icon-mail-open" viewBox="0 0 24 24"><path d="M2.4 9.8h19.2v9.6A1.6 1.6 0 0 1 20 21H4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M12 2.6 21.6 9.2h-3.8L12 5.3 6.2 9.2H2.4z"/><path d="m3.9 11.2 8.1 5.4 8.1-5.4 1.5 1.3-9.6 6.4-9.6-6.4z"/></symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a7 7 0 0 0-7 7c0 5.2 7 12.2 7 12.2s7-7 7-12.2a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z"/></symbol>
+        <symbol id="icon-newspaper" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 4.4h14.8v15.2H2.8zm2 2v11.2h10.8V6.4z"/><path d="M6 7.6h8.4v1.6H6z"/><path d="M6 10.8h8.4v1.6H6z"/><path d="M6 14h5.2v1.6H6z"/><path d="M18.4 8.4h2.8v9.6a1.4 1.4 0 0 1-2.8 0z"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="7.4" y="4" width="3.6" height="16" rx="0.9"/><rect x="13" y="4" width="3.6" height="16" rx="0.9"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 4.5v15l12-7.5z"/></symbol>
+        <symbol id="icon-picture" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.4 5.2h19.2v13.6H2.4zm2 2v9.6h15.2V7.2z"/><path d="M5.6 16.4 10 11l2.6 3 2-2.2 4 4.6z"/><circle cx="8" cy="10.4" r="1.5"/></symbol>
+        <symbol id="icon-press-conference" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6"/><path d="M7.6 12.2a4.4 4.4 0 0 1 8.8 0z"/><circle cx="4.9" cy="9.6" r="2.2"/><path d="M1.8 15.2a3.1 3.1 0 0 1 6.2 0z"/><circle cx="19.1" cy="9.6" r="2.2"/><path d="M16 15.2a3.1 3.1 0 0 1 6.2 0z"/><path d="M6.6 13.6h10.8l2.2 7.8H4.4z"/></symbol>
+        <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6.4 2.8h11.2v4.4H6.4z"/><path d="M4 8.4h16a1.6 1.6 0 0 1 1.6 1.6v5.6a1.6 1.6 0 0 1-1.6 1.6h-1.6v-2.8H6v2.8H4a1.6 1.6 0 0 1-1.6-1.6V10A1.6 1.6 0 0 1 4 8.4z"/><path d="M7.2 15.6h9.6v5.6H7.2z"/></symbol>
+        <symbol id="icon-rss" viewBox="0 0 24 24"><circle cx="4.8" cy="19.2" r="2.4"/><path d="M2.4 11.2v3.2a6.4 6.4 0 0 1 6.4 6.4H12A9.6 9.6 0 0 0 2.4 11.2z"/><path d="M2.4 4.8V8A13.6 13.6 0 0 1 16 21.6h3.2A16.8 16.8 0 0 0 2.4 4.8z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10 2.8a7.2 7.2 0 1 0 0 14.4 7.2 7.2 0 0 0 0-14.4zm0 2.4a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6z"/><path d="M15.3 14.6 21.2 20.5l-1.5 1.5-5.9-5.9z"/><path d="M9.2 6.8h1.6v2.4h2.4v1.6h-2.4v2.4H9.2v-2.4H6.8V9.2h2.4z"/></symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5.6" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="18.4" r="3"/><path d="M8.3 10.9 15.7 7.2l.9 1.8-7.4 3.7z"/><path d="M9.2 13.1 16.6 16.8l-.9 1.8-7.4-3.7z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M4.2 3h4.3l11.3 18h-4.3z"/><path d="M19.3 3h-2.6L4.2 21h2.6z"/></symbol>
+        <symbol id="icon-university" viewBox="0 0 24 24"><path d="M12 2.4 21.6 7.2v1.6H2.4V7.2z"/><path d="M4.8 10.4h2.4v8H4.8z"/><path d="M9.2 10.4h2.4v8H9.2z"/><path d="M13.4 10.4h2.4v8h-2.4z"/><path d="M17.6 10.4H20v8h-2.4z"/><path d="M3.2 19.8h17.6v1.8H3.2z"/></symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3.2 9.2h3.3l5-4.2v14l-5-4.2H3.2z"/><path d="M14.6 8.4a5 5 0 0 1 0 7.2l1.6 1.6a7.2 7.2 0 0 0 0-10.4z"/><path d="M17.4 5.6a8.8 8.8 0 0 1 0 12.8l1.5 1.5a10.9 10.9 0 0 0 0-15.8z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a9.5 9.5 0 0 0-8.1 14.5L2.4 21.6l4.8-1.4A9.5 9.5 0 1 0 12 2.4zm0 2.2a7.3 7.3 0 1 1-3.8 13.5l-.4-.2-2.6.7.7-2.5-.3-.4A7.3 7.3 0 0 1 12 4.6z"/><path d="M9.4 7.8c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5z"/></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10.2 15.1V8.9l5.1 3.1z"/></symbol>
+    </defs>
+</svg>
+
+    <form method="post" action="./PressReleasePage.aspx?PRID=1976917&amp;lang=2&amp;reg=48" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZPQet1wIx1Q48y3xJY2k25Y7qxH5RrQ9qQcN-OiTC9guZtri9w2&amp;t=639246310055090729" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LdIxBJXt0U_WW5GWfJqHAqo6frgCmGRfEywglicTersO2OKrFhK1gAIp0Wk2al2YrpdR3uWqH6f4nfjBsCyRUfTUUVmb0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScH645UK3RD852IErF2548Wz9Ssv0rLjB4fhVKnHcMpqkaMHpNAGOeWY02Lf4aBYN9-dVBme_SNK5KJwmFQNpMixYDZ7M0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a8613aea7%3af9cec9bc%3a3202a5a2%3aab09e3fe%3a87104b7c%3a720a52bf%3a589eaa30%3aa67c2700%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="cxdnl7Lh+uuBVWhsB25icL6FE2xaJ7Av+eyjCzq21LhmWRKuC+dm+v5rDETDg9Gwsh+yqYLSM+r0FpwZlw8n/SnEsy0ag3TylSzilFLs9N9adOw/OylHiEPDCTk3qR4KNsVofJxc9WH+JHtX6oGVn4G2TPko/T3zfi56NdwslENcR7HdDglLFvyShU5Uet/nmhFvAn+yEibtTHmAyJzTQoHNSl4yp/YgodBZMC5nCnxdiLOROAcOcsEm2b+nEz56UNznOwf6TdWGLC5EkjJvq4AhxNE=" />
+</div>
+        
+        <div id="templateCss"></div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+        <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+        <div class="container" style='margin-bottom: 50px;'>
+            <div id="accessories">
+                
+                <div class="pull-right" style="display: flex">
+                    <div id="voll"></div>
+                    <div id="vollDT"></div>
+                    
+
+<span class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</span>
+                </div>
+            </div>
+            <input type="hidden" name="hydpermid" id="hydpermid" value="1976917" />
+            
+
+            <div class="innner-page-main-about-us-content-right-part">
+                <div id="MinistryName" class="MinistryNameSubhead text-center">
+                    Special Service and Features
+                </div>
+                <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2026/sep/ph_9768_20260902_10000501.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+                <div class="text-center event-heading-background">
+                    
+                    <h1 id="Titleh2">
+                        Holidays to be observed by Central Government Offices in Kerala in 2024
+                    </h1>
+                    <h3 id="Subtitleh3">
+                        <span id="ltrSubtitle"><br/></span>
+                    </h3>
+                </div>
+
+                <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                    Posted On:
+                              14 NOV 2023 5:24PM by PIB Thiruvananthpuram
+                </div>
+                
+                <div class='pt20'>
+                </div>
+                <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                
+
+                <!-- Release content wrapper for client-side zero-reflow word count -->
+                <div id="pibReleaseBody">
+                    <p>The list of Holidays for the year 2024 to be observed by Central Government Offices in Kerala has been published. In 2023, there will be 17 holidays and 43 restricted holidays.</p>
+
+<p style="text-align:justify"><span style="background-color:white"><strong><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Holidays</span></span></span></strong><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">:</span></span></span></span></p>
+
+<table border="1" cellspacing="0" class="Table" style="border-collapse:collapse; border:solid black 1.0pt; margin-left:-5.4pt; width:428px">
+	<tbody>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">January 26</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Republic Day</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">March 08</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">MahaShivarathri</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">March 29</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Good Friday</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*April 10</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Idu&#39;l-Fitr (Ramzan),</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">April 21</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">MahavirJayanti</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">May 23</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Buddha Purnima</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*June 17</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Idu&#39;lZuha (Bakrid)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*July 16</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Muharram</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">August 15</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Independence Day </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">August 26</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Janmashtami</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*September 16</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Milad-Un-Nabi (Birthday of Prophet Mohammed)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 02</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Gandhi Jayanti</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 11</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Durgashtami</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 13</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Dussehra (Vijayadasami)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 31</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Diwali (Deepavali)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">November 15</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Guru Nanak Jayanti</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">December 25</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Christmas Day</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:justify"><span style="background-color:white"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Of these, April 10- Idu&rsquo;l-Fitr, June 17-Idu&#39;l Zuha (Bakrid), July 16- Muharram, and September 16- Milad-Un-Nabi (Birthday of Prophet Mohammed) have been adopted from the State list. If the State Government changes any of these Holidays, only the changed date will be observed as a Holiday for the Central Government Offices in Kerala</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="background-color:white"><a name="_gjdgxs"></a><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Two of the 41 restricted holidays are available to Central Government employees. These include the following special days in Kerala : January 02- MannamJayanti, January 14- Makarasanranti, March 12- AyyaVaikundaswamy Jayanti , April 13 : Vishu, August 08- KarkidakaVavu, August 20- SreeNarayana Guru Jayanthi, September 07- Ganesh Chathurthi, September 14- First Onam, September 15- ThiruOnam, September 16- Third Onam, September 17 - Fourth Onam September 21- SreeNarayana Guru Samadhi Day.</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="background-color:white"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">The decision regarding finalization of the list of holidays to be observed by Central Government Offices in 202</span></span></span><span style="font-size:10.5pt"><span style="font-family:Arimo"><span style="color:#333333">4</span></span></span><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333"> was taken at a meeting of the Central Government Welfare Employees Coordination Committee in Thiruvananthapuram.</span></span></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="background-color:white"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">NS</span></span></span></span></p>
+
+                </div>
+
+                <div id="reel_pic">
+                </div>
+
+                <br />
+                <span id="ReleaseId">(Release ID: 1976917)</span>
+                <span id="lblViews">Visitor Counter : 40</span>
+                <div>
+                    
+                </div>
+                
+
+                <span id="lblRefPhoto"></span>
+
+                <div class="BackgroundRelease">
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div class="ReleaseLang">Read this release in: 
+                
+                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1976916' target="_blank">
+                            Malayalam </a>
+                    
+                </div>
+
+                <div class="RelTag">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+
+                <!-- DBIM 3.0 Option 4: Separator Line with Left Share Rail & Right Reading Metrics -->
+                <div class="pr-share pr-share--footer" role="region" aria-label="Share and reading details">
+                    <div class="pr-share__left">
+                        <span class="pr-share__label" aria-hidden="true">Share</span>
+                        <ul class="pr-share__list">
+                            <li><a class="pr-share__btn pr-share__btn--facebook"
+                                href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1976917"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on Facebook">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-facebook" xlink:href="#icon-facebook"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--twitter"
+                                href="https://twitter.com/intent/tweet?url=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1976917"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on X">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-twitter" xlink:href="#icon-twitter"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--whatsapp"
+                                href="https://api.whatsapp.com/send?text=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1976917"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on WhatsApp">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--linkedin"
+                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1976917"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on LinkedIn">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-linkedin" xlink:href="#icon-linkedin"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--mail"
+                                href="mailto:?subject=Press+release+from+PIB&amp;body=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d1976917"
+                                aria-label="Share by email">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-mail" xlink:href="#icon-mail"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="pr-reading-meta" id="prReadingMeta" aria-label="Reading statistics">
+                        <span class="pr-reading-meta__item">
+                            <!-- Modern Document / Word Count Icon -->
+                            <svg class="pr-reading-meta__icon" width="18" height="18" viewbox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                            </svg>
+                            <span id="prWordCount">-- words</span>
+                        </span>
+
+                        <span class="pr-reading-meta__divider" aria-hidden="true">|</span>
+
+                        <span class="pr-reading-meta__item">
+                            <!-- Modern Precision Clock / Read Time Icon -->
+                            <svg class="pr-reading-meta__icon" width="18" height="18" viewbox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+                            <span id="prReadTime">-- min read</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="RelLink" class="RelLink">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <center>
+                    
+                </center>
+            </div>
+
+            <div id="update12">
+	
+                    
+                    <input type="hidden" name="Hidden" id="Hidden" />
+                    <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                        <div>
+                            <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                        </div>
+                        <div id="description">
+                        </div>
+                        <div class="text-center">
+                            <h2>
+                                
+                                <br>
+                                
+                            </h2>
+                        </div>
+                        <br />
+                        <div class="clear">
+                        </div>
+                        
+                    
+	</div>
+                
+</div>
+        </div>
+
+        <div id="PdfDiv" style="display: none;">
+            <table width="100%">
+                <tr>
+                    <td style="font-weight: 200; text-align: center">
+                        Special Service and Features
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            Holidays to be observed by Central Government Offices in Kerala in 2024
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            <div style='height:30px;width:100%;'></div>
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="text-align: center; font-size: 14px;">
+                            Posted On:
+                                          14 NOV 2023 5:24PM by PIB Thiruvananthpuram
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                            <p>The list of Holidays for the year 2024 to be observed by Central Government Offices in Kerala has been published. In 2023, there will be 17 holidays and 43 restricted holidays.</p>
+
+<p style="text-align:justify"><span style="background-color:white"><strong><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Holidays</span></span></span></strong><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">:</span></span></span></span></p>
+
+<table border="1" cellspacing="0" class="Table" style="border-collapse:collapse; border:solid black 1.0pt; margin-left:-5.4pt; width:428px">
+	<tbody>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">January 26</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Republic Day</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">March 08</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">MahaShivarathri</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">March 29</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Good Friday</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*April 10</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Idu&#39;l-Fitr (Ramzan),</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">April 21</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">MahavirJayanti</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">May 23</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Buddha Purnima</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*June 17</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Idu&#39;lZuha (Bakrid)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*July 16</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Muharram</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">August 15</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Independence Day </span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">August 26</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Janmashtami</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">*September 16</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Milad-Un-Nabi (Birthday of Prophet Mohammed)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 02</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Gandhi Jayanti</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 11</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Durgashtami</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 13</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Dussehra (Vijayadasami)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">October 31</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Diwali (Deepavali)</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">November 15</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Guru Nanak Jayanti</span></span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:141.3pt">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">December 25</span></span></span></p>
+
+			<p style="text-align:center">&nbsp;</p>
+			</td>
+			<td style="width:2.5in">
+			<p style="text-align:center"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Christmas Day</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:justify"><span style="background-color:white"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Of these, April 10- Idu&rsquo;l-Fitr, June 17-Idu&#39;l Zuha (Bakrid), July 16- Muharram, and September 16- Milad-Un-Nabi (Birthday of Prophet Mohammed) have been adopted from the State list. If the State Government changes any of these Holidays, only the changed date will be observed as a Holiday for the Central Government Offices in Kerala</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="background-color:white"><a name="_gjdgxs"></a><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">Two of the 41 restricted holidays are available to Central Government employees. These include the following special days in Kerala : January 02- MannamJayanti, January 14- Makarasanranti, March 12- AyyaVaikundaswamy Jayanti , April 13 : Vishu, August 08- KarkidakaVavu, August 20- SreeNarayana Guru Jayanthi, September 07- Ganesh Chathurthi, September 14- First Onam, September 15- ThiruOnam, September 16- Third Onam, September 17 - Fourth Onam September 21- SreeNarayana Guru Samadhi Day.</span></span></span></span></p>
+
+<p style="text-align:justify"><span style="background-color:white"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">The decision regarding finalization of the list of holidays to be observed by Central Government Offices in 202</span></span></span><span style="font-size:10.5pt"><span style="font-family:Arimo"><span style="color:#333333">4</span></span></span><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333"> was taken at a meeting of the Central Government Welfare Employees Coordination Committee in Thiruvananthapuram.</span></span></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="background-color:white"><span style="font-size:10.5pt"><span style="font-family:&quot;Helvetica Neue&quot;"><span style="color:#333333">NS</span></span></span></span></p>
+
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                            (Release ID: 1976917)
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearfix">
+        </div>
+
+        <div class="section1">
+            <div id="frst_t">
+                <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917&text=Holidays to be observed by Central Government Offices in Kerala in 2024' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Holidays to be observed by Central Government Offices in Kerala in 2024&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917&title=Holidays to be observed by Central Government Offices in Kerala in 2024&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+            </div>
+            <div id="second_t">
+                <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917&text=Holidays to be observed by Central Government Offices in Kerala in 2024' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Holidays to be observed by Central Government Offices in Kerala in 2024&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1976917&title=Holidays to be observed by Central Government Offices in Kerala in 2024&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+            </div>
+        </div>
+        <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Holidays to be observed by Central Government Offices in Kerala in 2024" />
+        <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" value="&lt;br/>" />
+        <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p>The list of Holidays for the year 2024 to be observed by Central Government Offices in Kerala has been published. In 2023, there will be 17 holidays and 43 restricted holidays.&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;strong>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Holidays&lt;/span>&lt;/span>&lt;/span>&lt;/strong>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>:&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; class=&quot;Table&quot; style=&quot;border-collapse:collapse; border:solid black 1.0pt; margin-left:-5.4pt; width:428px&quot;>
+	&lt;tbody>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>January 26&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Republic Day&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>March 08&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>MahaShivarathri&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>March 29&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Good Friday&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>*April 10&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Idu&amp;#39;l-Fitr (Ramzan),&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>April 21&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>MahavirJayanti&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>May 23&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Buddha Purnima&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>*June 17&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Idu&amp;#39;lZuha (Bakrid)&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>*July 16&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Muharram&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>August 15&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Independence Day &lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>August 26&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Janmashtami&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>*September 16&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Milad-Un-Nabi (Birthday of Prophet Mohammed)&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>October 02&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Gandhi Jayanti&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>October 11&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Durgashtami&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>October 13&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Dussehra (Vijayadasami)&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>October 31&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Diwali (Deepavali)&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>November 15&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Guru Nanak Jayanti&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td style=&quot;width:141.3pt&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>December 25&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+			&lt;p style=&quot;text-align:center&quot;>&amp;nbsp;&lt;/p>
+			&lt;/td>
+			&lt;td style=&quot;width:2.5in&quot;>
+			&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Christmas Day&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+			&lt;/td>
+		&lt;/tr>
+	&lt;/tbody>
+&lt;/table>
+
+&lt;p>&amp;nbsp;&lt;/p>
+
+&lt;p>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Of these, April 10- Idu&amp;rsquo;l-Fitr, June 17-Idu&amp;#39;l Zuha (Bakrid), July 16- Muharram, and September 16- Milad-Un-Nabi (Birthday of Prophet Mohammed) have been adopted from the State list. If the State Government changes any of these Holidays, only the changed date will be observed as a Holiday for the Central Government Offices in Kerala&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;a name=&quot;_gjdgxs&quot;>&lt;/a>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>Two of the 41 restricted holidays are available to Central Government employees. These include the following special days in Kerala : January 02- MannamJayanti, January 14- Makarasanranti, March 12- AyyaVaikundaswamy Jayanti , April 13 : Vishu, August 08- KarkidakaVavu, August 20- SreeNarayana Guru Jayanthi, September 07- Ganesh Chathurthi, September 14- First Onam, September 15- ThiruOnam, September 16- Third Onam, September 17 - Fourth Onam September 21- SreeNarayana Guru Samadhi Day.&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>The decision regarding finalization of the list of holidays to be observed by Central Government Offices in 202&lt;/span>&lt;/span>&lt;/span>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:Arimo&quot;>&lt;span style=&quot;color:#333333&quot;>4&lt;/span>&lt;/span>&lt;/span>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;> was taken at a meeting of the Central Government Welfare Employees Coordination Committee in Thiruvananthapuram.&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;font-size:10.5pt&quot;>&lt;span style=&quot;font-family:&amp;quot;Helvetica Neue&amp;quot;&quot;>&lt;span style=&quot;color:#333333&quot;>NS&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+" />
+        <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+        </script>
+        <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+                  function CleanHtml(html) {
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+        </script>
+        <script type="text/javascript">
+                  $(document).ready(function () {
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                        }
+                  });
+        </script>
+        <style type="text/css">
+            @media print {
+                .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                    display: none !important;
+                }
+            }
+
+            .f_vl {
+                padding-right: 30px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            .log_oo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .log_oo img {
+                    width: 150px;
+                }
+
+            .sticky-social_mb {
+                position: fixed;
+                bottom: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+            }
+
+            .social_mb {
+                list-style: none;
+                display: flex;
+                width: 100%;
+                margin-bottom: -8px;
+            }
+
+                .social_mb a {
+                    padding: 8px 0px;
+                    font-size: 30px;
+                    transition: all 0.8s ease-in-out;
+                    width: 20% !important;
+                    text-align: center;
+                }
+        </style>
+        <style type="text/css">
+            .section1 {
+                position: relative;
+                padding: 10px 0px;
+                width: 100%;
+            }
+
+            .sticky-social {
+                position: fixed;
+                top: 20px;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .social {
+                list-style: none;
+            }
+
+                .social a li {
+                    padding: 8px 12px;
+                    font-size: 25px;
+                    transition: all 0.8s ease-in-out;
+                }
+
+                    .social a li:hover {
+                        margin-right: -30px;
+                        box-shadow: 2px 5px 10px grey;
+                    }
+
+                        .social a li:hover .fa {
+                            margin-left: 20px;
+                        }
+
+            .fb_b {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .twitter_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .whatsapp_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .fa-envelope_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .fa-linkedin_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+        </style>
+        <style type="text/css">
+            @media only screen and (max-device-width: 767px) {
+                p span img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                p img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                h2 {
+                    font-size: var(--dbim-h2, 20px);
+                    font-weight: 600 !important;
+                }
+
+                h3 {
+                    font-size: var(--dbim-h3, 16px);
+                    font-weight: 600 !important;
+                }
+            }
+        </style>
+        <style type="text/css">
+            .film-roll-badge {
+                position: absolute;
+                top: 82%;
+                right: 20px;
+                width: 230px;
+                height: 70px;
+                background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 18px, var(--dbim-text, #150202) 18px, var(--dbim-text, #150202) 36px );
+                border-top: 8px solid var(--dbim-green-key, #0F5757);
+                border-bottom: 8px solid var(--dbim-green-key, #0F5757);
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                animation: moveFilm 8s linear infinite;
+                z-index: 10;
+            }
+
+                .film-roll-badge::before,
+                .film-roll-badge::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 10px;
+                    background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 10px, #fff 10px, #fff 20px );
+                    left: 0;
+                    z-index: 2;
+                }
+
+                .film-roll-badge::before {
+                    top: -4px;
+                }
+
+                .film-roll-badge::after {
+                    bottom: -4px;
+                }
+
+            .film-roll-inner {
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: flicker 2s infinite ease-in-out;
+            }
+
+            .countdown-text {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: #fff;
+                text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                white-space: nowrap;
+            }
+
+            @keyframes moveFilm {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 120px 0;
+                }
+            }
+
+            @keyframes flicker {
+                0%, 100% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0.9;
+                }
+
+                25% {
+                    opacity: 0.95;
+                }
+
+                75% {
+                    opacity: 0.85;
+                }
+            }
+
+            @media (max-width: 1500px) {
+                .film-roll-badge {
+                    top: 68%;
+                    right: 18px;
+                    height: 65px;
+                    font-size: 0.85rem;
+                }
+
+                .press-section {
+                    margin-top: 35px;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .film-roll-badge {
+                    top: 52%;
+                    right: 10px;
+                    width: 200px;
+                    height: 60px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .film-roll-badge {
+                    top: 56%;
+                    right: 10px;
+                    width: 124px;
+                    height: 55px;
+                }
+
+                .countdown-text {
+                    font-size: 0.9rem;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .film-roll-badge {
+                    top: 59%;
+                    right: 5px;
+                    height: 50px;
+                }
+
+                .countdown-text {
+                    font-size: 0.85rem;
+                }
+            }
+        </style>
+        <script type="text/javascript">
+                  const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                  const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+                  const countdownElement = document.getElementById("countdown");
+
+                  if (countdownElement) {
+                        const interval = setInterval(() => {
+                              const now = new Date().getTime();
+
+                              if (now < festivalStart) {
+                                    const diff = festivalStart - now;
+                                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                                    countdownElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to go`;
+                              } else if (now >= festivalStart && now <= festivalEnd) {
+                                    const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                                    countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                              } else {
+                                    countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+                                    const elements = document.querySelectorAll('.film-roll-badge');
+                                    elements.forEach(el => el.style.width = "350px");
+                                    clearInterval(interval);
+                              }
+                        }, 1000);
+                  }
+        </script>
+        <script type="text/javascript">
+                  const miffStart = new Date("2026-06-15T00:00:00").getTime();
+                  const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+                  const miffElement = document.getElementById("miff");
+
+                  if (miffElement) {
+                        const miffInterval = setInterval(() => {
+                              const now = new Date().getTime();
+
+                              if (now < miffStart) {
+                                    const diff = miffStart - now;
+                                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                    miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+                              } else if (now >= miffStart && now <= miffEnd) {
+                                    const dayNumber = Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+                                    miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                              } else {
+                                    miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+                                    document.querySelectorAll('.film-roll-badge').forEach(el => el.style.width = "350px");
+                                    clearInterval(miffInterval);
+                              }
+                        }, 1000);
+                  }
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="Jjl2NdQSiy28Vv78bG5a8Emvc1YOb_cCwljfKU7NpS_udm6NXaqTnD57Pk9fpItfalqXjnZCYTpc2TAhg9t0ixZ2YqsB8HKaF73tu6NpZKRxS6Bn-dkz8Q=="/></form>
+    
+
+<script type="application/json" id="pibConsentConfig">{"ga4Id":"G-Q414Y0X6EE,G-QJJ6LZ8LHV","policyUrl":"/CookiePolicy.aspx","text":{"bannerLabel":"Cookie consent","title":"Cookies on this website","body":"We use essential cookies to make this website work. We also set analytics cookies when you arrive, so we can see how the site is used and improve it - you can switch these off below or at any time from the Cookie Policy page. Cookies from embedded social media content are set only if you allow them.","policyLink":"Read our Cookie Policy","accept":"Accept all","reject":"Reject optional","customize":"Customise","prefsTitle":"Cookie preferences","prefsIntro":"Choose which cookies this website may set. Essential cookies cannot be switched off because the site does not work without them. Analytics cookies are on unless you turn them off. Social media cookies stay off until you allow them. You can change these choices at any time from the Cookie Policy page.","essentialName":"Essential cookies","essentialDesc":"Needed for the site to function. These remember your session, your language and region, your text size and colour theme, and verify the security check on forms. They are always on.","analyticsName":"Analytics cookies","analyticsDesc":"Help us understand how visitors use the site - which pages are read and how long people stay - so it can be improved. The information is collected in a form that does not directly identify you. These are on when you arrive; switching them off here stops them and deletes the ones already set.","socialName":"Social media cookies","socialDesc":"Set by content embedded from X, Facebook and YouTube, such as timelines and videos. These platforms may use them to track you across websites. They stay off until you allow them.","save":"Save preferences","cancel":"Cancel"}}</script>
+<script type="text/javascript" src='/js/consent.js?v=10'></script>
+
+<script type="text/javascript" src='/js/consent-embeds.js?v=10'></script>
+
+
+    <!-- Minimal O(N) Time and O(1) Auxiliary Space Word Count & Read Time Calculation -->
+    <script type="text/javascript">
+            (function () {
+                  function calculateReadingStats() {
+                        var bodyEl = document.getElementById("pibReleaseBody");
+                        if (!bodyEl) return;
+
+                        // textContent extracts text without triggering expensive layout/reflow computations
+                        var text = bodyEl.textContent || "";
+                        var words = 0;
+                        var inWord = false;
+
+                        // O(N) single pass character code scan: achieves O(1) space with zero array allocations
+                        for (var i = 0, len = text.length; i < len; i++) {
+                              var code = text.charCodeAt(i);
+                              // Delimits on ASCII whitespace, control characters, tabs, newlines, and non-breaking spaces (160)
+                              if (code <= 32 || code === 160) {
+                                    inWord = false;
+                              } else if (!inWord) {
+                                    inWord = true;
+                                    words++;
+                              }
+                        }
+
+                        // Standard 250 WPM reading speed (e.g., 612 words yields 2 min read)
+                        var minutes = Math.max(1, Math.round(words / 250));
+
+                        var elWords = document.getElementById("prWordCount");
+                        var elTime = document.getElementById("prReadTime");
+
+                        if (elWords) elWords.textContent = words + (words === 1 ? " word" : " words");
+                        if (elTime) elTime.textContent = minutes + " min read";
+                  }
+
+                  if (document.readyState === "loading") {
+                        document.addEventListener("DOMContentLoaded", calculateReadingStats);
+                  } else {
+                        calculateReadingStats();
+                  }
+            })();
+    </script>
+
+    <script type="text/javascript">
+            (function () {
+                  try {
+                        if (window.self === window.top) { return; }
+                  } catch (e) { return; }
+                  var s = document.createElement("style");
+                  s.textContent = ".sticky-social, .sticky-social_mb { display: none !important; }";
+                  (document.head || document.documentElement).appendChild(s);
+            }());
+    </script>
+</body>
+</html>

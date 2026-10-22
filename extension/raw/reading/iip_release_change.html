@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css?v=1" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css?v=1" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css?v=1" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" /><link id="pibA11yCss" rel="stylesheet" href="/css/accessibility.css?v=7" type="text/css" />
+    <script type="text/javascript">
+        (function (d) {
+            var t = "";
+            try {
+                t = window.localStorage.getItem("pibStyle") || "";
+            } catch (e) {
+                t = "";
+            }
+            if (t === "orange") {
+                t = "yellow";
+            }
+            var c = t === "change" ? " pib-hc"
+                : t === "green" ? " pib-theme-green"
+                : t === "yellow" ? " pib-theme-yellow" : "";
+            d.documentElement.className += c + " pib-a11y-content";
+        }(document));
+    </script>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/accessibility.js?v=7"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+            });
+    </script>
+    <style type="text/css">
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        full-width {
+            width: 100%;
+        }
+
+        .logo-left, .logo-center, .countdown {
+            display: flex;
+            align-items: center;
+        }
+
+            .logo-left img, .logo-center img {
+                height: 70px;
+            }
+
+        .countdown {
+            text-align: center;
+            background-color: var(--dbim-text, #150202);
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid grey;
+        }
+
+        .firstnumber {
+            color: #000000;
+            position: absolute;
+            top: 50px;
+            right: 90px;
+            font-size: 30px;
+        }
+
+        .secondnumber {
+            position: absolute;
+            color: #000000;
+            right: 45px;
+            top: 50px;
+            font-size: 30px;
+        }
+
+        .countdown .days {
+            font-size: 35px;
+            color: gold;
+        }
+
+        .countdown p {
+            margin: 0;
+        }
+
+        .countdown .text {
+            font-size: 16px;
+        }
+
+        a {
+            word-break: break-all;
+        }
+
+        iframe, img {
+            max-width: 100%;
+        }
+
+        /* === DBIM 3.0 Option 4 Separator Line & Reading Meta Styling === */
+        .pr-share--footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-top: 1px solid var(--dbim-border, #d1d5db);
+            padding-top: 16px;
+            margin-top: 24px;
+        }
+
+        .pr-share__left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .pr-reading-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--dbim-text-secondary, #475569);
+            font-weight: 500;
+            white-space: nowrap;
+            margin-left: auto;
+        }
+
+        .pr-reading-meta__item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pr-reading-meta__divider {
+            color: var(--dbim-border, #cbd5e1);
+            font-weight: 300;
+        }
+
+        .pib-hc .pr-reading-meta,
+        .pib-hc .pr-reading-meta svg {
+            color: currentColor !important;
+        }
+
+        @media (max-width: 680px) {
+            .pr-share--footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pr-reading-meta {
+                margin-left: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media(max-width:1199px) {
+            .firstnumber {
+                top: 40px;
+                right: 72px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 35px;
+                top: 40px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:990px) {
+            .firstnumber {
+                top: 25px;
+                right: 54px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 25px;
+                top: 25px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:768px) {
+            .countdown, .days {
+                font-size: 12px !important;
+            }
+
+            .firstnumber {
+                top: 25%;
+                right: 8%;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 4.5%;
+                top: 25%;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:475px) {
+            .countdown, .days {
+                font-size: 10px !important;
+                top: 20%;
+            }
+
+            .bannerimgdiv {
+                padding: 0 !important;
+            }
+
+            .bannerimg {
+                width: 108% !important;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+    </script>
+
+    <link id="pibConsentCss" href="/css/consent.css?v=8" rel="stylesheet" type="text/css" /><link id="pibFontsCss" href="/css/fonts-noto.css?v=6" rel="stylesheet" type="text/css" /><link id="pibDbimCss" href="/css/dbim.css?v=1120" rel="stylesheet" type="text/css" /><meta property="og:title" content="MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days." /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=2122427" /><meta property="og:description" content="The Ministry of Statistics &amp; Programme Implementation (MoSPI) is making continuous efforts to bring " /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="xftdhlqxgv5iy2w2dx5q-f-09940411e-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":0,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"195e138d","ak.r":43539,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":62624,"ak.gh":"23.53.121.140","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1792679419","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/gmRlEYZqAkKyKL9gNaw1afRoTqrrpb7DAV3Fp59rNVOYsPUCY2zk65rdT8XyjabXqg1qygy7xcCBWoTt2qFUtegKJlYzUP4w3tvAg/hR9yXq7sU5BXgxSm2aYZ1dCklxucOPkinu6bMguMQtvZ03ig+Cjr/F0Xzrb7Xjd2aer4UNwcsp1e8W6ND/fsRXQGJQ3fbCQYimP62/DKkqV+uj8F1CLTGK/DgWc3Y4rFmySUnT4aBJVpLXqdbEbMBGKTBoeUnv6nljRLOzyQLvr5k7EVL/4FR8OUX81/Nt3a/nnOB/8JahbfjzE8fDyzhf5ZmzsPlppoQG7yqnucqPjf0Ydliyx63znPiCSasEoCNdG/q/SPfW+IGGOxLv5K48LSBjyPQtKte8D87sy4GG3XX+TS6uecXntci1gUkIqFYHb0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+     style="position:absolute;width:0;height:0;overflow:hidden" id="dbim-icon-sprite">
+    <defs>
+        <symbol id="icon-angle-double-left" viewBox="0 0 24 24"><path d="M11.6 4.6 4.2 12l7.4 7.4 2.2-2.2L8.6 12l5.2-5.2z"/><path d="M19 4.6 11.6 12 19 19.4l2.2-2.2L16 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-angle-double-right" viewBox="0 0 24 24"><path d="M12.4 4.6 10.2 6.8 15.4 12l-5.2 5.2 2.2 2.2L19.8 12z"/><path d="M5 4.6 2.8 6.8 8 12l-5.2 5.2L5 19.4 12.4 12z"/></symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M20.8 10.6H9.6v2.8h11.2z"/><path d="M10.8 5.6 3.2 12l7.6 6.4z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M3.2 10.6h11.2v2.8H3.2z"/><path d="M13.2 5.6 20.8 12l-7.6 6.4z"/></symbol>
+        <symbol id="icon-blogger" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.4 2.4h11.2a4 4 0 0 1 4 4v11.2a4 4 0 0 1-4 4H6.4a4 4 0 0 1-4-4V6.4a4 4 0 0 1 4-4zm2.8 5.2a2 2 0 0 0 0 4h2.4a2 2 0 0 0 0-4zm0 5.6a2 2 0 0 0 0 4h5.6a2 2 0 0 0 0-4z"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M7.6 2.4H10v2.4H7.6z"/><path d="M14 2.4h2.4v2.4H14z"/><path fill-rule="evenodd" d="M4 4.8h16a1.6 1.6 0 0 1 1.6 1.6v13.2a1.6 1.6 0 0 1-1.6 1.6H4a1.6 1.6 0 0 1-1.6-1.6V6.4A1.6 1.6 0 0 1 4 4.8zm.4 5.6v8.4h15.2v-8.4z"/><path d="M6.4 12.4h3.2v3.2H6.4z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4 2.2-2.2L12.4 12l5.2-5.2z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M8.6 4.6 6.4 6.8 11.6 12l-5.2 5.2 2.2 2.2L16 12z"/></symbol>
+        <symbol id="icon-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M10.8 3h2.4v7.6h3.4L12 16.6l-4.6-6h3.4z"/><path d="M4 17.2h2.4v2.4h11.2v-2.4H20v3.2a1.4 1.4 0 0 1-1.4 1.4H5.4A1.4 1.4 0 0 1 4 20.4z"/></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M13.6 21.6v-8.4h2.8l.42-3.3h-3.22V7.8c0-.95.27-1.6 1.64-1.6h1.74V3.26a23 23 0 0 0-2.54-.13c-2.5 0-4.22 1.53-4.22 4.34v2.43H7.4v3.3h2.82v8.4z"/></symbol>
+        <symbol id="icon-fact-check" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4 3.6 5.6v6.2c0 4.6 3.4 8.6 8.4 9.8 5-1.2 8.4-5.2 8.4-9.8V5.6zm-1 13.2-3.6-3.6 1.7-1.7 1.9 1.9 4.5-4.5 1.7 1.7z"/></symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.8 3h2.4l-1 6h3.2l1-6h2.4l-1 6h3.4v2.4h-3.8l-.6 3.2h3.6V17h-4l-1 5h-2.4l1-5h-3.2l-1 5H5.4l1-5H3V14.6h3.8l.6-3.2H3.8V9h4zm.6 8.4-.6 3.2h3.2l.6-3.2z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M12 3.4 2.8 11.6h2.4v8.4a1 1 0 0 0 1 1h3.3v-5.4h5v5.4h3.3a1 1 0 0 0 1-1v-8.4h2.4z"/></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.6 2.4h8.8a5.2 5.2 0 0 1 5.2 5.2v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6a5.2 5.2 0 0 1 5.2-5.2zm0 2.4a2.8 2.8 0 0 0-2.8 2.8v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8z"/><path fill-rule="evenodd" d="M12 6.8a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 2.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6z"/><circle cx="17.3" cy="6.7" r="1.3"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M4.8 8.8h3.6v12H4.8z"/><circle cx="6.6" cy="5.4" r="2.1"/><path d="M10.8 8.8h3.45v1.65h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.35 4.3 5.4v6.6h-3.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.95h-3.6z"/></symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M2.4 7.6v9.2a1.6 1.6 0 0 0 1.6 1.6h16a1.6 1.6 0 0 0 1.6-1.6V7.6L12 14z"/><path d="M21.2 5.4H2.8L12 11.8z"/></symbol>
+        <symbol id="icon-mail-open" viewBox="0 0 24 24"><path d="M2.4 9.8h19.2v9.6A1.6 1.6 0 0 1 20 21H4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M12 2.6 21.6 9.2h-3.8L12 5.3 6.2 9.2H2.4z"/><path d="m3.9 11.2 8.1 5.4 8.1-5.4 1.5 1.3-9.6 6.4-9.6-6.4z"/></symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a7 7 0 0 0-7 7c0 5.2 7 12.2 7 12.2s7-7 7-12.2a7 7 0 0 0-7-7zm0 9.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z"/></symbol>
+        <symbol id="icon-newspaper" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 4.4h14.8v15.2H2.8zm2 2v11.2h10.8V6.4z"/><path d="M6 7.6h8.4v1.6H6z"/><path d="M6 10.8h8.4v1.6H6z"/><path d="M6 14h5.2v1.6H6z"/><path d="M18.4 8.4h2.8v9.6a1.4 1.4 0 0 1-2.8 0z"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="7.4" y="4" width="3.6" height="16" rx="0.9"/><rect x="13" y="4" width="3.6" height="16" rx="0.9"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 4.5v15l12-7.5z"/></symbol>
+        <symbol id="icon-picture" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.4 5.2h19.2v13.6H2.4zm2 2v9.6h15.2V7.2z"/><path d="M5.6 16.4 10 11l2.6 3 2-2.2 4 4.6z"/><circle cx="8" cy="10.4" r="1.5"/></symbol>
+        <symbol id="icon-press-conference" viewBox="0 0 24 24"><circle cx="12" cy="5.2" r="2.6"/><path d="M7.6 12.2a4.4 4.4 0 0 1 8.8 0z"/><circle cx="4.9" cy="9.6" r="2.2"/><path d="M1.8 15.2a3.1 3.1 0 0 1 6.2 0z"/><circle cx="19.1" cy="9.6" r="2.2"/><path d="M16 15.2a3.1 3.1 0 0 1 6.2 0z"/><path d="M6.6 13.6h10.8l2.2 7.8H4.4z"/></symbol>
+        <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6.4 2.8h11.2v4.4H6.4z"/><path d="M4 8.4h16a1.6 1.6 0 0 1 1.6 1.6v5.6a1.6 1.6 0 0 1-1.6 1.6h-1.6v-2.8H6v2.8H4a1.6 1.6 0 0 1-1.6-1.6V10A1.6 1.6 0 0 1 4 8.4z"/><path d="M7.2 15.6h9.6v5.6H7.2z"/></symbol>
+        <symbol id="icon-rss" viewBox="0 0 24 24"><circle cx="4.8" cy="19.2" r="2.4"/><path d="M2.4 11.2v3.2a6.4 6.4 0 0 1 6.4 6.4H12A9.6 9.6 0 0 0 2.4 11.2z"/><path d="M2.4 4.8V8A13.6 13.6 0 0 1 16 21.6h3.2A16.8 16.8 0 0 0 2.4 4.8z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10 2.8a7.2 7.2 0 1 0 0 14.4 7.2 7.2 0 0 0 0-14.4zm0 2.4a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6z"/><path d="M15.3 14.6 21.2 20.5l-1.5 1.5-5.9-5.9z"/><path d="M9.2 6.8h1.6v2.4h2.4v1.6h-2.4v2.4H9.2v-2.4H6.8V9.2h2.4z"/></symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5.6" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="18.4" r="3"/><path d="M8.3 10.9 15.7 7.2l.9 1.8-7.4 3.7z"/><path d="M9.2 13.1 16.6 16.8l-.9 1.8-7.4-3.7z"/></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M4.2 3h4.3l11.3 18h-4.3z"/><path d="M19.3 3h-2.6L4.2 21h2.6z"/></symbol>
+        <symbol id="icon-university" viewBox="0 0 24 24"><path d="M12 2.4 21.6 7.2v1.6H2.4V7.2z"/><path d="M4.8 10.4h2.4v8H4.8z"/><path d="M9.2 10.4h2.4v8H9.2z"/><path d="M13.4 10.4h2.4v8h-2.4z"/><path d="M17.6 10.4H20v8h-2.4z"/><path d="M3.2 19.8h17.6v1.8H3.2z"/></symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3.2 9.2h3.3l5-4.2v14l-5-4.2H3.2z"/><path d="M14.6 8.4a5 5 0 0 1 0 7.2l1.6 1.6a7.2 7.2 0 0 0 0-10.4z"/><path d="M17.4 5.6a8.8 8.8 0 0 1 0 12.8l1.5 1.5a10.9 10.9 0 0 0 0-15.8z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2.4a9.5 9.5 0 0 0-8.1 14.5L2.4 21.6l4.8-1.4A9.5 9.5 0 1 0 12 2.4zm0 2.2a7.3 7.3 0 1 1-3.8 13.5l-.4-.2-2.6.7.7-2.5-.3-.4A7.3 7.3 0 0 1 12 4.6z"/><path d="M9.4 7.8c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6 6 0 0 1-1.8-1.1 6.6 6.6 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5z"/></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10.2 15.1V8.9l5.1 3.1z"/></symbol>
+    </defs>
+</svg>
+
+    <form method="post" action="./PressReleasePage.aspx?PRID=2122427&amp;lang=2&amp;reg=3" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZPQet1wIx1Q48y3xJY2k25Y7qxH5RrQ9qQcN-OiTC9guZtri9w2&amp;t=639246310404186790" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LdIxBJXt0U_WW5GWfJqHAqo6frgCmGRfEywglicTersO2OKrFhK1gAIp0Wk2al2YrpdR3uWqH6f4nfjBsCyRUfTUUVmb0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScH645UK3RD852IErF2548Wz9Ssv0rLjB4fhVKnHcMpqkaMHpNAGOeWY02Lf4aBYN9-dVBme_SNK5KJwmFQNpMixYDZ7M0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a8613aea7%3af9cec9bc%3a3202a5a2%3aab09e3fe%3a87104b7c%3a720a52bf%3a589eaa30%3aa67c2700%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="DCywU3+lPl5beaYwLCswdQ5tctXtdIUGFDnBj2VH75BkkXJkVavZJ3O3ZPlmoba8UuZK5PIPAKHMQJTBxcVPm92k//FXsEZCRtUAYpq8nj1qACFiBkH6MJXXNO6HKoVpxGTtWZV2hSUQsjavMxTOOeojKsd+JB3DAa6Odjp/UInWCfTNR8S0ax1UyWALFL7sSjh2EGTn9HJomd/g5e/ixQ3XRAGdtSTCf4gCJCOxBi5rWgy53XBLPxR8vWLlpVV7Cg+ENJ+OJ5C46Fcnvd5H7DFyGS4=" />
+</div>
+        
+        <div id="templateCss"></div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+        <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+        <div class="container" style='margin-bottom: 50px;'>
+            <div id="accessories">
+                
+                <div class="pull-right" style="display: flex">
+                    <div id="voll"></div>
+                    <div id="vollDT"></div>
+                    
+
+<span class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</span>
+                </div>
+            </div>
+            <input type="hidden" name="hydpermid" id="hydpermid" value="2122427" />
+            
+
+            <div class="innner-page-main-about-us-content-right-part">
+                <div id="MinistryName" class="MinistryNameSubhead text-center">
+                    Ministry of Statistics & Programme Implementation
+                </div>
+                <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2026/sep/ph_9768_20260902_10000501.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+                <div class="text-center event-heading-background">
+                    
+                    <h1 id="Titleh2">
+                        MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.
+                    </h1>
+                    <h3 id="Subtitleh3">
+                        <span id="ltrSubtitle"></span>
+                    </h3>
+                </div>
+
+                <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                    Posted On:
+                              17 APR 2025 4:30PM by PIB Delhi
+                </div>
+                
+                <div class='pt20'>
+                </div>
+                <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                
+
+                <!-- Release content wrapper for client-side zero-reflow word count -->
+                <div id="pibReleaseBody">
+                    <p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">The Ministry of Statistics &amp; Programme Implementation (MoSPI) is making continuous efforts to bring significant improvement in dissemination of its statistical products in sync with international best practices and timelines. MOSPI releases consumer price indices within 12 days after the end of the reference month, which is among the best globally. Similarly, survey reports of NSS are now released within 90 days of completion of fieldwork. The Calendar of release of National Accounts Statistics has been rationalized by obviating the need for the 3</span><sup style="font-family:&quot;Times New Roman&quot;,Times,serif">rd</sup><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px"> Revised Estimates of GDP. On the same lines, MOSPI now plans to release the Index of Industrial Production (IIP) within 28 days instead of 42 days.</span></p>
+
+<table align="center" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse">
+	<tbody>
+		<tr>
+			<td><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong><em>&ldquo;From April 2025 onwards, All India Index of Industrial Production (IIP) will be released on 28<sup>th</sup> of every month at 4:00 PM within 28 days from the reference month. For a particular month IIP will be released as Quick Estimates followed by a Final Estimate.&rdquo;</em></strong></span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-left:0in; margin-right:-6.8pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong><em>&nbsp;</em></strong>The Index of Industrial Production (IIP) is a crucial short-term indicator of industrial growth in the country. The compilation and release of IIP in India commenced with base year 1937<span style="background-color:white"><span style="color:#393939">, which</span></span> was successively revised to 1946, 1951, 1956, 1960, 1970, 1980-81, 1993-94, 2004-05 and 2011-12. MoSPI presently releases the monthly all India Index of Industrial Production (IIP) on the 12<sup>th</sup> of every month (previous working day if 12th is a holiday) within 42 days from the reference month. </span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Currently, the Quick Estimates of a month undergo revision in subsequent releases as per the revision policy of IIP. Along with the Quick Estimates of IIP for the specific month, the indices of the previous month undergo the first revision and those for the third previous month undergo the second or final revision in the light of the updated data received from the source agencies. </span></span></p>
+
+<p style="margin-left:0in; margin-right:0.2pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The United Nations&rsquo; International Recommendations for Index of Industrial production (IRIIP)-2010 provide that the monthly IIP be released within forty-five days after the end of the reference month. Similarly, the Special Data Dissemination Standards (SDDS) of the IMF requires that the index for any reference month should be released within six weeks from the end of that month. In accordance with these international standards in data dissemination, MOSPI has been releasing IIP indices within 42 days after the end of the reference month.</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">In recent times, considering the advancement in data collection and processing technologies, there is a growing demand from stakeholders for reducing the timeline of release of IIP. Recognizing this need, MoSPI constituted a committee, in June, 2024, to examine the feasibility of reducing the timeline of release of IIP, its revision schedule, while maintaining the response rates and without compromising the quality. The committee included representatives from all the data source agencies, including the Department for Promotion of Industry and Internal Trade (DPIIT), the Indian Bureau of Mines, Department of Chemicals and Petrochemicals and others. The Committee reviewed the entire system of data collection and processing of IIP data to arrive at its recommendations.</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">After due consultations with the source agencies and in keeping with stakeholders&rsquo; aspirations, it has been decided to reduce the timeline of release of IIP from 42 days to 28 days from reference month and also to do-away with second revision of IIP. Accordingly, MoSPI will henceforth release the monthly <strong>&ldquo;All India Index of Industrial Production (IIP)</strong>&rdquo;<strong>on 28<sup>th</sup> of every month at 4:00 PM</strong> (next working day if 28<sup>th</sup> is a holiday). The Quick estimate for a specific month will undergo revision only once, in the next month as the final estimate, as per the revised revision policy. Thus, MOSPI will now release only two estimates (Quick estimate and Final estimate) of a particular month instead of the earlier practice of releasing three estimates (Quick estimates followed by a 1<sup>st</sup> Revised estimate and a 2<sup>nd</sup> Revised (final) estimate). </span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">In view of the above, it is informed that MoSPI will release the next IIP estimates on 28 April 2025, at 4:00 PM on the website of Press Information Bureau and Ministry&#39;s official website (<a href="https://www.mospi.gov.in" target="_blank">https://www.mospi.gov.in</a>). This release will include - Quick estimates for March 2025, and the Final estimates for December 2024, January 2025 and February 2025.</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">********</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><strong><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Samrat</span></span></strong></p>
+
+                </div>
+
+                <div id="reel_pic">
+                </div>
+
+                <br />
+                <span id="ReleaseId">(Release ID: 2122427)</span>
+                <span id="lblViews">Visitor Counter : 2848</span>
+                <div>
+                    
+                </div>
+                
+
+                <span id="lblRefPhoto"></span>
+
+                <div class="BackgroundRelease">
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div class="ReleaseLang">Read this release in: 
+                
+                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2122487' target="_blank">
+                            Urdu </a>
+                    
+                        ,
+                    
+                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2122508' target="_blank">
+                            हिन्दी </a>
+                    
+                        ,
+                    
+                        <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2122521' target="_blank">
+                            Tamil </a>
+                    
+                </div>
+
+                <div class="RelTag">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+
+                <!-- DBIM 3.0 Option 4: Separator Line with Left Share Rail & Right Reading Metrics -->
+                <div class="pr-share pr-share--footer" role="region" aria-label="Share and reading details">
+                    <div class="pr-share__left">
+                        <span class="pr-share__label" aria-hidden="true">Share</span>
+                        <ul class="pr-share__list">
+                            <li><a class="pr-share__btn pr-share__btn--facebook"
+                                href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d2122427"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on Facebook">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-facebook" xlink:href="#icon-facebook"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--twitter"
+                                href="https://twitter.com/intent/tweet?url=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d2122427"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on X">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-twitter" xlink:href="#icon-twitter"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--whatsapp"
+                                href="https://api.whatsapp.com/send?text=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d2122427"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on WhatsApp">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--linkedin"
+                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d2122427"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Share on LinkedIn">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-linkedin" xlink:href="#icon-linkedin"></use>
+                                </svg>
+                            </a></li>
+                            <li><a class="pr-share__btn pr-share__btn--mail"
+                                href="mailto:?subject=Press+release+from+PIB&amp;body=https%3a%2f%2fpib.gov.in%2fPressReleasePage.aspx%3fPRID%3d2122427"
+                                aria-label="Share by email">
+                                <svg class="dbim-icon dbim-icon-24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <use href="#icon-mail" xlink:href="#icon-mail"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="pr-reading-meta" id="prReadingMeta" aria-label="Reading statistics">
+                        <span class="pr-reading-meta__item">
+                            <!-- Modern Document / Word Count Icon -->
+                            <svg class="pr-reading-meta__icon" width="18" height="18" viewbox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                            </svg>
+                            <span id="prWordCount">-- words</span>
+                        </span>
+
+                        <span class="pr-reading-meta__divider" aria-hidden="true">|</span>
+
+                        <span class="pr-reading-meta__item">
+                            <!-- Modern Precision Clock / Read Time Icon -->
+                            <svg class="pr-reading-meta__icon" width="18" height="18" viewbox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+                            <span id="prReadTime">-- min read</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="RelLink" class="RelLink">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <center>
+                    
+                </center>
+            </div>
+
+            <div id="update12">
+	
+                    
+                    <input type="hidden" name="Hidden" id="Hidden" />
+                    <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                        <div>
+                            <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                        </div>
+                        <div id="description">
+                        </div>
+                        <div class="text-center">
+                            <h2>
+                                
+                                <br>
+                                
+                            </h2>
+                        </div>
+                        <br />
+                        <div class="clear">
+                        </div>
+                        
+                    
+	</div>
+                
+</div>
+        </div>
+
+        <div id="PdfDiv" style="display: none;">
+            <table width="100%">
+                <tr>
+                    <td style="font-weight: 200; text-align: center">
+                        Ministry of Statistics & Programme Implementation
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="text-align: center; font-size: 14px;">
+                            Posted On:
+                                          17 APR 2025 4:30PM by PIB Delhi
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                            <p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">The Ministry of Statistics &amp; Programme Implementation (MoSPI) is making continuous efforts to bring significant improvement in dissemination of its statistical products in sync with international best practices and timelines. MOSPI releases consumer price indices within 12 days after the end of the reference month, which is among the best globally. Similarly, survey reports of NSS are now released within 90 days of completion of fieldwork. The Calendar of release of National Accounts Statistics has been rationalized by obviating the need for the 3</span><sup style="font-family:&quot;Times New Roman&quot;,Times,serif">rd</sup><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px"> Revised Estimates of GDP. On the same lines, MOSPI now plans to release the Index of Industrial Production (IIP) within 28 days instead of 42 days.</span></p>
+
+<table align="center" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse">
+	<tbody>
+		<tr>
+			<td><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong><em>&ldquo;From April 2025 onwards, All India Index of Industrial Production (IIP) will be released on 28<sup>th</sup> of every month at 4:00 PM within 28 days from the reference month. For a particular month IIP will be released as Quick Estimates followed by a Final Estimate.&rdquo;</em></strong></span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="margin-left:0in; margin-right:-6.8pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong><em>&nbsp;</em></strong>The Index of Industrial Production (IIP) is a crucial short-term indicator of industrial growth in the country. The compilation and release of IIP in India commenced with base year 1937<span style="background-color:white"><span style="color:#393939">, which</span></span> was successively revised to 1946, 1951, 1956, 1960, 1970, 1980-81, 1993-94, 2004-05 and 2011-12. MoSPI presently releases the monthly all India Index of Industrial Production (IIP) on the 12<sup>th</sup> of every month (previous working day if 12th is a holiday) within 42 days from the reference month. </span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Currently, the Quick Estimates of a month undergo revision in subsequent releases as per the revision policy of IIP. Along with the Quick Estimates of IIP for the specific month, the indices of the previous month undergo the first revision and those for the third previous month undergo the second or final revision in the light of the updated data received from the source agencies. </span></span></p>
+
+<p style="margin-left:0in; margin-right:0.2pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The United Nations&rsquo; International Recommendations for Index of Industrial production (IRIIP)-2010 provide that the monthly IIP be released within forty-five days after the end of the reference month. Similarly, the Special Data Dissemination Standards (SDDS) of the IMF requires that the index for any reference month should be released within six weeks from the end of that month. In accordance with these international standards in data dissemination, MOSPI has been releasing IIP indices within 42 days after the end of the reference month.</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">In recent times, considering the advancement in data collection and processing technologies, there is a growing demand from stakeholders for reducing the timeline of release of IIP. Recognizing this need, MoSPI constituted a committee, in June, 2024, to examine the feasibility of reducing the timeline of release of IIP, its revision schedule, while maintaining the response rates and without compromising the quality. The committee included representatives from all the data source agencies, including the Department for Promotion of Industry and Internal Trade (DPIIT), the Indian Bureau of Mines, Department of Chemicals and Petrochemicals and others. The Committee reviewed the entire system of data collection and processing of IIP data to arrive at its recommendations.</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">After due consultations with the source agencies and in keeping with stakeholders&rsquo; aspirations, it has been decided to reduce the timeline of release of IIP from 42 days to 28 days from reference month and also to do-away with second revision of IIP. Accordingly, MoSPI will henceforth release the monthly <strong>&ldquo;All India Index of Industrial Production (IIP)</strong>&rdquo;<strong>on 28<sup>th</sup> of every month at 4:00 PM</strong> (next working day if 28<sup>th</sup> is a holiday). The Quick estimate for a specific month will undergo revision only once, in the next month as the final estimate, as per the revised revision policy. Thus, MOSPI will now release only two estimates (Quick estimate and Final estimate) of a particular month instead of the earlier practice of releasing three estimates (Quick estimates followed by a 1<sup>st</sup> Revised estimate and a 2<sup>nd</sup> Revised (final) estimate). </span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">In view of the above, it is informed that MoSPI will release the next IIP estimates on 28 April 2025, at 4:00 PM on the website of Press Information Bureau and Ministry&#39;s official website (<a href="https://www.mospi.gov.in" target="_blank">https://www.mospi.gov.in</a>). This release will include - Quick estimates for March 2025, and the Final estimates for December 2024, January 2025 and February 2025.</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">********</span></span></p>
+
+<p style="margin-left:0in; margin-right:-6.9pt; text-align:justify"><strong><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Samrat</span></span></strong></p>
+
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                            (Release ID: 2122427)
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearfix">
+        </div>
+
+        <div class="section1">
+            <div id="frst_t">
+                <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427&text=MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427&title=MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+            </div>
+            <div id="second_t">
+                <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427' target='_blank'><li class='fb_b'   ></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427&text=MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.' target='_blank'><li class='twitter_r'  > </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427' target='_blank'><li class='whatsapp_r'  ></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2122427&title=MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days.&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ></li></a></ul></div></div>
+            </div>
+        </div>
+        <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="MOSPI continues its endeavor to reduce timelines in release of its statistical products; Index of Industrial Production will now be released on 28th of every month reducing its release timeline from 42 days to 28 days." />
+        <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+        <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:justify&quot;>&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;>The Ministry of Statistics &amp;amp; Programme Implementation (MoSPI) is making continuous efforts to bring significant improvement in dissemination of its statistical products in sync with international best practices and timelines. MOSPI releases consumer price indices within 12 days after the end of the reference month, which is among the best globally. Similarly, survey reports of NSS are now released within 90 days of completion of fieldwork. The Calendar of release of National Accounts Statistics has been rationalized by obviating the need for the 3&lt;/span>rd&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;> Revised Estimates of GDP. On the same lines, MOSPI now plans to release the Index of Industrial Production (IIP) within 28 days instead of 42 days.&lt;/span>&lt;/p>
+
+&lt;table align=&quot;center&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;>
+	&lt;tbody>
+		&lt;tr>
+			&lt;td>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>&lt;em>&amp;ldquo;From April 2025 onwards, All India Index of Industrial Production (IIP) will be released on 28th of every month at 4:00 PM within 28 days from the reference month. For a particular month IIP will be released as Quick Estimates followed by a Final Estimate.&amp;rdquo;&lt;/em>&lt;/strong>&lt;/span>&lt;/span>&lt;/td>
+		&lt;/tr>
+	&lt;/tbody>
+&lt;/table>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.8pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>&lt;em>&amp;nbsp;&lt;/em>&lt;/strong>The Index of Industrial Production (IIP) is a crucial short-term indicator of industrial growth in the country. The compilation and release of IIP in India commenced with base year 1937&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:#393939&quot;>, which&lt;/span>&lt;/span> was successively revised to 1946, 1951, 1956, 1960, 1970, 1980-81, 1993-94, 2004-05 and 2011-12. MoSPI presently releases the monthly all India Index of Industrial Production (IIP) on the 12th of every month (previous working day if 12th is a holiday) within 42 days from the reference month. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Currently, the Quick Estimates of a month undergo revision in subsequent releases as per the revision policy of IIP. Along with the Quick Estimates of IIP for the specific month, the indices of the previous month undergo the first revision and those for the third previous month undergo the second or final revision in the light of the updated data received from the source agencies. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0.2pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The United Nations&amp;rsquo; International Recommendations for Index of Industrial production (IRIIP)-2010 provide that the monthly IIP be released within forty-five days after the end of the reference month. Similarly, the Special Data Dissemination Standards (SDDS) of the IMF requires that the index for any reference month should be released within six weeks from the end of that month. In accordance with these international standards in data dissemination, MOSPI has been releasing IIP indices within 42 days after the end of the reference month.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>In recent times, considering the advancement in data collection and processing technologies, there is a growing demand from stakeholders for reducing the timeline of release of IIP. Recognizing this need, MoSPI constituted a committee, in June, 2024, to examine the feasibility of reducing the timeline of release of IIP, its revision schedule, while maintaining the response rates and without compromising the quality. The committee included representatives from all the data source agencies, including the Department for Promotion of Industry and Internal Trade (DPIIT), the Indian Bureau of Mines, Department of Chemicals and Petrochemicals and others. The Committee reviewed the entire system of data collection and processing of IIP data to arrive at its recommendations.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>After due consultations with the source agencies and in keeping with stakeholders&amp;rsquo; aspirations, it has been decided to reduce the timeline of release of IIP from 42 days to 28 days from reference month and also to do-away with second revision of IIP. Accordingly, MoSPI will henceforth release the monthly &lt;strong>&amp;ldquo;All India Index of Industrial Production (IIP)&lt;/strong>&amp;rdquo;&lt;strong>on 28th of every month at 4:00 PM&lt;/strong> (next working day if 28th is a holiday). The Quick estimate for a specific month will undergo revision only once, in the next month as the final estimate, as per the revised revision policy. Thus, MOSPI will now release only two estimates (Quick estimate and Final estimate) of a particular month instead of the earlier practice of releasing three estimates (Quick estimates followed by a 1st Revised estimate and a 2nd Revised (final) estimate). &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>In view of the above, it is informed that MoSPI will release the next IIP estimates on 28 April 2025, at 4:00 PM on the website of Press Information Bureau and Ministry&amp;#39;s official website (&lt;a href=&quot;https://www.mospi.gov.in&quot; target=&quot;_blank&quot;>https://www.mospi.gov.in&lt;/a>). This release will include - Quick estimates for March 2025, and the Final estimates for December 2024, January 2025 and February 2025.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>********&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:-6.9pt; text-align:justify&quot;>&lt;strong>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Samrat&lt;/span>&lt;/span>&lt;/strong>&lt;/p>
+" />
+        <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+        </script>
+        <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+                  function CleanHtml(html) {
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+        </script>
+        <script type="text/javascript">
+                  $(document).ready(function () {
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                        }
+                  });
+        </script>
+        <style type="text/css">
+            @media print {
+                .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                    display: none !important;
+                }
+            }
+
+            .f_vl {
+                padding-right: 30px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            .log_oo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .log_oo img {
+                    width: 150px;
+                }
+
+            .sticky-social_mb {
+                position: fixed;
+                bottom: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+            }
+
+            .social_mb {
+                list-style: none;
+                display: flex;
+                width: 100%;
+                margin-bottom: -8px;
+            }
+
+                .social_mb a {
+                    padding: 8px 0px;
+                    font-size: 30px;
+                    transition: all 0.8s ease-in-out;
+                    width: 20% !important;
+                    text-align: center;
+                }
+        </style>
+        <style type="text/css">
+            .section1 {
+                position: relative;
+                padding: 10px 0px;
+                width: 100%;
+            }
+
+            .sticky-social {
+                position: fixed;
+                top: 20px;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .social {
+                list-style: none;
+            }
+
+                .social a li {
+                    padding: 8px 12px;
+                    font-size: 25px;
+                    transition: all 0.8s ease-in-out;
+                }
+
+                    .social a li:hover {
+                        margin-right: -30px;
+                        box-shadow: 2px 5px 10px grey;
+                    }
+
+                        .social a li:hover .fa {
+                            margin-left: 20px;
+                        }
+
+            .fb_b {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .twitter_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .whatsapp_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .fa-envelope_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+
+            .fa-linkedin_r {
+                background-color: var(--dbim-key, #0F5757);
+            }
+        </style>
+        <style type="text/css">
+            @media only screen and (max-device-width: 767px) {
+                p span img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                p img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                h2 {
+                    font-size: var(--dbim-h2, 20px);
+                    font-weight: 600 !important;
+                }
+
+                h3 {
+                    font-size: var(--dbim-h3, 16px);
+                    font-weight: 600 !important;
+                }
+            }
+        </style>
+        <style type="text/css">
+            .film-roll-badge {
+                position: absolute;
+                top: 82%;
+                right: 20px;
+                width: 230px;
+                height: 70px;
+                background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 18px, var(--dbim-text, #150202) 18px, var(--dbim-text, #150202) 36px );
+                border-top: 8px solid var(--dbim-green-key, #0F5757);
+                border-bottom: 8px solid var(--dbim-green-key, #0F5757);
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                animation: moveFilm 8s linear infinite;
+                z-index: 10;
+            }
+
+                .film-roll-badge::before,
+                .film-roll-badge::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 10px;
+                    background: repeating-linear-gradient( to right, var(--dbim-green-key, #0F5757) 0px, var(--dbim-green-key, #0F5757) 10px, #fff 10px, #fff 20px );
+                    left: 0;
+                    z-index: 2;
+                }
+
+                .film-roll-badge::before {
+                    top: -4px;
+                }
+
+                .film-roll-badge::after {
+                    bottom: -4px;
+                }
+
+            .film-roll-inner {
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: flicker 2s infinite ease-in-out;
+            }
+
+            .countdown-text {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: #fff;
+                text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                white-space: nowrap;
+            }
+
+            @keyframes moveFilm {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 120px 0;
+                }
+            }
+
+            @keyframes flicker {
+                0%, 100% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0.9;
+                }
+
+                25% {
+                    opacity: 0.95;
+                }
+
+                75% {
+                    opacity: 0.85;
+                }
+            }
+
+            @media (max-width: 1500px) {
+                .film-roll-badge {
+                    top: 68%;
+                    right: 18px;
+                    height: 65px;
+                    font-size: 0.85rem;
+                }
+
+                .press-section {
+                    margin-top: 35px;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .film-roll-badge {
+                    top: 52%;
+                    right: 10px;
+                    width: 200px;
+                    height: 60px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .film-roll-badge {
+                    top: 56%;
+                    right: 10px;
+                    width: 124px;
+                    height: 55px;
+                }
+
+                .countdown-text {
+                    font-size: 0.9rem;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .film-roll-badge {
+                    top: 59%;
+                    right: 5px;
+                    height: 50px;
+                }
+
+                .countdown-text {
+                    font-size: 0.85rem;
+                }
+            }
+        </style>
+        <script type="text/javascript">
+                  const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                  const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+                  const countdownElement = document.getElementById("countdown");
+
+                  if (countdownElement) {
+                        const interval = setInterval(() => {
+                              const now = new Date().getTime();
+
+                              if (now < festivalStart) {
+                                    const diff = festivalStart - now;
+                                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                                    countdownElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to go`;
+                              } else if (now >= festivalStart && now <= festivalEnd) {
+                                    const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                                    countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                              } else {
+                                    countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+                                    const elements = document.querySelectorAll('.film-roll-badge');
+                                    elements.forEach(el => el.style.width = "350px");
+                                    clearInterval(interval);
+                              }
+                        }, 1000);
+                  }
+        </script>
+        <script type="text/javascript">
+                  const miffStart = new Date("2026-06-15T00:00:00").getTime();
+                  const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+                  const miffElement = document.getElementById("miff");
+
+                  if (miffElement) {
+                        const miffInterval = setInterval(() => {
+                              const now = new Date().getTime();
+
+                              if (now < miffStart) {
+                                    const diff = miffStart - now;
+                                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                    miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+                              } else if (now >= miffStart && now <= miffEnd) {
+                                    const dayNumber = Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+                                    miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                              } else {
+                                    miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+                                    document.querySelectorAll('.film-roll-badge').forEach(el => el.style.width = "350px");
+                                    clearInterval(miffInterval);
+                              }
+                        }, 1000);
+                  }
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="RBHsi1Tg_-Ei-uFOWLZWkSpzBBizB1mTsLugs9KURjy9lCffx4rmEv8yLJ774Ku7TF3G3re6eone-zY-tS_vwymCf5ytMCciOtoJ40wMh58XhdPBa84n6Q=="/></form>
+    
+
+<script type="application/json" id="pibConsentConfig">{"ga4Id":"G-Q414Y0X6EE,G-QJJ6LZ8LHV","policyUrl":"/CookiePolicy.aspx","text":{"bannerLabel":"Cookie consent","title":"Cookies on this website","body":"We use essential cookies to make this website work. We also set analytics cookies when you arrive, so we can see how the site is used and improve it - you can switch these off below or at any time from the Cookie Policy page. Cookies from embedded social media content are set only if you allow them.","policyLink":"Read our Cookie Policy","accept":"Accept all","reject":"Reject optional","customize":"Customise","prefsTitle":"Cookie preferences","prefsIntro":"Choose which cookies this website may set. Essential cookies cannot be switched off because the site does not work without them. Analytics cookies are on unless you turn them off. Social media cookies stay off until you allow them. You can change these choices at any time from the Cookie Policy page.","essentialName":"Essential cookies","essentialDesc":"Needed for the site to function. These remember your session, your language and region, your text size and colour theme, and verify the security check on forms. They are always on.","analyticsName":"Analytics cookies","analyticsDesc":"Help us understand how visitors use the site - which pages are read and how long people stay - so it can be improved. The information is collected in a form that does not directly identify you. These are on when you arrive; switching them off here stops them and deletes the ones already set.","socialName":"Social media cookies","socialDesc":"Set by content embedded from X, Facebook and YouTube, such as timelines and videos. These platforms may use them to track you across websites. They stay off until you allow them.","save":"Save preferences","cancel":"Cancel"}}</script>
+<script type="text/javascript" src='/js/consent.js?v=10'></script>
+
+<script type="text/javascript" src='/js/consent-embeds.js?v=10'></script>
+
+
+    <!-- Minimal O(N) Time and O(1) Auxiliary Space Word Count & Read Time Calculation -->
+    <script type="text/javascript">
+            (function () {
+                  function calculateReadingStats() {
+                        var bodyEl = document.getElementById("pibReleaseBody");
+                        if (!bodyEl) return;
+
+                        // textContent extracts text without triggering expensive layout/reflow computations
+                        var text = bodyEl.textContent || "";
+                        var words = 0;
+                        var inWord = false;
+
+                        // O(N) single pass character code scan: achieves O(1) space with zero array allocations
+                        for (var i = 0, len = text.length; i < len; i++) {
+                              var code = text.charCodeAt(i);
+                              // Delimits on ASCII whitespace, control characters, tabs, newlines, and non-breaking spaces (160)
+                              if (code <= 32 || code === 160) {
+                                    inWord = false;
+                              } else if (!inWord) {
+                                    inWord = true;
+                                    words++;
+                              }
+                        }
+
+                        // Standard 250 WPM reading speed (e.g., 612 words yields 2 min read)
+                        var minutes = Math.max(1, Math.round(words / 250));
+
+                        var elWords = document.getElementById("prWordCount");
+                        var elTime = document.getElementById("prReadTime");
+
+                        if (elWords) elWords.textContent = words + (words === 1 ? " word" : " words");
+                        if (elTime) elTime.textContent = minutes + " min read";
+                  }
+
+                  if (document.readyState === "loading") {
+                        document.addEventListener("DOMContentLoaded", calculateReadingStats);
+                  } else {
+                        calculateReadingStats();
+                  }
+            })();
+    </script>
+
+    <script type="text/javascript">
+            (function () {
+                  try {
+                        if (window.self === window.top) { return; }
+                  } catch (e) { return; }
+                  var s = document.createElement("style");
+                  s.textContent = ".sticky-social, .sticky-social_mb { display: none !important; }";
+                  (document.head || document.documentElement).appendChild(s);
+            }());
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "file": "calendar_sources/holidays_2014.pdf",
+    "source_url": "https://www.highcourtchd.gov.in/sub_pages/top_menu/about/calendar/pbutcalender2014.pdf",
+    "sha256": "231d5d646e4ab4aa057029abe7652390fae9037fb9d542193c561ad3cce8656e",
+    "retrieved_utc": "2026-10-22T08:56:19.888233+00:00",
+    "year": 2014,
+    "diwali_date": "2014-10-23",
+    "content_type": "application/pdf"
+  },
+  {
+    "file": "calendar_sources/holidays_2015.pdf",
+    "source_url": "https://surveyofindia.gov.in/files/RONo.10.pdf",
+    "sha256": "b0a7af637de4babcd0a874b3ec4903c565ee13461dcf0c4bf5f25c499eea4cb3",
+    "retrieved_utc": "2026-10-22T08:56:22.617588+00:00",
+    "year": 2015,
+    "diwali_date": "2015-11-11",
+    "content_type": "application/pdf"
+  },
+  {
+    "file": "calendar_sources/holidays_2016.pdf",
+    "source_url": "https://surveyofindia.gov.in/files/HOLIDAY_1.pdf",
+    "sha256": "94f2ddf0a3709ba00c77eab809b5440bfd10d3a4ebc9557331172a0d1fd0a275",
+    "retrieved_utc": "2026-10-22T08:56:19.844304+00:00",
+    "year": 2016,
+    "diwali_date": "2016-10-30",
+    "content_type": "application/pdf"
+  },
+  {
+    "file": "calendar_sources/holidays_2017.pdf",
+    "source_url": "https://delhi.gov.in/sites/default/files/documents/Government-2017_0.pdf",
+    "sha256": "571051762a0791ea973da66328aec02cdf44d5a7a5099df682f29d6d8debbae2",
+    "retrieved_utc": "2026-10-22T08:56:20.246457+00:00",
+    "year": 2017,
+    "diwali_date": "2017-10-19",
+    "content_type": "application/pdf"
+  },
+  {
+    "file": "calendar_sources/holidays_2018.pdf",
+    "source_url": "https://surveyofindia.gov.in/files/Holiday%20List%202018.pdf",
+    "sha256": "903626953d7243198ef668532ca7c57affe3e46a7b46d0572baf938f744af143",
+    "retrieved_utc": "2026-10-22T08:58:15.907381+00:00",
+    "year": 2018,
+    "diwali_date": "2018-11-07"
+  },
+  {
+    "file": "calendar_sources/holidays_2019.pdf",
+    "source_url": "https://surveyofindia.gov.in/files/Holidays%202019.pdf",
+    "sha256": "03337c665cec6ab81a20ef85df22ab3f0b2769e38cfaaed27761461e158dfd8b",
+    "retrieved_utc": "2026-10-22T09:00:11.571570+00:00",
+    "year": 2019,
+    "diwali_date": "2019-10-27"
+  },
+  {
+    "file": "calendar_sources/holidays_2020.html",
+    "source_url": "https://www.lpsc.gov.in/holidaysBangalore2020.html",
+    "sha256": "db11970c74500acb00f711a716fd89a6b8852f26895bc0f11a77cfe50e6ff3cf",
+    "retrieved_utc": "2026-10-22T08:58:07.887444+00:00",
+    "year": 2020,
+    "diwali_date": "2020-11-14"
+  },
+  {
+    "file": "calendar_sources/holidays_2021.html",
+    "source_url": "https://www.lpsc.gov.in/holidaysBangalore2021.html",
+    "sha256": "fed617a07d1b4b821b71b8b7f84b71fe069b03ef9d97f07dc29974d454fcc152",
+    "retrieved_utc": "2026-10-22T08:58:07.911460+00:00",
+    "year": 2021,
+    "diwali_date": "2021-11-04"
+  },
+  {
+    "file": "calendar_sources/holidays_2022.html",
+    "source_url": "https://www.lpsc.gov.in/holidaysBangalore2022.html",
+    "sha256": "1febc3fbec26c8f131f5728933a0194ef691c0ab700b1cea9637d65220790406",
+    "retrieved_utc": "2026-10-22T08:58:07.847431+00:00",
+    "year": 2022,
+    "diwali_date": "2022-10-24"
+  },
+  {
+    "file": "calendar_sources/holidays_2023.html",
+    "source_url": "https://www.lpsc.gov.in/holidaysBangalore2023.html",
+    "sha256": "6c74e4344e58f7d2e0a457ddfb09704eed762fed7760a618bdf53de0dec2f467",
+    "retrieved_utc": "2026-10-22T08:58:07.877321+00:00",
+    "year": 2023,
+    "diwali_date": "2023-11-12"
+  }
+]

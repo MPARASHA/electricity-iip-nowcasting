@@ -1,0 +1,12 @@
+{
+  "completed_utc": "2026-10-22T15:07:47.858646+00:00",
+  "freeze_sha256": "2ce56ee89345ba8b6c05ed261b2b72917221713ed9e2fcbfc7155e6edd115136",
+  "outputs": {
+    "test_coefficients.csv": "58de5542b34ada2c8f73258be222f0c709b473f073820bf05c3bd50ad6129305",
+    "test_daily_coefficients.csv": "094d0359505d18e831dd16ddcbf2a1feaf64a94ad86598fb3d5ef7350e059bce",
+    "test_features.csv": "a904be6ea04f9887d050fd5198f6e87dafdedc323ec42fde2d44957d7c1f0cff",
+    "test_ledger.csv": "cd378a535ed6325faa69aaff925bccd4b744e30e657d23c710422f6a94b5f486",
+    "test_predictions.csv": "b9ba7b777e095da4fe5a833e310b8485ffe9659159a7d00ffd09383cd7fcbf67",
+    "test_scores.csv": "15593abcee6f5ac001c9babe8ba03b6fd10ce4f888f515be4818af7e245e8e6a"
+  }
+}

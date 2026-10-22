@@ -1,0 +1,29 @@
+{
+  "stage": "validation",
+  "fingerprint": {
+    "config_sha256": "e48f4a4b901b1d471b190cf9330daab4ef875a2801df3212aebcfb81fcd9b71b",
+    "backtest_script_sha256": "ec9fd5d0736672f826815b41963ebb4eaa4c0ba78ef372a3e8b2b4e1f25b6b1e",
+    "data_versions_sha256": "f8e0ebf587c84a4b5ba892231693b753d3ad90b857c55ac2eed09e8a039c98e1"
+  },
+  "experiment_id": "validation_unfrozen",
+  "evaluation_months": 36,
+  "scenarios": [
+    {
+      "name": "primary",
+      "lag_days": 5,
+      "coverage": 0.9,
+      "exclude_pandemic_training": false
+    }
+  ],
+  "prediction_rows": 252,
+  "value_vintage": "revised_IIP_pseudo_real_time",
+  "outputs": {
+    "validation_adjusted_daily_snapshot.csv": "b8f54b18abf2e03b388dcf2b401c8e8ad45983cddc0f44fe4761f064d126a76d",
+    "validation_adjustment_coefficients.csv": "d6ee50aa3c172b3cc4c33d9eacae24e39519a1f2a54eaa015ef499c9fd486867",
+    "validation_coefficients.csv": "0e42ea08fa6a73d4ea9c40943c6d4c53fde8b89e6c990df9c28c7453e0657ca2",
+    "validation_feature_eligibility.csv": "5675d75852e4ff23817e3b8e1c6014d09cdfdbe974a34088e19c6186bdbfbc97",
+    "validation_information_sets.csv": "058c93b186a6feb07bb0c81fb6ecc332e157fad6ce0315a46f71df8f503354f5",
+    "validation_metrics.csv": "cba30cac5ff3b49cca4f9eac9c8bffc58886c8dc154cdf57eb0985b33ec0436e",
+    "validation_predictions.csv": "1d4b9288ba811e6bf7fc9d5442285c6360987955f3e6998964c23556aabf7278"
+  }
+}

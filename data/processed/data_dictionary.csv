@@ -1,0 +1,58 @@
+table,field,unit,definition
+daily.csv,date,date,Grid energy day; each weather series retains its UTC date label
+daily.csv,energy_MU,MU = GWh = million kWh,National Table A energy supplied; missing stays missing
+daily.csv,energy_quality_flag,text,Unresolved reporting-year or source-value conflict; nonempty flags exclude usable energy
+daily.csv,energy_usable,boolean,Positive nonmissing energy with no unresolved date or conflicting-source flag
+daily.csv,energy_source_sha256,SHA-256,Hash of the frozen national electricity CSV
+daily.csv,delhi_north_T2M_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,delhi_north_T2M_MAX_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,delhi_north_T2M_MIN_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,mumbai_west_T2M_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,mumbai_west_T2M_MAX_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,mumbai_west_T2M_MIN_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,chennai_south_T2M_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,chennai_south_T2M_MAX_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,chennai_south_T2M_MIN_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,kolkata_east_T2M_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,kolkata_east_T2M_MAX_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,kolkata_east_T2M_MIN_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,guwahati_northeast_T2M_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,guwahati_northeast_T2M_MAX_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,guwahati_northeast_T2M_MIN_C,degrees Celsius,"Fixed NASA POWER point, UTC; same labelled date retained with a documented 5.5-hour grid-day mismatch"
+daily.csv,weather_complete,boolean,All 15 temperature fields present; fixed UTC calendar-label proxy for grid energy days
+daily.csv,weather_time_standard,UTC,NASA POWER daily time convention; no local-day conversion at preparation
+daily.csv,fixed_holiday,boolean,"Republic Day, Independence Day or Gandhi Jayanti from checked primary annual calendars"
+daily.csv,diwali_window,boolean,Checked Diwali date plus/minus one day; small aggregate festival proxy
+iip.csv,month,YYYY-MM,Reference month of the manufacturing IIP target
+iip.csv,manufacturing_index,"index, 2011-12 = 100",Official aggregate manufacturing index; excludes manufacturing subcategories and other IIP sectors
+iip.csv,reported_yoy_pct,percent,"Published annual growth, retained for rounding comparison; April 2021 is blank"
+iip.csv,source_sha256,SHA-256,Hash of the official API page containing the aggregate monthly index
+iip.csv,yoy_pct,percentage points,100 * (index for month / index for same month last year - 1)
+iip.csv,base_year,text,Consistent 2011-12 IIP base; other bases are not spliced
+iip.csv,release_date,date,First-release date where verified; explicitly nominal elsewhere
+iip.csv,release_date_status,text,Distinguishes verified primary release dates from nominal legacy dates
+iip.csv,release_source_url,HTTPS URL,Primary first quick-estimate release; blank for unverified legacy dates
+iip.csv,value_vintage_status,text,Latest revised indices and backcasts; original release values are not reconstructed
+iip.csv,target_in_scope,boolean,January 2015 onward; 2014 indices provide prior-year comparisons
+origins.csv,month,YYYY-MM,Reference month of the manufacturing IIP target
+origins.csv,split,text,"Training 2015-18, validation 2019-21, held-out test 2022-23"
+origins.csv,forecast_date,date,Fifth calendar day of the month after the target month
+origins.csv,assumed_lag_days,calendar days,Prespecified daily-data availability assumption; longer documented issue lags override energy availability
+origins.csv,daily_cutoff,date,Earlier of target month end and forecast date minus assumed daily lag
+origins.csv,prior_year_cutoff,date,Same calendar date one year earlier; Feb 29 maps to Feb 28
+origins.csv,latest_released_iip_month,YYYY-MM,Latest past IIP label with a first-release date no later than the forecast date
+origins.csv,latest_label_release_date,date,First-release date of the latest past label
+origins.csv,release_date_status,text,Distinguishes verified primary release dates from nominal legacy dates
+origins.csv,eligible_released_training_labels,boolean,Input eligibility at the stated joint coverage threshold; feature readiness is not implied
+origins.csv,current_expected_days,days,Expected calendar dates from the window's month start through its cutoff
+origins.csv,current_energy_days,days,"Nonmissing, quality-approved energy dates available by the forecast origin"
+origins.csv,current_energy_coverage,fraction 0–1,Usable available observations / expected calendar days; current and prior year checked separately
+origins.csv,current_weather_coverage,fraction 0–1,Usable available observations / expected calendar days; current and prior year checked separately
+origins.csv,current_joint_coverage,fraction 0–1,Usable available observations / expected calendar days; current and prior year checked separately; energy and all weather fields must be available on the same day
+origins.csv,prior_expected_days,days,Expected calendar dates from the window's month start through its cutoff
+origins.csv,prior_energy_days,days,"Nonmissing, quality-approved energy dates available by the forecast origin"
+origins.csv,prior_energy_coverage,fraction 0–1,Usable available observations / expected calendar days; current and prior year checked separately
+origins.csv,prior_weather_coverage,fraction 0–1,Usable available observations / expected calendar days; current and prior year checked separately
+origins.csv,prior_joint_coverage,fraction 0–1,Usable available observations / expected calendar days; current and prior year checked separately; energy and all weather fields must be available on the same day
+origins.csv,eligible_90,boolean,Input eligibility at the stated joint coverage threshold; feature readiness is not implied
+origins.csv,eligible_95,boolean,Input eligibility at the stated joint coverage threshold; feature readiness is not implied

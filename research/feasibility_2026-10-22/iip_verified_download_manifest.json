@@ -1,0 +1,275 @@
+[
+  {
+    "file": "iip_official_pages/page_001.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=1",
+    "retrieved_utc": "2026-10-22T02:07:53.718738+00:00",
+    "bytes": 39395,
+    "sha256": "93c7acbf6b324b86efbf1b1a9097a8fa83f738b755c5efc71c64c393222a24c3",
+    "meta_data": {
+      "page": 1,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_002.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=2",
+    "retrieved_utc": "2026-10-22T02:07:54.262991+00:00",
+    "bytes": 39157,
+    "sha256": "317879bcfca74d7782accb2cc1a7681a9a782331807844fa753fd4099cbe55c4",
+    "meta_data": {
+      "page": 2,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_003.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=3",
+    "retrieved_utc": "2026-10-22T02:07:54.265147+00:00",
+    "bytes": 38970,
+    "sha256": "ee98dd14b330877153e845ddcdc4e26bab8c71dd14594988a8a8c02c3c4d3fe8",
+    "meta_data": {
+      "page": 3,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_004.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=4",
+    "retrieved_utc": "2026-10-22T02:07:54.265585+00:00",
+    "bytes": 39362,
+    "sha256": "9402a8d2448e6ec2a40f3c969a7fc63c2879ff5de08a24f2929b32d0b72dd047",
+    "meta_data": {
+      "page": 4,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_005.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=5",
+    "retrieved_utc": "2026-10-22T02:07:54.775836+00:00",
+    "bytes": 39294,
+    "sha256": "ccd5c8f599b8d9c25fc2dd6a2ce84ba3a65b7b1b0dc3608e42e1fa225a5fc373",
+    "meta_data": {
+      "page": 5,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_006.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=6",
+    "retrieved_utc": "2026-10-22T02:07:54.794093+00:00",
+    "bytes": 39040,
+    "sha256": "9d247ca171a871710e112bd561ea9372010cf79d7a675295da11026170f15b9f",
+    "meta_data": {
+      "page": 6,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_007.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=7",
+    "retrieved_utc": "2026-10-22T02:07:54.814836+00:00",
+    "bytes": 39263,
+    "sha256": "9453ebb54674706b70365f3998f2eebd72a9f7024a55162457de59e1cf76626c",
+    "meta_data": {
+      "page": 7,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_008.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=8",
+    "retrieved_utc": "2026-10-22T02:07:55.419368+00:00",
+    "bytes": 39383,
+    "sha256": "47e1739d66ad6611fd506e7a4c6f455b03ce2d581736b99f3d86936a16a4ac4a",
+    "meta_data": {
+      "page": 8,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_009.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=9",
+    "retrieved_utc": "2026-10-22T02:07:55.427361+00:00",
+    "bytes": 39079,
+    "sha256": "16284cf0d22b9ceb05ab18c2b97433157d991566d30416dcf40c8536ab9416f0",
+    "meta_data": {
+      "page": 9,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_010.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=10",
+    "retrieved_utc": "2026-10-22T02:07:55.454918+00:00",
+    "bytes": 39238,
+    "sha256": "5d373a116b37289d20dcef7fecf4078e5b7e9c53d623f1e430a4bcad3c9f5997",
+    "meta_data": {
+      "page": 10,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_011.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=11",
+    "retrieved_utc": "2026-10-22T02:07:56.014771+00:00",
+    "bytes": 39486,
+    "sha256": "fcdb7e5a52345654e8d5da2ee09ed5c4aa5d9854736296f2a029a94b2c01df69",
+    "meta_data": {
+      "page": 11,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_012.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=12",
+    "retrieved_utc": "2026-10-22T02:07:56.123548+00:00",
+    "bytes": 39041,
+    "sha256": "b2776c37e8e2322c3256b7695609be0300083354de72d272ba4eb86b10f98934",
+    "meta_data": {
+      "page": 12,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_013.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=13",
+    "retrieved_utc": "2026-10-22T02:07:56.497935+00:00",
+    "bytes": 39153,
+    "sha256": "be0c58d78a11aeb2dd87d4859e820488737b566272a7247bf5b41f17037a66d9",
+    "meta_data": {
+      "page": 13,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_014.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=14",
+    "retrieved_utc": "2026-10-22T02:07:56.648269+00:00",
+    "bytes": 39477,
+    "sha256": "b7b2d487272027b844b0701c7e52fae8214e23cc9671f58ec5275062385732fa",
+    "meta_data": {
+      "page": 14,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_015.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=15",
+    "retrieved_utc": "2026-10-22T02:07:56.872815+00:00",
+    "bytes": 39098,
+    "sha256": "2c25eb361ed4285e64863255e0b20f601451524c9674221bad42da34a4f90530",
+    "meta_data": {
+      "page": 15,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_016.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=16",
+    "retrieved_utc": "2026-10-22T02:07:57.035797+00:00",
+    "bytes": 39075,
+    "sha256": "dd4bc08744df195ae76beb9de58f14acda952c432694a504bc9c3c16b2a55416",
+    "meta_data": {
+      "page": 16,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_017.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=17",
+    "retrieved_utc": "2026-10-22T02:07:57.386156+00:00",
+    "bytes": 39403,
+    "sha256": "42c08722c68c65b5d2d516f148ad8dd37ca90aaba8eee8302c5f3e9b42a0f356",
+    "meta_data": {
+      "page": 17,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_018.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=18",
+    "retrieved_utc": "2026-10-22T02:07:57.426986+00:00",
+    "bytes": 39146,
+    "sha256": "7c3af53f39ea937a51f09b75d2ed2501539ec7ecd78e5c5a39d1e0cc53b07374",
+    "meta_data": {
+      "page": 18,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_019.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=19",
+    "retrieved_utc": "2026-10-22T02:07:57.640905+00:00",
+    "bytes": 39072,
+    "sha256": "06099d76259831d919f986d070505b21cb8373cbb2009fa2258185973b2b562c",
+    "meta_data": {
+      "page": 19,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_020.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=20",
+    "retrieved_utc": "2026-10-22T02:07:57.972849+00:00",
+    "bytes": 39272,
+    "sha256": "01bcd8c6ff03f1bfe1faf64e9533bf68b237bd8f5059e9f62ee766e76a3b2ba0",
+    "meta_data": {
+      "page": 20,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  },
+  {
+    "file": "iip_official_pages/page_021.json",
+    "source_url": "https://api.mospi.gov.in/api/iip/getIIPData?frequency=Monthly&base_year=2011-12&category_code=2&limit=200&page=21",
+    "retrieved_utc": "2026-10-22T02:07:58.020678+00:00",
+    "bytes": 6265,
+    "sha256": "70e93df4bebda2c8aee51244d8292144a8249adb3f4a1cd5ddf52005d9d1bb72",
+    "meta_data": {
+      "page": 21,
+      "totalRecords": 4032,
+      "totalPages": 21,
+      "recordPerPage": 200
+    }
+  }
+]

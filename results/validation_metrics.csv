@@ -1,0 +1,8 @@
+scenario,model,alpha,months,MAE_pp,RMSE_pp
+primary,adjusted_ols,0,36,13.0534621554,29.9133622069
+primary,adjusted_ridge,0.1,36,13.0389944191,29.9033211138
+primary,adjusted_ridge,1,36,12.9333586815,29.825824919
+primary,adjusted_ridge,10,36,12.3489556355,29.7702104892
+primary,adjusted_ridge,100,36,12.0417942966,32.8822713245
+primary,iip_benchmark,0,36,15.7124812007,38.4876648901
+primary,raw_ols,0,36,14.3120650638,31.6088726822

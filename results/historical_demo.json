@@ -1,0 +1,43 @@
+{
+  "target_month": "2023-12",
+  "forecast_date": "2024-01-05",
+  "daily_cutoff": "2023-12-31",
+  "latest_released_iip_month": "2023-10",
+  "latest_iip_release_date": "2023-12-12",
+  "source_date": "2023-12-31",
+  "printed_reporting_date": "2024-01-01",
+  "source_url": "https://webcdn.grid-india.in/files/grdw/uploads/daily-reports/psp-reports/2023-2024/31.12.23_NLDC_PSP.pdf",
+  "printed_energy_MU": 4102.0,
+  "official_xls_energy_MU": 4101.63,
+  "before_report": {
+    "monthly_coverage": 0.967741935483871,
+    "last_week_coverage": 0.8571428571428571,
+    "raw_energy_yoy_pct": 1.5240813014838261,
+    "forecast_ready": false
+  },
+  "after_report": {
+    "monthly_coverage": 1.0,
+    "last_week_coverage": 1.0,
+    "raw_energy_yoy_pct": 1.6334337225133,
+    "forecast_ready": true
+  },
+  "saved_frozen_predictions": [
+    {
+      "model": "iip_benchmark",
+      "prediction_pct": 4.42129316137
+    },
+    {
+      "model": "raw_ols",
+      "prediction_pct": -6.19770045952
+    },
+    {
+      "model": "adjusted_ols",
+      "prediction_pct": -6.44074120333
+    },
+    {
+      "model": "adjusted_ridge",
+      "prediction_pct": -0.231389310554
+    }
+  ],
+  "explanation": "Withholding 31 December leaves monthly coverage above 90%, but only six of seven recent days. The weekly feature fails coverage, so the shared model sample rule blocks a forecast. The report completes the week and permits the saved frozen forecast. This demonstration recomputes availability and raw growth only; it does not refit models or score a new experiment."
+}

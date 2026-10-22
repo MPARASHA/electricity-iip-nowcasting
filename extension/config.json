@@ -1,0 +1,347 @@
+{
+  "history_start": "2014-01-01",
+  "target_start": "2015-01",
+  "energy": {
+    "file": "andrew_POSOCO_data.csv",
+    "metadata_file": "andrew_POSOCO_metadata.json",
+    "column": "India: EnergyMet",
+    "units": "MU = GWh",
+    "core": "energy only"
+  },
+  "weather_locations": [
+    {
+      "id": "delhi_north",
+      "file": "delhi_north.json",
+      "latitude": 28.61,
+      "longitude": 77.21,
+      "weight": 0.2
+    },
+    {
+      "id": "mumbai_west",
+      "file": "mumbai_west.json",
+      "latitude": 19.08,
+      "longitude": 72.88,
+      "weight": 0.2
+    },
+    {
+      "id": "chennai_south",
+      "file": "chennai_south.json",
+      "latitude": 13.08,
+      "longitude": 80.27,
+      "weight": 0.2
+    },
+    {
+      "id": "kolkata_east",
+      "file": "kolkata_east.json",
+      "latitude": 22.57,
+      "longitude": 88.36,
+      "weight": 0.2
+    },
+    {
+      "id": "guwahati_northeast",
+      "file": "guwahati_northeast.json",
+      "latitude": 26.14,
+      "longitude": 91.74,
+      "weight": 0.2
+    }
+  ],
+  "weather_time_rule": "Use NASA POWER UTC daily means under the same calendar-date label as grid energy. UTC midnight differs from IST midnight by 5.5 hours; daily aggregates cannot be shifted exactly. Treat five points as a climate proxy, not a population-weighted national temperature.",
+  "energy_exclusions": [
+    {
+      "date": "2014-01-01",
+      "reason": "unresolved_printed_reporting_year",
+      "evidence": "Official 2014 listing and grid-synchronisation footnote disagree with the printed 2013 reporting year; retain raw value but exclude."
+    },
+    {
+      "date": "2014-01-02",
+      "reason": "unresolved_printed_reporting_year",
+      "evidence": "Official 2014 listing disagrees with the printed 2013 reporting year; retain raw value but exclude."
+    },
+    {
+      "date": "2017-02-15",
+      "reason": "conflicting_original_report_energy",
+      "evidence": "Current official report: 3050 MU. Archived original and Andrew candidate: 3200 MU. Both reports cover the same date; retain both and exclude the day."
+    }
+  ],
+  "adjustment": {
+    "response": "log_energy_MU",
+    "trend": "linear_years_from_history_start_retained",
+    "annual_harmonics": 2,
+    "weekday_reference": "Monday",
+    "fixed_holidays": [
+      "01-26",
+      "08-15",
+      "10-02"
+    ],
+    "diwali_window_days_each_side": 1,
+    "heating_base_C": 18,
+    "cooling_base_C": 24,
+    "temperature_rule": "Compute positive-part HDD18 and CDD24 at each point, then take fixed weighted means.",
+    "fit_end_rule": "Last released in-scope training label month end; exclude current unlabeled months.",
+    "remove": "Annual Fourier, weekdays, fixed holidays, Diwali window and temperature. Keep intercept, trend and residual."
+  },
+  "project": "Industry electricity nowcasting extension",
+  "original_raw_dir": "research/feasibility_2026-10-22",
+  "history_end": "2025-12-31",
+  "training": [
+    "2015-01",
+    "2018-12"
+  ],
+  "validation": [
+    "2019-01",
+    "2023-11"
+  ],
+  "test": [
+    "2024-01",
+    "2025-12"
+  ],
+  "first_test_origin": "2024-02-05",
+  "forecast_day": 5,
+  "daily_lag_days": 5,
+  "coverage": 0.9,
+  "weekly_days": 7,
+  "minimum_training_rows": 36,
+  "minimum_validation_origins": 12,
+  "minimum_test_months": 20,
+  "required_new_reports": 12,
+  "shock": [
+    "2020-03",
+    "2022-06"
+  ],
+  "ridge_alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "cases": [
+    "full",
+    "strict_covid"
+  ],
+  "targets": [
+    {
+      "id": "manufacturing",
+      "name": "National manufacturing",
+      "nic": "aggregate",
+      "sub_category": ""
+    },
+    {
+      "id": "basic_metals",
+      "name": "Basic metals",
+      "nic": "24",
+      "sub_category": "Manufacture of Basic Metals"
+    },
+    {
+      "id": "nonmetallic_minerals",
+      "name": "Other non-metallic mineral products",
+      "nic": "23",
+      "sub_category": "Manufacture of Other Non-metallic Mineral Products"
+    },
+    {
+      "id": "wearing_apparel",
+      "name": "Wearing apparel",
+      "nic": "14",
+      "sub_category": "Manufacture of Wearing Apparel"
+    }
+  ],
+  "new_releases": [
+    {
+      "month": "2023-12",
+      "id": 2005316,
+      "date": "2024-02-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2005316&lang=2&reg=3"
+    },
+    {
+      "month": "2024-01",
+      "id": 2013798,
+      "date": "2024-03-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2013798&lang=2&reg=3"
+    },
+    {
+      "month": "2024-02",
+      "id": 2017772,
+      "date": "2024-04-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2017772&lang=2&reg=3"
+    },
+    {
+      "month": "2024-03",
+      "id": 2020239,
+      "date": "2024-05-10",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2020239&lang=2&reg=3"
+    },
+    {
+      "month": "2024-04",
+      "id": 2024748,
+      "date": "2024-06-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2024748&lang=2&reg=3"
+    },
+    {
+      "month": "2024-05",
+      "id": 2032770,
+      "date": "2024-07-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2032770&lang=2&reg=3"
+    },
+    {
+      "month": "2024-06",
+      "id": 2044601,
+      "date": "2024-08-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2044601&lang=2&reg=3"
+    },
+    {
+      "month": "2024-07",
+      "id": 2054214,
+      "date": "2024-09-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2054214&lang=2&reg=3"
+    },
+    {
+      "month": "2024-08",
+      "id": 2064193,
+      "date": "2024-10-11",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2064193&lang=2&reg=3"
+    },
+    {
+      "month": "2024-09",
+      "id": 2072709,
+      "date": "2024-11-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2072709&lang=2&reg=3"
+    },
+    {
+      "month": "2024-10",
+      "id": 2083705,
+      "date": "2024-12-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2083705&lang=2&reg=3"
+    },
+    {
+      "month": "2024-11",
+      "id": 2091785,
+      "date": "2025-01-10",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2091785&lang=2&reg=3"
+    },
+    {
+      "month": "2024-12",
+      "id": 2102261,
+      "date": "2025-02-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2102261&lang=2&reg=3"
+    },
+    {
+      "month": "2025-01",
+      "id": 2110777,
+      "date": "2025-03-12",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2110777&lang=2&reg=3"
+    },
+    {
+      "month": "2025-02",
+      "id": 2120934,
+      "date": "2025-04-11",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2120934&lang=2&reg=3"
+    },
+    {
+      "month": "2025-03",
+      "id": 2124850,
+      "date": "2025-04-28",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2124850&lang=2&reg=3"
+    },
+    {
+      "month": "2025-04",
+      "id": 2132055,
+      "date": "2025-05-28",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132055&lang=2&reg=3"
+    },
+    {
+      "month": "2025-05",
+      "id": 2140774,
+      "date": "2025-06-30",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2140774&lang=2&reg=3"
+    },
+    {
+      "month": "2025-06",
+      "id": 2149266,
+      "date": "2025-07-28",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2149266&lang=2&reg=3"
+    },
+    {
+      "month": "2025-07",
+      "id": 2161516,
+      "date": "2025-08-28",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2161516&lang=2&reg=3"
+    },
+    {
+      "month": "2025-08",
+      "id": 2172702,
+      "date": "2025-09-29",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2172702&lang=2&reg=3"
+    },
+    {
+      "month": "2025-09",
+      "id": 2183312,
+      "date": "2025-10-28",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2183312&lang=2&reg=3"
+    },
+    {
+      "month": "2025-10",
+      "id": 2196938,
+      "date": "2025-12-01",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2196938&lang=2&reg=3"
+    },
+    {
+      "month": "2025-11",
+      "id": 2209434,
+      "date": "2025-12-29",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209434&lang=2&reg=3"
+    },
+    {
+      "month": "2025-12",
+      "id": 2219602,
+      "date": "2026-01-28",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219602&lang=2&reg=3"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "file": "calendar/2024.html",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1976917&lang=2&reg=48"
+    },
+    {
+      "file": "calendar/2025.html",
+      "url": "https://dip.goa.gov.in/list-of-holidays-during-year-2025/"
+    },
+    {
+      "file": "reading/bee_pat.html",
+      "url": "https://www.beeindia.gov.in/view_content.php?lang=1&lid=613"
+    },
+    {
+      "file": "reading/iip_release_change.html",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2122427&lang=2&reg=3"
+    },
+    {
+      "file": "reading/iip_october_delay.html",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2195834&lang=1&reg=3"
+    },
+    {
+      "file": "grid/mirror_commit.json",
+      "url": "https://api.github.com/repos/HalcyonVector/Grid-Sentinel/commits/main"
+    }
+  ],
+  "uncertainty": {
+    "block_months": 3,
+    "repetitions": 2000,
+    "seed": 241022,
+    "coverage": 0.95,
+    "construction": "Noncircular blocks within each contiguous calendar run; truncate each run to its own length; shared draws across targets/models/cases"
+  },
+  "protocol": {
+    "lag_selection": "Two latest released growth labels at each historical origin; no substitution of older clean lags in strict case",
+    "daily_fit_end": "Latest released target label month end, regardless of monthly strict eligibility; remove shock dates only for strict daily fit. Daily energy/weather after the shock remain past observed inputs, not outcomes.",
+    "common_rows": "Within each case all four models use identical training months; test calendar identical across targets and cases",
+    "strict_monthly_exposure": "Outcome index and annual base, two released IIP lag indices and annual bases, monthly and annual-base electricity windows and both weekly windows; drop row on any shock contact",
+    "strict_validation_limit": "At most 16 nominal dates, only Oct-Nov2023 recent; accept explicitly before holdout scoring",
+    "primary_contrast": "Adjusted ridge versus IIP-only OLS is a complete-method comparison",
+    "matched_ols_contrasts": [
+      "raw_ols minus iip_benchmark",
+      "adjusted_ols minus iip_benchmark",
+      "adjusted_ols minus raw_ols"
+    ],
+    "original_study": "unchanged; new holdout chosen after original findings; not an independent prospective replication"
+  },
+  "source_access_limitation": "Official Grid India API and CDN closed TLS connections. Audit original NLDC XLS workbooks preserved in a public GitHub archive at a frozen commit; official-host byte identity cannot be confirmed. Do not use the mirror derived dataset."
+}

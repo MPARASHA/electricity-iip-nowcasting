@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "purpose": "Supplementary primary-source check of oldest released lag at first validation origin; no frozen modeling input or date changed",
+  "forecast_origin": "2019-02-05",
+  "target_month": "2019-01",
+  "older_lag_month": "2018-10",
+  "model_release_date": "2018-12-12",
+  "primary_publication_date": "2018-12-12",
+  "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1555680&lang=2&reg=48",
+  "retrieved_utc": "2026-10-22T15:17:33.390967+00:00",
+  "sha256": "12bce3d2269403636219e86aad2764a87d1770e4e46a4780bed69805b52cec14",
+  "file": "extension/qa/release_boundary/october_2018_release.html",
+  "checks": [
+    "Primary date matches nominal model date",
+    "Available by first validation origin",
+    "Main 86-month ledger remains unchanged"
+  ]
+}

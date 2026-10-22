@@ -1,0 +1,2 @@
+# Preserve frozen source and result bytes on every platform.
+* -text
